@@ -1,0 +1,18 @@
+@include font-face(Roboto, "fonts/roboto/Roboto-Regular", normal, normal);
+@include font-face(Roboto, "fonts/roboto/Roboto-Italic", normal, italic);
+@include font-face(Roboto, "fonts/roboto/Roboto-Medium", 500, normal);
+@include font-face(Roboto, "fonts/roboto/Roboto-Bold", 700, normal);
+@include font-face(Roboto, "fonts/roboto/Roboto-Black", 900, normal);
+
+$font-size-base: 14px !default;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe ui", "Droid Sans", Oxygen, Ubuntu, Cantarell, sans-serif !default;
+
+html {
+  font-size: 62.5%; // 1rem = 10px, 3.5rem = 35px;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: 1.4rem;
+  color: $black;
+}

@@ -1,0 +1,129 @@
+/* Media Queries
+========================================================================== */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint== "mobile-small" {
+    @media (max-width: 320px) {
+      @content;
+    }
+  } @else if $breakpoint== "mobile" {
+    @media (max-width: 375px) {
+      @content;
+    }
+  } @else if $breakpoint== "mobile-large" {
+    @media (max-width: 414px) {
+      @content;
+    }
+  } @else if $breakpoint== "tablet" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint== "tablet-large" {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint== "desktop-13" {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+//! Example usage
+/* @include respond-to('mobile') {} */
+
+// Font-face mixin
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+/* CENTERING */
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+//! Example usage
+/*
+.parent {
+position: relative;
+}
+.child {
+@include centered;
+}
+*/
+
+// vendor prefixes
+@mixin prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+// Opacity with fallback for IE8+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}
+
+@mixin font-size($font-size, $line-height: normal) {
+  font-size: $font-size * 0.1rem;
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+}
+// Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+// Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+// Cover Background
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
