@@ -10,7 +10,34 @@ body {
 }
 
 .wrapper {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.container {
+  width: $lg-wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  margin: 0 auto;
+
+  @include respond-to('desktop-13') {
+    width: $md-wrap;
+  }
+
+  @include respond-to('tablet-large') {
+    width: $sm-wrap;
+  }
+
+  @include respond-to('tablet-medium') {
+    width: $xs-wrap;
+  }
 }
 
 h1,
