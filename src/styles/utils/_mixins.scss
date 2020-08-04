@@ -116,20 +116,6 @@ position: relative;
     line-height: $line-height / $font-size;
   }
 }
-// Padding mixin
-@mixin padding($top, $right, $bottom, $left) {
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-}
-// Margin mixin
-@mixin margin($top, $right, $bottom, $left) {
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
-}
 // Cover Background
 @mixin cover-background {
   background-repeat: no-repeat;
