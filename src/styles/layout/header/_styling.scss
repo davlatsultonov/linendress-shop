@@ -6,4 +6,13 @@
     margin-top: 15px;
     float: left;
   }
+
+  &__info {
+    margin-left: 69px;
+  }
+
+  &__item {
+    @include flexbox;
+    @include justify-content(space-between);
+  }
 }
