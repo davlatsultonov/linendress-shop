@@ -1,0 +1,20 @@
+.contacts {
+
+  &__item {
+    @include flexbox;
+    @include align-items(center);
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__text {
+    @include font-size(16);
+    font-weight: 500;
+  }
+}
