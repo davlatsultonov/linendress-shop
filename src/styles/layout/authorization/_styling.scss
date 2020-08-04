@@ -1,0 +1,22 @@
+.auth-block {
+  @include flexbox;
+  @include align-items(center);
+
+  &__icon, &__phone {
+    margin-left: 10px;
+  }
+
+  a {
+    @include inline-flex;
+    @include align-items(center);
+    @include shift(ease-in-out);
+
+    &:hover {
+      opacity: .8;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+}

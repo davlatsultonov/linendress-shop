@@ -12,9 +12,4 @@
   &__icon {
     margin-right: 10px;
   }
-
-  &__text {
-    @include font-size(16);
-    font-weight: 500;
-  }
 }

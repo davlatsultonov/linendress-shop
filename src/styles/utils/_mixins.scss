@@ -91,6 +91,13 @@ position: relative;
 @include centered;
 }
 */
+//usage: @include shift([property],[duration],[easing]);
+@mixin shift($ease: ease, $duration: .3s, $property: all){
+  -webkit-transition: $property $duration $ease;
+  -moz-transition: $property $duration $ease;
+  -o-transition: $property $duration $ease;
+  transition: $property $duration $ease;
+}
 
 // vendor prefixes
 @mixin prefix($prop, $value) {
