@@ -1,0 +1,19 @@
+.social-block {
+
+  &__item {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__link {
+    @include inline-flex;
+    @include align-items(center);
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
