@@ -5,12 +5,15 @@
   font-weight: 500;
 
   &__logo {
-    margin-top: 15px;
+    margin-top: 45px;
+    width: 20%;
     float: left;
   }
 
   &__info {
     margin-left: 69px;
+    float: left;
+    width: 65%;
   }
 
   &__item {
@@ -18,7 +21,7 @@
     @include justify-content(space-between);
 
     &:not(:last-child) {
-      margin-top: 30px;
+      margin-bottom: 40px;
     }
   }
 
