@@ -1,40 +1,12 @@
 /* Media Queries
 ========================================================================== */
-@mixin respond-to($breakpoint) {
-  @if $breakpoint== "mobile-small" {
-    @media (max-width: 320px) {
-      @content;
-    }
-  } @else if $breakpoint== "mobile" {
-    @media (max-width: 375px) {
-      @content;
-    }
-  } @else if $breakpoint== "mobile-large" {
-    @media (max-width: 414px) {
-      @content;
-    }
-  } @else if $breakpoint== "tablet" {
-    @media (max-width: 720px) {
-      @content;
-    }
-  } @else if $breakpoint== "tablet-medium" {
-    @media (max-width: 768px) {
-      @content;
-    }
-  } @else if $breakpoint== "tablet-large" {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  } @else if $breakpoint== "desktop-13" {
-    @media (max-width: 1170px) {
-      @content;
-    }
-  } @else {
-    @media ($breakpoint) {
-      @content;
-    }
-  }
-}
+$xxs: "(max-width : 375px)";
+$xs: "(max-width : 480px)";
+$xsl: "(max-width : 639px)";
+$msm: "(max-width : 719px)";
+$sm: "(max-width : 768px)";
+$md: "(max-width : 1024px)";
+$lg: "(max-width : 1200px)";
 
 $lg-wrap: 1170px;
 $md-wrap: 960px;
