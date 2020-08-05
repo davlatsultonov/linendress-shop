@@ -26,6 +26,7 @@ body {
   padding-right: 20px;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 
   @media #{$lg} {
     width: $md-wrap;
@@ -57,10 +58,6 @@ p {
 a {
   text-decoration: none;
   color: $black;
-}
-
-img {
-  display: block;
 }
 
 ul {

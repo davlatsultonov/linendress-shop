@@ -5,15 +5,18 @@
   font-weight: 500;
 
   &__logo {
-    margin-top: 45px;
     width: 20%;
     float: left;
   }
 
+  &__lang-switcher {
+    margin-bottom: 15px;
+  }
+
   &__info {
-    margin-left: 69px;
+    margin-left: 12%;
     float: left;
-    width: 65%;
+    width: 68%;
   }
 
   &__item {

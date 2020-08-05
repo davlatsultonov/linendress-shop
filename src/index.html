@@ -11,9 +11,23 @@
       <div class="content">
         <header class="header">
           <div class="container">
-            <div class="main-logo header__logo">
-                <img src="/src/images/logo/logo-black.svg" alt="header-logo">
-            </div>
+              <div class="header__logo">
+                  <div class="lang-switcher header__lang-switcher">
+                      <span class="lang-switcher__current" title="English">EN</span>
+                      <span class="lang-switcher__popover">
+                      <ul>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">RU</a></li>
+                      </ul>
+                  </span>
+                  </div>
+
+                  <div class="main-logo ">
+                      <a href='./index.html'>
+                          <img src="/src/images/logo/logo-black.svg" alt="header-logo">
+                      </a>
+                  </div>
+              </div>
             <div class="header__info">
                 <div class="header__item">
                     <ul class="contacts">
@@ -86,5 +100,7 @@
         </header>
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,0 +1,1 @@
+import './components/lang-switcher/_script';
