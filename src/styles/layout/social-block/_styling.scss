@@ -11,6 +11,15 @@
   &__link {
     @include inline-flex;
     @include align-items(center);
+    @include shift;
+
+    &:hover {
+      opacity: .8;
+
+      .social-block__text {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__icon {

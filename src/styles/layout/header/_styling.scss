@@ -4,9 +4,12 @@
   @include font-size(16);
   font-weight: 500;
 
+  &__items {
+    @include flexbox;
+  }
+
   &__logo {
     width: 20%;
-    float: left;
   }
 
   &__lang-switcher {
@@ -15,7 +18,7 @@
 
   &__info {
     margin-left: 12%;
-    float: left;
+    margin-top: 10px;
     width: 68%;
   }
 
