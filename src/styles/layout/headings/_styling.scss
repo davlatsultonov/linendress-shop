@@ -1,0 +1,20 @@
+.main-title {
+  font-weight: 500;
+  font-size: 24px;
+
+  &_type_thin {
+    font-weight: 400;
+  }
+
+  &_size_md {
+    font-size: 16px;
+  }
+
+  &_size_sm {
+    font-size: 14px;
+  }
+
+  &_size_xs {
+    font-size: 12px;
+  }
+}
