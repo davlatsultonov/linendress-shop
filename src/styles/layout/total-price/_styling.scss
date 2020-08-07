@@ -1,0 +1,23 @@
+.total-price {
+  font-weight: 700;
+
+  &_size_md {
+    font-size: 16px;
+  }
+
+  &_size_sm {
+    font-size: 14px;
+  }
+
+  &_size_xs {
+    font-size: 12px;
+  }
+
+  &_weight_extra-bold {
+    font-weight: 900;
+  }
+
+  &_mode_on-sale {
+    color: #fa6400;
+  }
+}

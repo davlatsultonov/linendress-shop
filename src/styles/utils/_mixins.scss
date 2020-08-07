@@ -8,7 +8,7 @@ $sm: "(max-width : 768px)";
 $md: "(max-width : 1024px)";
 $lg: "(max-width : 1200px)";
 
-$lg-wrap: 1170px;
+$lg-wrap: 1200px;
 $md-wrap: 960px;
 $sm-wrap: 728px;
 $xs-wrap: 100%;
@@ -262,4 +262,13 @@ position: relative;
     -ms-flex-item-align: $value;
   }
   align-self: $value;
+}
+
+//троеточие в конце текста
+@mixin ellipsis($number) {
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  overflow: hidden;
 }

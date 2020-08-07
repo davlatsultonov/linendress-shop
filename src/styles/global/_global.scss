@@ -22,8 +22,8 @@ body {
 
 .container {
   width: $lg-wrap;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -57,7 +57,7 @@ p {
 
 a {
   text-decoration: none;
-  color: $black;
+  color: $black-soft;
 }
 
 ul {
