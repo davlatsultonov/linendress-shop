@@ -1,0 +1,45 @@
+.info-block {
+  @include flexbox;
+  @include prefix(border-radius, 30px);
+  @include prefix(box-shadow, $base-shadow);
+  min-height: 290px;
+  max-height: 290px;
+  overflow: hidden;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__img {
+    width: 50%;
+    @include cover-background;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 30px;
+    overflow-y: overlay;
+  }
+
+  &__des {
+    color: $black;
+    font-size: 1.4rem;
+    margin-top: 15px;
+
+    &_mode_active {
+      @include flexbox;
+      @include justify-content(space-between);
+      color: $active-orange;
+      font-weight: 700;
+
+      p {
+        width: 90%;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 24px;
+  }
+}

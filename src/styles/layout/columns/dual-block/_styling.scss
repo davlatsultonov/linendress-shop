@@ -1,0 +1,12 @@
+.dual-block {
+  @include flexbox;
+
+  &__item {
+    width: 49%;
+    margin-bottom: 63px;
+
+    &:not(:last-child) {
+      margin-right: 58px;
+    }
+  }
+}
