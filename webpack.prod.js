@@ -7,6 +7,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const TerserPlugin = require('terser-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
@@ -92,7 +93,15 @@ module.exports = merge(common, {
         })
       ]
     }),
-    new OfflinePlugin()
+    new OfflinePlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src/images/'),
+          to: path.join(__dirname, 'dist/images/'),
+        }
+      ]
+    }),
   ],
   output: {
     filename: '[name].[contentHash].js',
