@@ -1,0 +1,45 @@
+.info-block {
+  @include flexbox;
+  color: $black;
+  line-height: 24px;
+
+  &__item {
+    width: 50%;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    @include prefix(border-radius, 30px);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__des {
+    font-size: 1.4rem;
+    padding-right: 60px;
+    padding-top: 18px;
+
+    p:not(:last-child){
+      margin-bottom: 30px;
+    }
+
+    &_position_right {
+      padding-right: 0;
+      padding-left: 60px;
+    }
+  }
+
+  &__statement {
+    padding: 30px 45px;
+
+    p {
+      width: 75%;
+    }
+  }
+}
