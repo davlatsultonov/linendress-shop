@@ -12,6 +12,8 @@
   }
 
   &__img {
+    height: 330px;
+    width: 100%;
     overflow: hidden;
     @include prefix(border-radius, 30px);
 
@@ -36,7 +38,7 @@
   }
 
   &__statement {
-    padding: 30px 45px;
+    padding: 20px 45px;
 
     p {
       width: 75%;

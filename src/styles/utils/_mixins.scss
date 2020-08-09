@@ -264,6 +264,13 @@ position: relative;
   align-self: $value;
 }
 
+@mixin flex-shrink($int: 0) {
+  -webkit-flex-shrink: $int;
+  -moz-flex-shrink: $int;
+  -ms-flex: $int;
+  flex-shrink: $int;
+}
+
 //троеточие в конце текста
 @mixin ellipsis($number) {
   text-overflow: ellipsis;
