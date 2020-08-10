@@ -1,3 +1,65 @@
-footer {
+.footer {
   flex: 0 0 auto;
+  background-color: #606060;
+  padding: 39px 0;
+
+  &__items {
+    @include flexbox;
+  }
+
+  &__info {
+    width: 74%;
+    margin-left: 66px;
+  }
+
+  &__item {
+    width: 100%;
+    @include flexbox;
+
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__nav {
+    border-collapse: collapse;
+    margin-bottom: 43px;
+
+    tr {
+
+      &:nth-child(n+2) {
+
+        td {
+          padding-top: 10px;
+        }
+      }
+    }
+
+    td {
+      padding-right: 45px;
+
+      a {
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 500;
+        @include shift;
+
+        &.current {
+          color: $active-orange;
+        }
+
+        &:hover {
+          color: $active-orange;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    @include flexbox;
+    @include align-items(center);
+    color: #fff;
+    font-size: 1.6rem;
+    margin-left: auto;
+  }
 }

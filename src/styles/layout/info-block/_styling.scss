@@ -3,12 +3,12 @@
   color: $black;
   line-height: 24px;
 
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
   &__item {
     width: 50%;
-
-    &:not(:last-child) {
-      margin-bottom: 50px;
-    }
   }
 
   &__img {

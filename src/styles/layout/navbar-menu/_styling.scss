@@ -7,9 +7,15 @@
     &:not(:last-child) {
       margin-right: 50px;
     }
+
+    &:nth-child(n+6) {
+      margin-top: 10px;
+    }
   }
 
   &__link {
+    font-size: 1.6rem;
+    font-weight: 500;
 
     &:hover{
       color: $active-orange;

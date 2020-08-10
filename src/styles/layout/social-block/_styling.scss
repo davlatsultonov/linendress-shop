@@ -26,4 +26,16 @@
   &__icon {
     margin-right: 10px;
   }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &_color_white {
+
+    .social-block__text {
+      color: #fff;
+    }
+  }
 }

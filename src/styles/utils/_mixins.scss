@@ -85,16 +85,6 @@ position: relative;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity = $opacity-ie); //IE8
 }
-
-@mixin font-size($font-size, $line-height: normal) {
-  font-size: $font-size * 0.1rem;
-
-  @if $line-height==normal {
-    line-height: normal;
-  } @else {
-    line-height: $line-height / $font-size;
-  }
-}
 // Cover Background
 @mixin cover-background {
   background-repeat: no-repeat;
@@ -284,7 +274,7 @@ $queries: (
         $xs: 'xs',
         $sm: 'sm',
 );
-$num-of-classes: 100;
+$num-of-classes: 150;
 $directions: ('top', 'bottom', 'left', 'right');
 $types: ('margin', 'padding');
 

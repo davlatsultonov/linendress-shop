@@ -1,15 +1,60 @@
 .contacts {
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    margin-right: 45px;
+  }
 
   &__item {
-    @include flexbox;
-    @include align-items(center);
+
+    &:hover {
+
+      .contacts__text {
+        text-decoration: underline;
+      }
+    }
 
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
   }
 
   &__icon {
-    margin-right: 10px;
+    display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__text {
+    display: inline-block;
+
+    &_time-range {
+      width: 58%;
+    }
+  }
+
+  &_color_white {
+
+    .contacts__text {
+      color: #fff;
+    }
+  }
+
+  &_mode_only-read {
+
+    .contacts__text {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .contacts__item:hover {
+
+      .contacts__text {
+        text-decoration: none;
+      }
+    }
   }
 }
