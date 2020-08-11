@@ -67,7 +67,6 @@ position: relative;
 @mixin shift($ease: ease, $duration: .3s, $property: all){
   -webkit-transition: $property $duration $ease;
   -moz-transition: $property $duration $ease;
-  -o-transition: $property $duration $ease;
   transition: $property $duration $ease;
 }
 
@@ -76,7 +75,6 @@ position: relative;
   -webkit-#{$prop}: #{$value};
   -moz-#{$prop}: #{$value};
   -ms-#{$prop}: #{$value};
-  -o-#{$prop}: #{$value};
   #{$prop}: #{$value};
 }
 // Opacity with fallback for IE8+
@@ -104,7 +102,6 @@ position: relative;
 
 // Inline flex display
 @mixin inline-flex {
-  display: -webkit-inline-box;
   display: -moz-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

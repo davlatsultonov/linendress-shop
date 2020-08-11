@@ -55,6 +55,14 @@
     }
   }
 
+  &__btn {
+    margin-left: auto;
+  }
+
+  &__schedule {
+    width: 28%;
+  }
+
   &__copyright {
     @include flexbox;
     @include align-items(center);

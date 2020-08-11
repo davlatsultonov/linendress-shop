@@ -1,9 +1,10 @@
 .contacts {
   font-size: 1.6rem;
   font-weight: 500;
+  margin-right: 45px;
 
-  &:not(:last-child) {
-    margin-right: 45px;
+  &:last-of-type {
+    margin-right: 0;
   }
 
   &__item {
@@ -30,9 +31,10 @@
 
   &__text {
     display: inline-block;
+    line-height: 21px;
 
     &_time-range {
-      width: 58%;
+      width: 70%;
     }
   }
 

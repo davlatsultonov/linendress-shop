@@ -1,5 +1,5 @@
 .header {
-  margin: 45px 0;
+  margin: 45px 0 39px;
   overflow: hidden;
   font-size: 1.6rem;
   font-weight: 500;
@@ -25,6 +25,7 @@
   &__item {
     @include flexbox;
     @include justify-content(space-between);
+    @include align-items(center);
 
     &:not(:last-child) {
       margin-bottom: 40px;

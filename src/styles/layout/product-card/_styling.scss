@@ -59,17 +59,21 @@
 
     &__bottom {
       margin-top: 14px;
-      @include flexbox;
-      @include align-items(center);
-      @include justify-content(space-between);
+      overflow: hidden;
     }
 
     &__button {
-      width: 170px;
-      height: 40px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-      border-radius: 3px;
-      background-color: #606060;
+      float: left;
+
+      .button {
+        padding: 0 27px;
+      }
+    }
+
+    &__icon {
+      float: left;
+      margin-top: 9px;
+      margin-left: 15px;
     }
 
   }

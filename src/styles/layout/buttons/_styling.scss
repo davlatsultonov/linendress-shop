@@ -1,0 +1,90 @@
+.button {
+  @include inline-flex;
+  @include align-items(center);
+  box-shadow: $base-shadow;
+  border-radius: 3px;
+  background-color: #606060;
+  color: #fff;
+  font-weight: 500;
+  min-width: 104px;
+  min-height: 30px;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  padding: 0 22px;
+  @include shift(ease-in-out, 256ms);
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: .84;
+  }
+
+  // Ripple Effect
+ /* &::after {
+    content: "";
+    background: #c5bfbf;
+    display: block;
+    position: absolute;
+    padding-top: 23%;
+    padding-left: 100%;
+    margin-left: -22px !important;
+    margin-top: 0;
+    opacity: 0;
+    transition: all 0.4s;
+  }
+
+  &:active::after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }*/
+
+  &_theme_white {
+    background-color: #fff;
+    color: $black;
+  }
+
+  &_border-r_lg {
+    @include prefix(border-radius, 8px);
+  }
+
+  &_size_lg {
+    min-height: 46px;
+    font-size: 1.6rem;
+
+    &::after {
+      padding-top: 30%;
+    }
+  }
+
+  &_size_md {
+    min-height: 40px;
+    font-size: 1.4rem;
+  }
+
+  &_size_sm {
+    min-height: 30px;
+    font-size: 1.2rem;
+  }
+
+  &_font_lg {
+    font-size: 1.6rem;
+  }
+
+  &_font_md {
+    font-size: 1.4rem;
+  }
+
+  &_font_sm {
+    font-size: 1.2rem;
+  }
+
+  &__icon {
+    margin-left: 11px;
+  }
+}

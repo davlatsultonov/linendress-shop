@@ -1,6 +1,7 @@
 .nav-menu {
   @include flexbox;
   @include flex-wrap(wrap);
+  padding-bottom: 6px;
 
   &__item {
 

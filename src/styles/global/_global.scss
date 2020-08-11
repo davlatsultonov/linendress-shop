@@ -13,6 +13,9 @@ body {
   @include flexbox;
   @include flex-direction(column);
   height: 100%;
+  // prevent resizing window to mobile width
+  min-width: 1200px;
+  margin: auto;
 }
 
 .content {
@@ -28,7 +31,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
 
-  @media #{$lg} {
+  /*@media #{$lg} {
     width: $md-wrap;
   }
 
@@ -38,7 +41,7 @@ body {
 
   @media #{$sm} {
     width: $xs-wrap;
-  }
+  }*/
 }
 
 h1,
