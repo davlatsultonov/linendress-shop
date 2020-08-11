@@ -1,3 +1,6 @@
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
+
 //! utilities
 @import "./styles/utils/mixins"; // global mixins
 @import "./styles/utils/variables"; // global variables
@@ -18,14 +21,15 @@
 @import "./styles/layout/social-block/styling";
 @import "./styles/layout/lang-switcher/styling";
 @import "./styles/layout/total-price/styling";
-@import "styles/layout/testimonial/styling";
+@import "./styles/layout/testimonial/styling";
 @import "./styles/layout/columns/dual-block/styling";
 @import "./styles/layout/product-selection/styling";
 @import "./styles/layout/product-card/styling";
-@import "styles/layout/info-card/styling";
-@import "styles/layout/info-block/styling";
+@import "./styles/layout/info-card/styling";
+@import "./styles/layout/info-block/styling";
 @import "./styles/layout/navbar-menu/styling";
 @import "./styles/layout/main-slider/styling";
 @import "./styles/layout/header/styling";
 @import "./styles/layout/footer/styling";
 @import "./styles/layout/headings/styling";
+@import "styles/layout/owl-carousel-style-fix/styling";

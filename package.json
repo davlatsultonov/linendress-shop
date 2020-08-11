@@ -32,6 +32,7 @@
     "lazysizes": "^5.2.2",
     "mini-css-extract-plugin": "^0.9.0",
     "offline-plugin": "^5.0.7",
+    "owl.carousel": "^2.3.4",
     "postcss-loader": "^3.0.0",
     "preload-webpack-plugin": "^3.0.0-beta.4",
     "script-ext-html-webpack-plugin": "^2.1.4",

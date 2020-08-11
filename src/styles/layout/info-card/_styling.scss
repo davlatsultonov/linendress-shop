@@ -1,9 +1,9 @@
 .info-card {
-  @include flexbox;
   @include prefix(border-radius, 30px);
   @include prefix(box-shadow, $base-shadow);
   min-height: 290px;
   max-height: 290px;
+  margin-bottom: 33px;
   overflow: hidden;
 
   &__title {
@@ -13,11 +13,14 @@
 
   &__img {
     width: 50%;
+    height: 290px;
+    float: left;
     @include cover-background;
   }
 
   &__content {
     width: 50%;
+    float: right;
     padding: 30px;
     overflow: auto;
   }
