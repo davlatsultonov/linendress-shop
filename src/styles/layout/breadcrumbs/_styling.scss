@@ -1,0 +1,28 @@
+.breadcrumb {
+  color: #000000;
+  margin: 65px 0 40px;
+  overflow: hidden;
+
+  &__item {
+    float: left;
+
+    &:not(:first-child) {
+      margin-left: 5px;
+
+      &::before {
+        content: '\002F';
+        display: inline-block;
+        color: $black;
+      }
+    }
+
+    &.visiting {
+      color: $active-orange;
+    }
+  }
+
+  &__icon {
+    margin-right: 6px;
+    vertical-align: bottom;
+  }
+}
