@@ -9,4 +9,27 @@
       margin-right: 58px;
     }
   }
+
+  &_look-book {
+    margin-bottom: 143px;
+
+    .dual-block__item {
+
+      &:nth-child(1) {
+        width: calc(100% - 397px);
+      }
+
+      &:nth-child(2) {
+        width: 347px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 52px;
+      }
+    }
+  }
+
+  p {
+    line-height: 24px;
+  }
 }

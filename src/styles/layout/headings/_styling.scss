@@ -18,7 +18,15 @@
     font-size: 1.2rem;
   }
 
-  &_indent_bottom {
+  &_indent-bottom {
     margin-bottom: 25px;
+  }
+
+  &_indent-bottom_md {
+    margin-bottom: 20px;
+  }
+
+  &_indent-bottom_sm {
+    margin-bottom: 10px;
   }
 }

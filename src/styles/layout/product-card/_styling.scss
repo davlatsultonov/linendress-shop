@@ -1,6 +1,6 @@
 .product {
   &-cards {
-    margin: 28px 0 15px;
+    margin-bottom: 15px;
     @include flexbox;
     @include flex-wrap(wrap);
   }
@@ -14,7 +14,7 @@
     margin-bottom: 40px;
     overflow: hidden;
     @include shift(ease-in-out);
-    width: 21.4%;
+    width: 250px;
 
     &:hover {
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
@@ -26,8 +26,9 @@
 
     &__title {
       font-weight: 500;
-      min-height: 36px;
-      max-height: 36px;
+      min-height: 38px;
+      max-height: 38px;
+      line-height: 21px;
       @include ellipsis(2);
     }
 
@@ -59,7 +60,7 @@
 
     &__bottom {
       margin-top: 14px;
-      overflow: hidden;
+      display: flex;
     }
 
     &__button {

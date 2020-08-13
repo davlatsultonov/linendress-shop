@@ -36,6 +36,7 @@
     color: $black;
     font-size: 1.4rem;
     margin-top: 15px;
+    line-height: 16px;
 
     &_mode_active {
       @include flexbox;
