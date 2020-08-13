@@ -2,6 +2,7 @@
   @include flexbox;
   color: $black;
   line-height: 24px;
+  margin-bottom: 57px;
 
   &:not(:last-child) {
     margin-bottom: 50px;
@@ -12,7 +13,6 @@
   }
 
   &__img {
-    height: 330px;
     width: 100%;
     overflow: hidden;
     @include prefix(border-radius, 30px);
@@ -38,10 +38,10 @@
   }
 
   &__statement {
-    padding: 20px 45px;
+    padding: 15px 55px 20px;
 
     p {
-      width: 75%;
+      width: 80%;
     }
   }
 }

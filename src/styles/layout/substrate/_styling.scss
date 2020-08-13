@@ -1,0 +1,53 @@
+.substrate {
+  z-index: 1;
+  position: relative;
+
+  &__item {
+    border-radius: 30px;
+    width: 1600px;
+    background-color: #ffeee2;
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+  }
+
+  &__sm {
+
+    .substrate__item {
+      height: 323px;
+    }
+
+    &_left .substrate__item{
+      left: -204%;
+    }
+
+    &_right .substrate__item {
+      right: -186%;
+      top: 44px;
+    }
+  }
+
+  &__lg {
+    $offset: -89.4%;
+
+    .substrate__item {
+      height: 471px;
+    }
+
+    &_left .substrate__item {
+      left: $offset;
+    }
+
+    &_right .substrate__item {
+      right: $offset;
+    }
+
+    &_slider {
+
+      .substrate__item {
+        right: -62.5%;
+        top: -75px;
+      }
+    }
+  }
+}

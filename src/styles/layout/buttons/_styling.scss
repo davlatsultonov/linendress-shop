@@ -55,6 +55,7 @@
 
   &_size_lg {
     min-height: 46px;
+    height: 46px;
     font-size: 1.6rem;
 
     &::after {
@@ -64,11 +65,13 @@
 
   &_size_md {
     min-height: 40px;
+    height: 40px;
     font-size: 1.4rem;
   }
 
   &_size_sm {
     min-height: 30px;
+    height: 30px;
     font-size: 1.2rem;
   }
 

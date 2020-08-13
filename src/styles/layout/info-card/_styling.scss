@@ -1,3 +1,10 @@
+.info-cards_slider {
+
+  .info-card__content {
+    padding: 30px 30px 35px;
+  }
+}
+
 .info-card {
   @include prefix(border-radius, 30px);
   @include prefix(box-shadow, $base-shadow);
@@ -22,7 +29,7 @@
     width: 50%;
     float: right;
     padding: 30px;
-    overflow: auto;
+    background-color: #ffffff;
   }
 
   &__des {
