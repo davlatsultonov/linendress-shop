@@ -77,6 +77,12 @@ module.exports = {
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
+      title: 'look-book',
+      filename: 'look-book.html',
+      template: './src/look-book.html',
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
       title: '404-page',
       filename: '404.html',
       template: './src/404.html',
