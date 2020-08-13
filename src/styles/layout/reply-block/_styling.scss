@@ -1,0 +1,41 @@
+.reply-blocks {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  margin: 15px 0 25px;
+}
+
+.reply-block {
+  display: inline-block;
+  box-shadow: $base-shadow;
+  width: 250px;
+  min-height: 185px;
+  border-radius: 30px;
+  padding: 30px 16px 40px 30px;
+  margin-right: 56px;
+  position: relative;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n + 5) {
+    margin-top: 26px;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__content {
+    margin-top: 10px;
+  }
+
+  &__footer {
+    width: 80%;
+    @include flexbox;
+    @include justify-content(space-between);
+    position: absolute;
+    bottom: 24px;
+  }
+}
