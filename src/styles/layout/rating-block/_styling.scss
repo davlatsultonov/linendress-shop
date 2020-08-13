@@ -1,0 +1,36 @@
+.rating-block {
+  display: flex;
+
+  &__item {
+    display: inline-block;
+    @include shift;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      opacity: .84;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 2.4rem;
+    margin-right: 4px;
+    padding-top: 3px;
+
+    &_size_sm {
+      font-size: 1.4rem;
+      padding-top: 0;
+    }
+  }
+
+  &__icon {
+    vertical-align: top;
+
+    &_size_sm {
+      width: 18px;
+    }
+  }
+}
