@@ -1,6 +1,7 @@
 .button {
   @include inline-flex;
   @include align-items(center);
+  @include justify-content(center);
   box-shadow: $base-shadow;
   border-radius: 3px;
   background-color: #606060;
@@ -8,7 +9,6 @@
   font-weight: 500;
   min-width: 104px;
   min-height: 30px;
-  text-align: center;
   border: 0;
   cursor: pointer;
   padding: 0 22px;
@@ -73,6 +73,10 @@
     min-height: 30px;
     height: 30px;
     font-size: 1.2rem;
+  }
+
+  &_width_md {
+    min-width: 170px;
   }
 
   &_font_lg {
