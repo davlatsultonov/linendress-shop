@@ -11,9 +11,6 @@ $(document).ready(function() {
     $('#products').owlCarousel({
         items: 1,
         margin: 40,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout:3000,
-        autoplayHoverPause:true
+        loop: true
     });
 });
