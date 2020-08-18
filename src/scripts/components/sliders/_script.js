@@ -8,7 +8,7 @@ $(document).ready(function() {
         autoplayHoverPause:true,
     });
 
-    $('#products').owlCarousel({
+    $('#products-group').owlCarousel({
         items: 1,
         margin: 40,
         loop: true
