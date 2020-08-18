@@ -83,6 +83,18 @@ module.exports = {
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
+      title: 'catalog',
+      filename: 'catalog.html',
+      template: './src/catalog.html',
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'embroidery',
+      filename: 'embroidery.html',
+      template: './src/embroidery.html',
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
       title: '404-page',
       filename: '404.html',
       template: './src/404.html',
