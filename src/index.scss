@@ -15,6 +15,7 @@
 @import "./styles/global/global"; // global styles
 
 //! sections
+@import "styles/layout/owl-carousel-style-fix/styling";
 @import "./styles/layout/breadcrumbs/styling";
 @import "./styles/layout/substrate/styling";
 @import "./styles/layout/buttons/styling";
@@ -38,4 +39,3 @@
 @import "./styles/layout/header/styling";
 @import "./styles/layout/footer/styling";
 @import "./styles/layout/headings/styling";
-@import "styles/layout/owl-carousel-style-fix/styling";

@@ -1,23 +1,26 @@
-.reply-blocks {
+.reply-groups {
   @include flexbox;
   @include flex-wrap(wrap);
   margin-top: 15px;
+
+  &__item {
+    margin-right: 56px;
+    margin-bottom: 26px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }
 
-.reply-block {
+.reply-card {
   display: inline-block;
   box-shadow: $base-shadow;
   width: 250px;
   min-height: 185px;
   border-radius: 30px;
   padding: 30px 16px 40px 30px;
-  margin-right: 56px;
-  margin-bottom: 26px;
   position: relative;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
 
   &__title {
     font-size: 1.8rem;
