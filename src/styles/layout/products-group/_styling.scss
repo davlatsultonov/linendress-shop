@@ -4,15 +4,17 @@
     margin-bottom: 15px;
     @include flexbox;
     @include flex-wrap(wrap);
+    @include justify-content(space-between);
   }
 
   &__item {
-    margin-right: 56px;
     margin-bottom: 40px;
+  }
 
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+  &__blank {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -72,6 +74,7 @@
     float: left;
 
     .button {
+      min-width: 170px;
       padding: 0 27px;
     }
   }

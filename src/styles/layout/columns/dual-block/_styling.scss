@@ -28,6 +28,24 @@
     }
   }
 
+  &_fancywork {
+
+    .dual-block__item {
+
+      &:nth-child(1) {
+        width: 219px;
+      }
+
+      &:nth-child(2) {
+        width: calc(100% - 308px);
+      }
+
+      &:not(:last-child) {
+        margin-right: 89px;
+      }
+    }
+  }
+
   p {
     line-height: 24px;
   }
