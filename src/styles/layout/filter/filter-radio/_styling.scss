@@ -9,16 +9,16 @@
 
   &__label {
     position: relative;
-    padding-left: 22px;
+    padding-left: 26px;
     cursor: pointer;
-    line-height: 16px;
+    line-height: 19px;
     display: inline-block;
 
     &:before {
       content: '';
       position: absolute;
       left: 0;
-      top: 0;
+      top: 1px;
       width: 16px;
       height: 16px;
       border: 1px solid #000;
@@ -32,8 +32,8 @@
       height: 8px;
       background-color: #fa6400;
       position: absolute;
-      top: 4px;
-      left: 4px;
+      top: 5px;
+      left: 5px;
       border-radius: 100%;
       -webkit-transition: all 0.2s ease;
       transition: all 0.2s ease;
