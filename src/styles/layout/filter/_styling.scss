@@ -1,0 +1,9 @@
+@import "./filter-radio/styling";
+@import "./price-range/styling";
+
+.filter-block {
+
+  &__item {
+    margin-bottom: 15px;
+  }
+}

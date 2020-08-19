@@ -1,7 +1,10 @@
 .filter-radio {
 
   &__item {
-    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
   }
 
   &__label {
