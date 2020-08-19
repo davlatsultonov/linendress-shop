@@ -49,6 +49,15 @@
     color: $black;
   }
 
+  &_theme_no-shadow {
+    box-shadow: none;
+    border: 1px solid #323232;
+
+    &:hover {
+      box-shadow: $base-shadow;
+    }
+  }
+
   &_border-r_lg {
     @include prefix(border-radius, 8px);
   }
@@ -93,5 +102,10 @@
 
   &__icon {
     margin-left: 11px;
+
+    &_pos_right {
+      margin-left: 0;
+      margin-right: 11px;
+    }
   }
 }
