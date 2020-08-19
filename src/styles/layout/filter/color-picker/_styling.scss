@@ -1,0 +1,50 @@
+.color-picker {
+
+  &__container {
+    margin-top: 7px;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background: transparent;
+    position: relative;
+    margin-left: -4px;
+    margin-bottom: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    @include prefix(transition, all 175ms ease-in-out);
+
+    &:not(:nth-child(6n)) {
+      margin-right: 9px;
+    }
+
+    &.checked {
+      border: 2px solid $active-orange;
+
+      &::after {
+        content: '';
+        width: 14px;
+        height: 10px;
+        position: absolute;
+        top: 9px;
+        left: 7px;
+        background: url("/dist/images/icons/checked.svg") no-repeat;
+      }
+    }
+
+    &:hover {
+      border: 2px solid $active-orange;
+    }
+
+    > span {
+      display: inline-block;
+      margin: 1px;
+      width: 24px;
+      height: 24px;
+      border-radius: 2px;
+    }
+  }
+}
