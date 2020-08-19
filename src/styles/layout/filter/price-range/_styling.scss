@@ -1,0 +1,26 @@
+.price-range {
+  @include flexbox;
+
+  &__separator {
+    background: url("/dist/images/icons/price-range/separator.svg");
+    margin: 14px 19px;
+    height: 2px;
+    width: 6px;
+    display: inline-block;
+  }
+
+  &__input {
+    width: 85px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #323232;
+    text-align: center;
+    padding: 0 7px;
+
+    @include placeholder {
+      font-style: italic;
+      color: #676766;
+      font-size: 12px;
+    };
+  }
+}
