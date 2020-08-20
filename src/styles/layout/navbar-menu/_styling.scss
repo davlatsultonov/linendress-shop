@@ -1,9 +1,10 @@
 .nav-menu {
   @include flexbox;
   @include flex-wrap(wrap);
-  padding-bottom: 6px;
 
   &__item {
+    cursor: pointer;
+    padding-bottom: 16px;
 
     &:not(:last-child) {
       margin-right: 50px;
