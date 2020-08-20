@@ -1,0 +1,13 @@
+.filter-row {
+  @include flexbox;
+  font-size: 1.4rem;
+
+  &__label {
+    margin-right: 10px;
+    font-weight: 500;
+  }
+
+  &_aligned_right {
+    float: right;
+  }
+}

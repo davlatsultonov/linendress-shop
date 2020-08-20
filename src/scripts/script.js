@@ -2,6 +2,7 @@ import './components/lang-switcher/_script';
 import './components/nav-menu/_script';
 import './components/color-picker/_script';
 import './components/sliders/_script';
+import './components/custom-select/_script';
 
 $(window).on('load', function() {
     $('.info-block').each(function () {

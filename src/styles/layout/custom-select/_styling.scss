@@ -1,0 +1,82 @@
+.select-block {
+  height: 20px;
+  list-style: none;
+  min-width: 64px;
+  position: relative;
+  user-select: none;
+
+  &.expanded &{
+
+    &__list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &__default:before{
+      transform: rotate(180deg);
+    }
+  }
+
+  &__default {
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: 0;
+      background: url("/images/icons/select-arrow-down.svg") no-repeat;
+      width: 10px;
+      height: 6px;
+      @include shift;
+    }
+
+    li {
+      padding-right: 18px;
+    }
+  }
+
+  &__list {
+    width: auto;
+    white-space: nowrap;
+    transform: translateY(-40%);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.49);
+    margin-top: 6px;
+    @include shift(ease-in-out, 170ms);
+    transition-delay: 80ms;
+
+    li {
+      cursor: pointer;
+      padding: 6px 13px;
+      @include shift(ease-in-out, 175ms);
+
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 10px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding-bottom: 10px;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.06);
+      }
+    }
+  }
+
+  &__item {
+    font-weight: 400;
+  }
+}
