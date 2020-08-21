@@ -38,7 +38,7 @@
     border-radius: 5px;
     padding: 20px;
     z-index: 1;
-    @include shift(cubic-bezier(0, -1.13, 0.93, 1.11), 215ms);
-    transition-delay: 80ms;
+    @include shift(cubic-bezier(0, -1.13, 0.93, 1.11), 175ms);
+    transition-delay: 60ms;
   }
 }
