@@ -4,7 +4,8 @@
   &:hover {
 
     .menu-dropdown__content {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
 
     .nav-menu__item {
@@ -27,7 +28,8 @@
 
   &__content {
     min-width: 175px;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     left: -50%;
     top: 24px;
@@ -36,5 +38,7 @@
     border-radius: 5px;
     padding: 20px;
     z-index: 1;
+    @include shift(cubic-bezier(0, -1.13, 0.93, 1.11), 215ms);
+    transition-delay: 80ms;
   }
 }
