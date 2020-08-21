@@ -8,7 +8,7 @@ $(document).ready(function () {
     function openDropdown(defaultItem) {
         if (defaultItem) {
             defaultItem.click(function () {
-                $(this).parent().toggleClass('expanded');
+                $(this).parent().toggleClass('active');
             });
         }
         return false;
@@ -18,7 +18,7 @@ $(document).ready(function () {
         items.click(function () {
             let current = $(this).html();
             defaultItem.find('li').html(current);
-            $(this).parents('.select-block').removeClass('expanded');
+            $(this).parents('.select-block').removeClass('active');
         });
     }
 });

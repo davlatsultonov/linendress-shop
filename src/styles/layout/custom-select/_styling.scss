@@ -5,15 +5,15 @@
   position: relative;
   user-select: none;
 
-  &.expanded {
+  &.active &{
 
-    .select-block__list {
+    &__list {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
     }
 
-    .select-block__default:before{
+    &__default:before{
       transform: rotate(180deg);
     }
   }

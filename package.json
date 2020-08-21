@@ -2,12 +2,7 @@
   "name": "tris-webpack-boilerplate",
   "version": "1.0.0",
   "private": true,
-  "description": "A webpack boilerplate for static websites that has all the necessary modern tools and optimizations built-in.",
   "keywords": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tr1s/tris-webpack-boilerplate"
-  },
   "license": "ISC",
   "author": "tr1s",
   "scripts": {
