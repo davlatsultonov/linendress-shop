@@ -85,4 +85,55 @@
     margin-left: 15px;
   }
 
+  // slider styles overwriting
+  &__gallery {
+
+    .owl-dots {
+      width: 100%;
+      @include center(horizontal);
+      bottom: 14px;
+
+      .owl-dot {
+
+        span {
+          width: 12px;
+          height: 12px;
+          background: transparent;
+          border: 2px solid #000000;
+        }
+
+        &.active span, &:hover span{
+          background: #000;
+        }
+      }
+    }
+/*
+    .owl-nav {
+      width: 100%;
+      position: absolute;
+      bottom: 44%;
+    }
+
+    .nav-btn {
+      height: 14px;
+      position: absolute;
+      width: 8px;
+      cursor: pointer;
+    }
+
+    .owl-prev.disabled,
+    .owl-next.disabled{
+      pointer-events: none;
+      opacity: 0.2;
+    }
+
+    .prev-slide{
+      background: url("/images/icons/slider/arrow-left.svg") no-repeat;
+      left: 8px;
+    }
+    .next-slide{
+      background: url("/images/icons/slider/arrow-right.svg") no-repeat;
+      right: 8px;
+    }*/
+  }
 }

@@ -13,4 +13,10 @@ $(document).ready(function() {
         margin: 40,
         loop: true
     });
+
+    $('.product-card__gallery').owlCarousel({
+        items: 1,
+        margin: 40,
+        loop: true
+    });
 });
