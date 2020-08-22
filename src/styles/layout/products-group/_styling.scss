@@ -85,6 +85,21 @@
       min-width: 170px;
       padding: 0 27px;
     }
+
+    &_add {
+
+      &.show-counter {
+
+        .add-counter {
+          display: inline-flex;
+          opacity: 1;
+        }
+
+        .button {
+          display: none;
+        }
+      }
+    }
   }
 
   &__icon {
