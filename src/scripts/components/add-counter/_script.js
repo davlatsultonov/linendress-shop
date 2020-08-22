@@ -10,6 +10,8 @@ $(document).ready(function () {
                 e.stopPropagation();
                 $(this).val(e.target.value).blur();
             }
+
+            if (e.target.value === '') $(this).val(1).blur();
         }
     });
 
