@@ -13,7 +13,7 @@ module.exports = (ctx) => {
             purgecss({
               content: ['./**/*.html'],
               keyframes: true,
-                whitelist: ['show-counter'],
+                whitelist: ['show-counter', 'disabled'],
               defaultExtractor: (content) => content.match(/[A-z0-9-:/]+/g)
             })
           ]
