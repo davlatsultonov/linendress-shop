@@ -1,0 +1,27 @@
+.about-work-group {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  margin-bottom: 20px;
+
+  &__item {
+    margin-bottom: 30px;
+
+    &_blank {
+      visibility: hidden;
+    }
+  }
+}
+
+.about-work-item {
+  width: 176px;
+  min-height: 210px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 30px 15px;
+
+  &__des {
+    margin-top: 24px;
+  }
+}
