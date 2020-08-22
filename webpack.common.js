@@ -101,6 +101,12 @@ module.exports = {
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
+      title: 'about',
+      filename: 'about.html',
+      template: './src/about.html',
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
       title: '404-page',
       filename: '404.html',
       template: './src/404.html',
