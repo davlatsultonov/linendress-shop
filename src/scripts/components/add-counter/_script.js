@@ -1,6 +1,17 @@
 $(document).ready(function () {
     let addCounterBtn = $('.add-counter .add-counter__btn'),
+        countBox = $('.add-counter .add-counter__num'),
         addToCartButtons = $('.product-card__button_add');
+
+    countBox.keyup(function (e) {
+        if (e.which === 13) {
+            if (Number(e.target.value)) {
+                console.log(Number(e.target.value));
+                e.stopPropagation();
+                $(this).val(e.target.value).blur();
+            }
+        }
+    });
 
     addToCartButtons.click(function (e) {
         e.preventDefault();
