@@ -11,7 +11,7 @@ $(window).on('load', function() {
     let productCardItems = $('.product-card  a');
 
     productCardItems.click(function (e) {
-        e.preventDefault();
+        e.stopPropagation();
     });
 
     $('.info-block').each(function () {
