@@ -1,0 +1,68 @@
+.workview {
+  @include flexbox;
+  margin-bottom: 40px;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &-column {
+
+    &__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-row {
+    @include flexbox;
+
+    &__item:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    &_size {
+
+      &_lg {
+        width: 436px;
+        height: 300px;
+      }
+
+      &_md {
+        width: 300px;
+        height: 300px;
+
+        &-half {
+          width: 300px;
+          height: 142px;
+        }
+      }
+
+      &_sm {
+        width: 142px;
+        height: 142px;
+      }
+
+      &_xs {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    &_pos_bottom {
+      margin-top: 15px;
+    }
+  }
+}
