@@ -1,0 +1,41 @@
+.legal-info-group {
+  @include flexbox;
+  margin-bottom: 30px;
+
+  &__item {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.legal-info-item {
+
+
+  &__title {
+    color: $black;
+    min-height: 16px;
+  }
+
+  &__content {
+    display: inline-block;
+    margin-top: 10px;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__icon {
+    vertical-align: top;
+    margin-right: 12px;
+  }
+
+  &__text {
+    color: #1299dd;
+    text-decoration: underline;
+  }
+}
