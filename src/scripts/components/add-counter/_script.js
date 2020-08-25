@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let addCounterBtn = $('.add-counter .add-counter__btn'),
         countBox = $('.add-counter .add-counter__num'),
-        addToCartButtons = $('.product-card__button_add');
+        addToCartButtons = $('.button-add-js');
 
     countBox.keyup(function (e) {
         if (e.which === 13) {

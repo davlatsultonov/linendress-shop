@@ -17,6 +17,12 @@
     box-shadow: $base-shadow;
     border-radius: 3px;
     background-color: #606060;
+    cursor: pointer;
+
+    img {
+      pointer-events: none;
+      user-select: none;
+    }
   }
   
   &__num {

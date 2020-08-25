@@ -28,7 +28,7 @@
     }
   }
 
-  &_fancywork {
+  &_catalog {
 
     .dual-block__item {
 
@@ -42,6 +42,24 @@
 
       &:not(:last-child) {
         margin-right: 89px;
+      }
+    }
+  }
+
+  &_product-card {
+
+    .dual-block__item {
+
+      &:nth-child(1) {
+        width: 470px;
+      }
+
+      &:nth-child(2) {
+        width: calc(100% - 500px);
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
       }
     }
   }
