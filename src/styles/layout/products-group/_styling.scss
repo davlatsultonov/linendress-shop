@@ -1,7 +1,6 @@
 .products-group {
 
   &__wrapper {
-    margin-bottom: 15px;
     @include flexbox;
     @include flex-wrap(wrap);
     @include justify-content(space-between);

@@ -52,10 +52,6 @@
   &_theme_no-shadow {
     box-shadow: none;
     border: 1px solid #323232;
-
-    &:hover {
-      box-shadow: $base-shadow;
-    }
   }
 
   &_border-r_lg {
@@ -106,6 +102,25 @@
     &_pos_right {
       margin-left: 0;
       margin-right: 11px;
+    }
+  }
+
+  &_type_link {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    text-decoration: underline;
+    height: auto;
+    min-height: auto;
+    color: #000000;
+    padding: 0;
+
+    .button__icon {
+      width: 18px;
+
+      &_pos_right {
+        margin-right: 8px;
+      }
     }
   }
 }

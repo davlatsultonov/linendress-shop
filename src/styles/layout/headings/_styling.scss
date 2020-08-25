@@ -2,8 +2,16 @@
   font-weight: 500;
   font-size: 2.4rem;
 
-  &_type_thin {
-    font-weight: 400;
+  &_type {
+
+    &_thin {
+      font-weight: 400;
+    }
+
+    &_bordered {
+      border-bottom: 1px solid $black;
+      padding-bottom: 12px;
+    }
   }
 
   &_size_md {
@@ -20,13 +28,17 @@
 
   &_indent-bottom {
     margin-bottom: 25px;
+
+    &_md {
+      margin-bottom: 20px;
+    }
+
+    &_sm {
+      margin-bottom: 10px;
+    }
   }
 
-  &_indent-bottom_md {
-    margin-bottom: 20px;
-  }
-
-  &_indent-bottom_sm {
-    margin-bottom: 10px;
+  &__external-item {
+    float: right;
   }
 }
