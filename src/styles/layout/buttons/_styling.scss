@@ -123,6 +123,24 @@
     }
   }
 
+  &_type_expand {
+    min-width: 46px;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    @include shift(ease-in-out, 200ms);
+
+    .button__icon {
+      margin: 0;
+    }
+
+    &:hover {
+      box-shadow: $base-shadow;
+      opacity: 1;
+    }
+  }
+
   &-add-js {
 
     &.show-counter {

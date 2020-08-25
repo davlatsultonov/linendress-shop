@@ -1,0 +1,73 @@
+.product-view {
+  @include flexbox;
+
+  &__img {
+    overflow: hidden;
+    border-radius: 3px;
+
+    img {
+      width: 100%;
+      border-radius: 3px;
+    }
+  }
+
+  &__parts {
+    width: 75px;
+    margin-right: 15px;
+
+    .product-view__img {
+      width: 75px;
+      height: 75px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__full {
+    width: calc(100% - 90px);
+    position: relative;
+
+    .product-view__img {
+      width: 380px;
+      height: 570px;
+    }
+  }
+
+  &__btn-expand {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 15;
+  }
+
+
+  .owl-theme .owl-nav {
+    margin-top: 0;
+    height: 0;
+  }
+
+  .owl-carousel .nav-btn{
+    height: 19px;
+    width: 11px;
+    position: absolute;
+    bottom: 48%;
+    cursor: pointer;
+  }
+
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .owl-carousel .prev-slide{
+    background: url('/dist/images/icons/slider/arrow-left.svg') no-repeat ;
+    left: 20px;
+  }
+  .owl-carousel .next-slide{
+    background: url('/dist/images/icons/slider/arrow-right.svg') no-repeat;
+    right: 20px;
+  }
+}
