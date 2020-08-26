@@ -60,6 +60,10 @@
   &_size_sm {
     font-size: 1.2rem;
     line-height: 16px;
+
+    .check-block__label:after {
+      top: 7px;
+    }
   }
 
   &_box-grey {
