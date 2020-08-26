@@ -56,4 +56,17 @@
       transform: scale(1);
     }
   }
+
+  &_size_sm {
+    font-size: 1.2rem;
+    line-height: 16px;
+  }
+
+  &_box-grey {
+
+    .check-block__label::before {
+      border-color: #c8c8c8;
+      top: 2px;
+    }
+  }
 }

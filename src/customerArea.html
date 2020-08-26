@@ -154,9 +154,130 @@
                 Профиль
             </h1>
 
-            <h3 class="main-title main-title_size_md main-title_type_bordered main-title_indent-bottom">
+            <h3 class="main-title main-title_size_sm main-title_type_bordered main-title_indent-bottom_md">
                 Ваши личные данные профиля
             </h3>
+
+            <div class="dual-block dual-block_profile-info">
+                <div class="dual-block__item">
+                    <h3 class="main-title main-title_size_md main-title_indent-bottom_md">
+                        Информация о клиенте
+                    </h3>
+
+                    <form class="form-group">
+                        <div class="form-group__items">
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Имя
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_full" placeholder="Елена">
+                                </div>
+                            </div>
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Фамилия
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_full" placeholder="Иванова">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group__items">
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Телефон
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="tel" class="form-item__input form-item__input_full" placeholder="+7 (000) 000-00-00">
+                                </div>
+                            </div>
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Подтрвеждение номера телефона
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_half" placeholder="Код из СМС">
+                                    <button type="submit" class="button button_size_sm button_font_sm form-group__btn">
+                                        Применить
+                                    </button>
+                                    <div class="form-item__note form-item__note_status_warning">
+                                        Подтвердите номер телефона
+                                        для получения информации о заказах
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group__items">
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    E-mail
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="email" class="form-item__input form-item__input_full" placeholder="mail@mail.com">
+                                    <div class="form-item__note form-item__note_status_success">
+                                        Адрес электронной почты
+                                        подтвержден
+                                    </div>
+                                </div>
+
+                                <div class="form-info form-info_style_italic form-info_indent-top">
+                                    Является логином для входа
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="dual-block__item">
+                    <h3 class="main-title main-title_size_md main-title_indent-bottom_md">
+                        Мои мерки
+                    </h3>
+
+                    <form class="form-group">
+                        <div class="form-group__items">
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Обхват груди
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_quarter" placeholder="см">
+                                </div>
+                            </div>
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Обхват талии
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_quarter" placeholder="см">
+                                </div>
+                            </div>
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Обхват бедер
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_quarter" placeholder="см">
+                                </div>
+                            </div>
+                            <div class="form-item form-group__item">
+                                <label class="form-item__label">
+                                    Обхват руки
+                                </label>
+                                <div class="form-item__content">
+                                    <input type="text" class="form-item__input form-item__input_quarter" placeholder="см">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-info form-info_indent-bottom">
+                            На основании ваших мерок мы в каталоге предложим изделия подходящие под ваши параметры. Есть видео-инструкция с рекомендациями, если возниктнут вопросы.
+                        </div>
+                        <div class="check-block check-block_size_sm check-block_box-grey">
+                            <input class="check-block__input" type="checkbox" id="my-new-product" checked />
+                            <label class="check-block__label" for="my-new-product">Подписаться на новые готовые изделия моего размера</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="footer">
@@ -295,4 +416,3 @@
 </div>
 </body>
 </html>
-v

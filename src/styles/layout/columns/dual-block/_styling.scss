@@ -64,6 +64,20 @@
     }
   }
 
+  &_profile-info {
+
+    .dual-block__item {
+
+      &:nth-child(1) {
+        width: calc(100% - 509px);
+      }
+
+      &:nth-child(2) {
+        width: 363px;
+      }
+    }
+  }
+
   p {
     line-height: 24px;
   }
