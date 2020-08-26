@@ -1,0 +1,40 @@
+.table-order {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+
+  tr {
+    @include shift(ease-in-out, 200ms, background);
+
+    &:not(:first-child):hover {
+      background: #f9f9f9;
+    }
+
+    th {
+      padding: 10px;
+      font-weight: 500;
+      border-width: 1px 0 1px;
+      border-style: solid;
+      border-color: $black;
+    }
+
+    td {
+      padding: 20px 10px;
+      border-bottom: 1px solid #cacaca;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__id {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

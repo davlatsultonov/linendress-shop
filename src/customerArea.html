@@ -9,7 +9,7 @@
 
 <body>
 <div class="wrapper">
-    <div class="content">
+    <div class="content margin-bottom-80">
         <header class="header  substrate substrate__lg substrate__lg_header">
             <div class="container">
                 <div class="header__items">
@@ -154,7 +154,7 @@
                 Профиль
             </h1>
 
-            <h3 class="main-title main-title_size_sm main-title_type_bordered main-title_indent-bottom_md">
+            <h3 class="main-title main-title_size_sm item-bordered main-title_indent-bottom_md">
                 Ваши личные данные профиля
             </h3>
 
@@ -278,6 +278,294 @@
                     </form>
                 </div>
             </div>
+
+            <h3 class="main-title main-title_size_md main-title_indent-bottom_md">
+                Ваши заказы
+            </h3>
+
+            <table class="table-order">
+                <tr>
+                    <th>Номер заказа</th>
+                    <th>Дата заказа</th>
+                    <th>Стоимость</th>
+                    <th>Оплачено</th>
+                    <th>Статус заказа</th>
+                    <th colspan="2">Статус оплаты</th>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00023</td>
+                    <td>ср., 25 июня, 2020г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_primary">Создан</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_success">Оплачен</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_intention">Задать вопрос</a>
+                        <a href="#" class="text-action text-action_revert text-action_indent_left">Отменить</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00019</td>
+                    <td>чт., 12 октября, 2020г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            4 600 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <img src="/images/icons/minus-sign.png" alt="minus-sign">
+                    </td>
+                    <td>
+                        <span class="text-info text-info_warning">Отменен клиентом</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_unfinished ">Не оплачен</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_intention">Задать вопрос</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00012</td>
+                    <td>пн., 10 августа 2019г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_finished">Выдан</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_success">Оплачен</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_repeat">Повторить заказ</a>
+                        <a href="#" class="text-action text-action_revert text-action_indent_left">Вернуть</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00009</td>
+                    <td>пт, 01 июля, 2019г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            4 600 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <img src="/images/icons/minus-sign.png" alt="minus-sign">
+                    </td>
+                    <td>
+                        <span class="text-info text-info_primary">Создан</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_primary">Создан</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_intention">Задать вопрос</a>
+                        <a href="#" class="text-action text-action_revert text-action_indent_left">Отменить</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00023</td>
+                    <td>ср., 25 июня, 2020г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_warning">Отменен магазином</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_warning">Произведен возврат</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_intention">Задать вопрос</a>
+                        <a href="#" class="text-action text-action_revert text-action_indent_left">Отменить</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00019</td>
+                    <td>чт., 12 октября, 2020г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            4 600 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <img src="/images/icons/minus-sign.png" alt="minus-sign">
+                    </td>
+                    <td>
+                        <span class="text-info text-info_warning">Отменен магазином</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_unfinished">Не оплачен</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_intention">Задать вопрос</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00019</td>
+                    <td>чт., 12 октября, 2020г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            4 600 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <img src="/images/icons/minus-sign.png" alt="minus-sign">
+                    </td>
+                    <td>
+                        <span class="text-info text-info_warning">Отменен клиентом</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_unfinished ">Не оплачен</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_intention">Задать вопрос</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-order__id">LD00012</td>
+                    <td>пн., 10 августа 2019г.</td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price total-price_size_sm">
+                            3 500 руб.
+                        </div>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_finished">Выдан</span>
+                    </td>
+                    <td>
+                        <span class="text-info text-info_success">Оплачен</span>
+                    </td>
+                    <td>
+                        <a href="#" class="text-action text-action_repeat">Повторить заказ</a>
+                        <a href="#" class="text-action text-action_revert text-action_indent_left">Вернуть</a>
+                    </td>
+                </tr>
+            </table>
+
+            <ul class="pagination page-pagination">
+                <li class="pagination__item">
+                    <span class="pagination__nav-prev disabled"><img src="/images/icons/pagination/pagin-arrow-left.svg" alt="">Назад</span>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">...</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link pagination__link_active" href="#">5</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">...</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">100</a>
+                </li>
+                <li class="pagination__item">
+                    <span class="pagination__nav-next">Вперед<img src="/images/icons/pagination/pagin-arrow-right.svg" alt=""></span>
+                </li>
+            </ul>
+
+            <h3 class="main-title main-title_size_sm item-bordered main-title_indent-bottom_md">
+                Данные для входа в личный кабинет
+            </h3>
+
+            <h3 class="main-title main-title_size_md main-title_indent-bottom_md">
+                Безопасность
+            </h3>
+
+            <form class="form-group margin-bottom-20">
+                <div class="form-group__items">
+                    <div class="form-item form-group__item">
+                        <label class="form-item__label">
+                            Укажите текущий пароль
+                        </label>
+                        <div class="form-item__content">
+                            <input type="password" class="form-item__input form-item__input_full" placeholder="Введите пароль">
+                        </div>
+                    </div>
+                    <div class="form-item form-group__item">
+                        <label class="form-item__label">
+                            Введите новый пароль
+                        </label>
+                        <div class="form-item__content">
+                            <input type="text" class="form-item__input form-item__input_full" placeholder="Не менее 6 символов">
+                        </div>
+                    </div>
+                    <div class="form-item form-group__item">
+                        <label class="form-item__label">
+                            Повторите новый пароль
+                        </label>
+                        <div class="form-item__content">
+                            <input type="text" class="form-item__input form-item__input_full" placeholder="Не менее 6 символов">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <h3 class="main-title main-title_size_sm item-bordered main-title_indent-bottom_md">
+                Прочие настройки
+            </h3>
+
+            <h3 class="main-title main-title_size_md main-title_indent-bottom_md">
+                Рассылки и уведомления
+            </h3>
+
+            <div class="notifications item-bordered">
+                <div class="check-block check-block_size_sm check-block_box-grey notifications__item">
+                    <input class="check-block__input" type="checkbox" id="notifications--item1" checked />
+                    <label class="check-block__label" for="notifications--item1">Получать уведомления о статусе заказа на e-mail и ввиде СМС</label>
+                </div>
+                <div class="check-block check-block_size_sm check-block_box-grey notifications__item">
+                    <input class="check-block__input" type="checkbox" id="notifications--item2" checked />
+                    <label class="check-block__label" for="notifications--item2">Получать уведомления об акциях и спецпредложениях</label>
+                </div>
+                <div class="check-block check-block_size_sm check-block_box-grey notifications__item">
+                    <input class="check-block__input" type="checkbox" id="notifications--item3" checked />
+                    <label class="check-block__label" for="notifications--item3">Получать уведомеления о новинках</label>
+                </div>
+                <div class="check-block check-block_size_sm check-block_box-grey notifications__item">
+                    <input class="check-block__input" type="checkbox" id="notifications--item4" checked />
+                    <label class="check-block__label" for="notifications--item4">Подписаться на новые готовые изделия моего размера</label>
+                </div>
+            </div>
+
+            <button class="button button_size_md button_font_sm">
+                Сохранить
+            </button>
         </div>
     </div>
     <footer class="footer">

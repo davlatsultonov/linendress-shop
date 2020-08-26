@@ -1,0 +1,24 @@
+.text-info {
+  font-size: 14px;
+  font-weight: 500;
+
+  &_primary {
+    color: #0091ff;
+  }
+
+  &_warning {
+    color: #fa6400;
+  }
+
+  &_success {
+    color: #6dd400;
+  }
+
+  &_finished {
+    color: #6236ff;
+  }
+
+  &_unfinished {
+    color: #f7b500;
+  }
+}
