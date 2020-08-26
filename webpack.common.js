@@ -71,6 +71,12 @@ module.exports = {
       ]
     }),
     new HtmlWebpackPlugin({
+      title: 'customerArea',
+      filename: 'customerArea.html',
+      template: './src/customerArea.html',
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
       title: 'home-page',
       filename: 'index.html',
       template: './src/index.html',
