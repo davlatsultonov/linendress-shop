@@ -1,7 +1,13 @@
-.info-cards_slider {
+.info-cards_substrate {
 
   .info-card__content {
     padding: 30px 30px 35px;
+  }
+
+  .owl-nav.disabled + .owl-dots, .owl-dots {
+    position: relative;
+    top: -8px;
+    margin-top: 0;
   }
 }
 
@@ -16,6 +22,7 @@
   &__title {
     font-size: 1.8rem;
     font-weight: 500;
+    @include ellipsis(4);
   }
 
   &__img {
@@ -36,10 +43,8 @@
     color: $black;
     font-size: 1.4rem;
     margin-top: 15px;
-
-    p {
-      line-height: 16px;
-    }
+    line-height: 16px;
+    @include ellipsis(5);
 
     &_mode_active {
       @include flexbox;

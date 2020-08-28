@@ -16,6 +16,21 @@
     vertical-align: top;
     margin-left: 8px;
   }
+
+  &_indent-bottom {
+
+    &_lg {
+      margin-bottom: 40px;
+    }
+
+    &_md {
+      margin-bottom: 30px;
+    }
+
+    &_sm {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .form-item {
@@ -44,8 +59,12 @@
     border: 1px solid #3f3f3f;
     padding: 0 14px;
 
-    &_full {
+    &_wider {
       width: 210px;
+    }
+
+    &_wide {
+      width: 190px;
     }
 
     &_half {
@@ -84,6 +103,7 @@
 }
 
 .form-info {
+  max-width: 210px;
   color: $black;
   font-size: 1.2rem;
   line-height: 16px;
