@@ -160,3 +160,69 @@
     }
   }
 }
+
+// delivery btn
+.delivery-btn-group {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  margin-bottom: 11px;
+
+  &__item {
+    margin-bottom: 10px;
+
+    &_blank {
+      visibility: hidden;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+.delivery-btn {
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  color: #000000;
+  font-size: 1.2rem;
+  width: 140px;
+  min-height: 95px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  background-color: #ffffff;
+  padding: 15px 13px;
+  cursor: pointer;
+
+  &.checked {
+    box-shadow: none;
+    border: 2px solid #fa6400;
+  }
+
+  &__header {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+  }
+
+  &__title {
+    padding-top: 3px;
+    margin-right: 7px;
+  }
+
+  &__address {
+
+    span {
+      display: inline-block;
+      white-space: pre-line;
+    }
+  }
+
+  &__price {
+    margin-top: 10px;
+  }
+
+  &__date {
+    margin-top: 5px;
+  }
+}

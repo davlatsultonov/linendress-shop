@@ -5,13 +5,13 @@
     padding-left: 30px;
     cursor: pointer;
     line-height: 24px;
-    display: inline-block;
+    @include flexbox;
+    @include align-items(center);
 
     &:before {
       content: '';
       position: absolute;
       left: 0;
-      top: 1px;
       width: 20px;
       height: 20px;
       border: 1px solid #323232;
@@ -25,7 +25,6 @@
       height: 10px;
       background: url("/images/icons/checkbox-icon/check-icon.svg") no-repeat;
       position: absolute;
-      top: 6px;
       left: 3px;
       -webkit-transition: all 0.2s ease;
       transition: all 0.2s ease;
@@ -59,10 +58,9 @@
 
   &_size_sm {
     font-size: 1.2rem;
-    line-height: 16px;
 
-    .check-block__label:after {
-      top: 7px;
+    .check-block__label {
+      line-height: 16px;
     }
   }
 
@@ -70,7 +68,6 @@
 
     .check-block__label::before {
       border-color: #c8c8c8;
-      top: 2px;
     }
   }
 }

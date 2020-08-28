@@ -2,6 +2,7 @@ $('.info-cards').owlCarousel({
     items: 1,
     margin: 40,
     loop: true,
+    smartSpeed: 800,
     autoplay: true,
     autoplayTimeout:3000,
     autoplayHoverPause:true,
@@ -10,12 +11,14 @@ $('.info-cards').owlCarousel({
 $('#products-group').owlCarousel({
     items: 1,
     margin: 40,
+    smartSpeed: 800,
     loop: true
 });
 
 $('.product-card__gallery').owlCarousel({
     items: 1,
     margin: 40,
+    smartSpeed: 800,
     loop: true
 });
 

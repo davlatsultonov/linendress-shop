@@ -45,10 +45,9 @@
   }
 
   &__content {
-    @include inline-flex;
+    @include flexbox;
     @include align-items(center);
     min-height: 30px;
-
   }
 
   &__input {
@@ -58,6 +57,10 @@
     border-radius: 3px;
     border: 1px solid #3f3f3f;
     padding: 0 14px;
+
+    &_widest {
+      width: 100%;
+    }
 
     &_wider {
       width: 210px;
@@ -103,14 +106,9 @@
 }
 
 .form-info {
-  max-width: 210px;
   color: $black;
   font-size: 1.2rem;
   line-height: 16px;
-
-  &_style_italic {
-    font-style: italic;
-  }
 
   &_indent {
 

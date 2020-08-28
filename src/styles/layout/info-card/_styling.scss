@@ -1,8 +1,4 @@
-.info-cards_substrate {
-
-  .info-card__content {
-    padding: 30px 30px 35px;
-  }
+.info-cards_with-substrate {
 
   .owl-nav.disabled + .owl-dots, .owl-dots {
     position: relative;
@@ -14,8 +10,8 @@
 .info-card {
   @include prefix(border-radius, 30px);
   @include prefix(box-shadow, $base-shadow);
-  min-height: 290px;
-  max-height: 290px;
+  height: 290px;
+  background: #fff;
   margin-bottom: 33px;
   overflow: hidden;
 

@@ -172,7 +172,7 @@
                 </div>
             </form>
 
-            <div class="dual-block">
+            <div class="dual-block dual-block_basket-page">
                 <div class="dual-block__item">
                     <h1 class="main-title main-title_indent-bottom">
                         Оформление заказа
@@ -221,9 +221,146 @@
                         </div>
                     </form>
 
-                    <h2 class="main-title main-title_size_md main-title_indent-bottom">
+                    <h2 class="main-title main-title_size_md main-title_indent-bottom_sm">
                         Как будем доставлять заказ?
                     </h2>
+
+                    <div class="delivery-btn-group">
+                        <div class="delivery-btn delivery-btn-group__item">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Самовывоз
+                                </div>
+                                <img src="/images/icons/delivery-btn/flag.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                            <div class="delivery-btn__content">
+                                <div class="delivery-btn__address">
+                                    <span>г.Омск </span><span>ул. Ленина, 14/1</span><span>3 этаж, офис 312</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-btn delivery-btn-group__item checked">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Доставка
+                                    Почтой России
+                                </div>
+                                <img src="/images/icons/delivery-btn/delivery-icon.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                            <div class="delivery-btn__content">
+                                <div class="total-price total-price_size_xs delivery-btn__price">
+                                    от 350 руб.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-btn delivery-btn-group__item">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Доставка
+                                    СДЭК
+                                </div>
+                                <img src="/images/icons/delivery-btn/delivery-icon.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                            <div class="delivery-btn__content">
+                                <div class="total-price total-price_size_xs delivery-btn__price">
+                                    от 550 руб.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--
+                            при натягивании шаблона
+                            блок ниже будет включатся если остаток от количества элементов группы будет равно 2  -- group-items.length % 3 === 2
+                            это исплользуется для фикса css свойства flexbox justify-content: space-between
+                        -->
+                        <!--<div class="delivery-btn delivery-btn-group__item_blank"></div>-->
+                    </div>
+
+                    <form class="form-group form-group_indent-bottom_sm">
+                        <div class="form-item form-group__item">
+                            <label class="form-item__label">
+                                Адрес доставки
+                            </label>
+                            <div class="form-item__content">
+                                <input type="text" class="form-item__input form-item__input_widest" placeholder="630084, г. Новосибирск, ул. Богдана Хмельницкого, 65, кв.50">
+                            </div>
+                            <div class="form-info form-info_indent-top text-cursive">
+                                Мы проверим указанный адрес и рассчитаем доставку
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="delivery-btn-group">
+                        <div class="delivery-btn delivery-btn-group__item checked">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Доставка до двери курьером
+                                </div>
+                                <img src="/images/icons/delivery-btn/box-icon.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                            <div class="delivery-btn__content">
+                                <div class="total-price total-price_size_xs delivery-btn__price">
+                                    от 350 руб.
+                                </div>
+                                <div class="delivery-btn__date">
+                                    Срок: <span>7-10 дн.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-btn delivery-btn-group__item">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Доставка до почтового отделения
+                                </div>
+                                <img src="/images/icons/delivery-btn/man-with-box.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                            <div class="delivery-btn__content">
+                                <div class="total-price total-price_size_xs delivery-btn__price">
+                                    от 350 руб.
+                                </div>
+                                <div class="delivery-btn__date">
+                                    Срок: <span>7-10 дн.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--
+                            при натягивании шаблона
+                            блок ниже будет включатся если остаток от количества элементов группы будет равно 2  -- group-items.length % 3 === 2
+                            это исплользуется для фикса css свойства flexbox justify-content: space-between
+                        -->
+                        <div class="delivery-btn delivery-btn-group__item_blank"></div>
+                    </div>
+
+                    <h2 class="main-title main-title_size_md main-title_indent-bottom_sm">
+                        Оплата заказов на доставку сразу
+                    </h2>
+
+                    <div class="delivery-btn-group">
+                        <div class="delivery-btn delivery-btn-group__item checked">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Оплата банковской картой на сайте
+                                </div>
+                                <img src="/images/icons/delivery-btn/payment-with-card.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                        </div>
+                        <div class="delivery-btn delivery-btn-group__item">
+                            <div class="delivery-btn__header">
+                                <div class="delivery-btn__title">
+                                    Оплата Яндекс.Деньги
+                                </div>
+                                <img src="/images/icons/delivery-btn/payment-icon.svg" alt="" class="delivery-btn__icon">
+                            </div>
+                        </div>
+
+                        <!--
+                            при натягивании шаблона
+                            блок ниже будет включатся если остаток от количества элементов группы будет равно 2  -- group-items.length % 3 === 2
+                            это исплользуется для фикса css свойства flexbox justify-content: space-between
+                        -->
+                        <div class="delivery-btn delivery-btn-group__item_blank"></div>
+                    </div>
                 </div>
                 <div class="dual-block__item">
                     <h1 class="main-title main-title_indent-bottom">
@@ -231,7 +368,7 @@
                     </h1>
                     <div class="substrate substrate__sm substrate__sm_right">
                         <div class="substrate__item"></div>
-                        <div class="info-cards info-cards_substrate owl-theme owl-carousel">
+                        <div class="info-cards info-cards_with-substrate owl-theme owl-carousel">
                             <div class="info-card">
                                 <a href="./accessory.html">
                                     <div class="info-card__img" style="background-image: url('/images/info-card/info-card3.jpg')"></div>
@@ -271,6 +408,29 @@
 
                 </div>
             </div>
+
+            <div class="total-price total-price_indent-bottom_sm">
+                Сумма: 7 000 руб.
+            </div>
+
+            <h4 class="main-title main-title_size_xs main-title_type_thin main-title_indent-bottom_md item-bordered">
+                Цена включает в себя стоимость доставки
+            </h4>
+
+            <div class="dual-block dual-block_last-action">
+                <div class="dual-block__item">
+                    <button class="button button_size_md button_font_sm">
+                        Оплатить заказ
+                    </button>
+                </div>
+                <div class="dual-block__item">
+                    <div class="check-block check-block_size_sm check-block_box-grey">
+                        <input class="check-block__input" type="checkbox" id="agreement" checked />
+                        <label class="check-block__label text-cursive" for="agreement">Я даю согласие на обработку своих персональных данных в соответствии с Федеральным законом от 27.07.2006 года №152 ФЗ «О персональных данных», на условиях определенных Политикой информационной безопасности и пользовательским соглашением.</label>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <footer class="footer">
