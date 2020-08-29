@@ -23,27 +23,6 @@
     opacity: .84;
   }
 
-  // Ripple Effect
- /* &::after {
-    content: "";
-    background: #c5bfbf;
-    display: block;
-    position: absolute;
-    padding-top: 23%;
-    padding-left: 100%;
-    margin-left: -22px !important;
-    margin-top: 0;
-    opacity: 0;
-    transition: all 0.4s;
-  }
-
-  &:active::after{
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-  }*/
-
   &_theme_white {
     background-color: #fff;
     color: $black;
@@ -52,6 +31,10 @@
   &_theme_no-shadow {
     box-shadow: none;
     border: 1px solid #323232;
+  }
+
+  &_thin {
+    font-weight: 400;
   }
 
   &_border-r_lg {
@@ -107,6 +90,14 @@
     padding: 0 14px;
   }
 
+  &_indent-top {
+    margin-top: 20px;
+  }
+
+  &_indent-bottom {
+    margin-bottom: 20px;
+  }
+
   &_type_link {
     min-width: initial;
     border: none;
@@ -119,10 +110,13 @@
     padding: 0;
 
     .button__icon {
-      width: 18px;
 
       &_pos_right {
         margin-right: 8px;
+      }
+
+      &_comment {
+        width: 18px;
       }
     }
   }

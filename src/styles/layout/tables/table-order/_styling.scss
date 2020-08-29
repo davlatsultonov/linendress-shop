@@ -4,12 +4,9 @@
   border-collapse: collapse;
   margin-bottom: 25px;
 
-  tr {
+  .table-order__row {
     @include shift(ease-in-out, 200ms, background);
-
-    &:not(:first-child):hover {
-      background: #f9f9f9;
-    }
+    vertical-align: top;
 
     th {
       padding: 10px;
@@ -17,24 +14,96 @@
       border-width: 1px 0 1px;
       border-style: solid;
       border-color: $black;
-    }
 
-    td {
-      padding: 20px 10px;
-      border-bottom: 1px solid #cacaca;
+      &:first-child {
+        padding-left: 10px;
+      }
 
       &:last-child {
-        text-align: right;
+        padding-right: 10px;
       }
     }
 
     img {
       vertical-align: middle;
     }
+
+    &_connected {
+
+      .connected-products {
+        display: block;
+      }
+    }
+  }
+
+  .table-order__item {
+    padding: 20px 10px;
+    border-bottom: 1px solid #cacaca;
+    position: relative;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &__product-img {
+    width: 95px;
+    height: 95px;
+    border-radius: 15px;
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+    box-shadow: $base-shadow;
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  &__product-properties {
+    padding-left: 115px;
+  }
+
+  &__list {
+    display: flex;
+
+    li:first-child {
+      margin-right: 15px;
+    }
   }
 
   &__id {
     font-weight: 500;
     text-transform: uppercase;
+  }
+
+  &__discount-label {
+    margin-top: 10px;
+  }
+
+  .connected-products {
+    display: none;
+    width: 129px;
+    height: 21px;
+    background: url(/images/icons/connected-products.svg) no-repeat 47% #FFFFFF;
+    position: absolute;
+    bottom: -9px;
+    left: -2px;
+  }
+
+  &_selected-products {
+    border-bottom: 1px solid $black;
+
+    .table-order__row:last-child {
+
+      .table-order__item {
+        border-bottom: none;
+      }
+    }
+
+    .table-order__item:first-child {
+      width: 42%;
+    }
   }
 }

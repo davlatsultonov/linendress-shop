@@ -2,6 +2,10 @@
   text-decoration: underline;
   font-style: italic;
 
+  &:hover {
+    opacity: .84;
+  }
+
   &_repeat {
     color: #fa6400;
   }
@@ -16,5 +20,9 @@
 
   &_indent_left {
     margin-left: 11px;
+  }
+
+  &_no-underline {
+    text-decoration: none;
   }
 }

@@ -64,10 +64,6 @@
     &_discount {
       @include flexbox;
 
-      .total-price {
-        color: $active-orange;
-      }
-
       .discount-label {
         margin-left: 5px;
       }

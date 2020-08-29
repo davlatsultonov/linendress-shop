@@ -32,4 +32,24 @@
     padding: 0 5px;
   }
 
+  &_thin {
+    display: flex;
+    opacity: 1;
+     min-width: initial;
+     justify-content: flex-start;
+     height: auto;
+
+    .add-counter__btn {
+       width: auto;
+       height: auto;
+       box-shadow: none;
+       background-color: transparent;
+    }
+
+    .add-counter__num {
+      width: 65px;
+      margin: 0 10px;
+      background: none;
+    }
+  }
 }
