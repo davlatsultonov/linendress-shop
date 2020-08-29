@@ -4,11 +4,7 @@
   &__img {
     overflow: hidden;
     border-radius: 3px;
-
-    img {
-      width: 100%;
-      border-radius: 3px;
-    }
+    @include cover-background;
   }
 
   &__parts {
@@ -30,7 +26,6 @@
     position: relative;
 
     .product-view__img {
-      width: 380px;
       height: 570px;
     }
   }
@@ -40,8 +35,27 @@
     bottom: 15px;
     right: 15px;
     z-index: 15;
+
+    .button {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
   }
 
+  &_small {
+
+    .product-view__full {
+      width: 250px;
+
+      .product-view__img {
+        height: 375px;
+      }
+    }
+
+    .product-view__btn-expand {
+      bottom: calc(100% - 366px);
+      right: 10px;
+    }
+  }
 
   .owl-theme .owl-nav {
     margin-top: 0;

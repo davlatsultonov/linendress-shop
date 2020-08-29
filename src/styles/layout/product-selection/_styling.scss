@@ -2,16 +2,25 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
+  color: $black;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
 
   tr {
 
-    td {
+    td:first-child {
+      width: 130px;
       padding-right: 10px;
+    }
+  }
 
-      &:first-child {
-        width: 130px;
-      }
+  &_size_md {
+
+    tr td:first-child {
+      width: 110px;
     }
   }
 

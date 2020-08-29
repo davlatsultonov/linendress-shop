@@ -15,6 +15,7 @@
 @import "./styles/global/global"; // global styles
 
 //! sections
+@import "./styles/layout/owl-carousel-style-fix/styling";
 @import "./styles/layout/navbar-menu/styling";
 @import "./styles/layout/main-slider/styling";
 @import "./styles/layout/header/styling";
@@ -24,7 +25,6 @@
 @import "./styles/layout/add-counter/styling";
 @import "./styles/layout/custom-select/styling";
 @import "./styles/layout/menu-dropdown/styling";
-@import "./styles/layout/owl-carousel-style-fix/styling";
 @import "./styles/layout/breadcrumbs/styling";
 @import "./styles/layout/pagination/styling";
 @import "./styles/layout/substrate/styling";
@@ -40,6 +40,7 @@
 @import "./styles/layout/columns/dual-block/styling";
 @import "./styles/layout/product-selection/styling";
 @import "./styles/layout/products-group/styling";
+@import "./styles/layout/product-info-popover/styling";
 @import "./styles/layout/info-card/styling";
 @import "./styles/layout/info-block/styling";
 @import "./styles/layout/reply-block/styling";

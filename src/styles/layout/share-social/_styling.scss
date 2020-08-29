@@ -16,5 +16,9 @@
 
   &__icon {
     margin-right: 15px;
+
+    &:hover {
+      opacity: .84;
+    }
   }
 }

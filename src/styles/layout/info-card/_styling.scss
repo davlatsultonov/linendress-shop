@@ -1,9 +1,9 @@
-.info-cards_with-substrate {
+.info-cards {
 
   .owl-nav.disabled + .owl-dots, .owl-dots {
-    position: relative;
-    top: -8px;
-    margin-top: 0;
+    position: absolute;
+    bottom: 27px;
+    width: 100%;
   }
 }
 
@@ -12,7 +12,7 @@
   @include prefix(box-shadow, $base-shadow);
   height: 290px;
   background: #fff;
-  margin-bottom: 33px;
+  margin-bottom: 60px;
   overflow: hidden;
 
   &__title {
@@ -56,5 +56,9 @@
 
   &__bottom {
     margin-top: 24px;
+
+    img {
+      width: auto !important;
+    }
   }
 }

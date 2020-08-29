@@ -54,11 +54,7 @@
     float: left;
     margin-right: 20px;
     box-shadow: $base-shadow;
-
-    img {
-      width: 100%;
-      border-radius: 15px;
-    }
+    @include cover-background;
   }
 
   &__product-properties {
