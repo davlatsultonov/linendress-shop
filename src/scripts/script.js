@@ -13,7 +13,8 @@ $('#products-group').owlCarousel({
     items: 1,
     margin: 40,
     smartSpeed: 800,
-    loop: true
+    loop: true,
+    autoHeight: true
 });
 
 $('.product-card__gallery').owlCarousel({
@@ -40,7 +41,6 @@ $('.product-full-info__gallery').owlCarousel({
     dots: true,
     smartSpeed :900,
     nav: true,
-    adaptiveHeight: true,
     navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
 });
 
