@@ -30,16 +30,16 @@ $(window).on('load', function() {
         let popover = $(this).parents('.product-card').children('.product-full-info:hidden');
         e.preventDefault();
         popover.addClass('visible');
-        disableScroll();
+        //disableScroll();
     });
 
     closeBtn.on('click', function () {
         $(this).closest('.product-full-info').removeClass('visible');
-        enableScroll();
+        //enableScroll();
     });
 
     // disable scrolling when modal is open
-    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+    let keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
     function preventDefault(e) {
         e.preventDefault();
@@ -53,15 +53,15 @@ $(window).on('load', function() {
     }
 
     // modern Chrome requires { passive: false } when adding event
-    var supportsPassive = false;
+    let supportsPassive = false;
     try {
         window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
             get: function () { supportsPassive = true; }
         }));
     } catch(e) {}
 
-    var wheelOpt = supportsPassive ? { passive: false } : false;
-    var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+    let wheelOpt = supportsPassive ? { passive: false } : false;
+    let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
     // call this to Disable
     function disableScroll() {
@@ -78,4 +78,9 @@ $(window).on('load', function() {
         window.removeEventListener('touchmove', preventDefault, wheelOpt);
         window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
+
+
+    $('[data-fancybox="gallery"]').fancybox({
+
+    });
 });

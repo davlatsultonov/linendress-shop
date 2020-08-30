@@ -1,6 +1,8 @@
 @import "~owl.carousel/dist/assets/owl.carousel.min.css";
 @import "~owl.carousel/dist/assets/owl.theme.default.min.css";
 
+@import url("~@fancyapps/fancybox/dist/jquery.fancybox.css");
+
 //! utilities
 @import "./styles/utils/mixins"; // global mixins
 @import "./styles/utils/variables"; // global variables

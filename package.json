@@ -11,6 +11,7 @@
     "check": "npx npm-check-updates -u"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "autoprefixer": "^9.8.5",
     "babel-eslint": "^10.1.0",

@@ -56,6 +56,10 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /fancybox[\/\\]dist[\/\\]js[\/\\]jquery.fancybox.cjs.js/,
+        use: "imports-loader?jQuery=jquery,$=jquery,this=>window"
       }
     ]
   },
@@ -101,9 +105,9 @@ module.exports = {
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
-      title: 'fancywork',
-      filename: 'fancywork.html',
-      template: './src/fancywork.html',
+      title: 'fancybox',
+      filename: 'fancybox.html',
+      template: './src/fancybox.html',
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
