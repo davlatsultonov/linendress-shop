@@ -58,7 +58,7 @@
 
       &.slick-active {
         button:before {
-          color: #fa6400;
+          background-color: #fa6400;
           opacity: 1;
         }
       }
@@ -68,13 +68,19 @@
         &:hover, &:focus {
 
           &:before {
-            color: #fa6400;
+            background-color: #fa6400;
             opacity: 1;
           }
         }
 
         &:before {
-          font-size: 12px;
+          content: '';
+          width: 10px;
+          height: 10px;
+          top: 5px;
+          left: 5px;
+          border-radius: 100%;
+          background-color: $black;
           opacity: 1;
         }
       }
