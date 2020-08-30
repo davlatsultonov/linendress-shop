@@ -1,50 +1,53 @@
 .color-picker {
-
-  &__container {
-    margin-top: 7px;
-  }
+  @include flexbox;
+  @include flex-wrap(wrap);
 
   &__item {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    background: transparent;
-    position: relative;
-    margin-left: -4px;
-    margin-bottom: 5px;
+    @include inline-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    margin-bottom: 15px;
     border: 2px solid transparent;
     cursor: pointer;
-    @include prefix(transition, all 175ms ease-in-out);
 
     &:not(:nth-child(6n)) {
-      margin-right: 9px;
+      margin-right: 14px;
     }
 
     &.checked {
-      border: 2px solid $active-orange;
 
-      &::after {
-        content: '';
-        width: 14px;
-        height: 10px;
-        position: absolute;
-        top: 8px;
-        left: 6px;
-        background: url("/images/icons/checked.svg") no-repeat;
+      &::after, &::before {
+        display: block;
       }
     }
 
     &:hover {
-      border: 2px solid $active-orange;
+
+      &::before {
+        display: block;
+      }
     }
 
-    > span {
-      display: inline-block;
-      margin: 1px;
-      width: 24px;
-      height: 24px;
-      border-radius: 2px;
+    &::after, &::before {
+      content: '';
+      display: none;
+    }
+
+    &::after {
+      width: 14px;
+      height: 10px;
+      background: url("/images/icons/checked.svg") no-repeat;
+    }
+
+    &::before {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      position: absolute;
+      border: 2px solid #fa6400;
     }
   }
 }
