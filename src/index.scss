@@ -3,6 +3,14 @@
 
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
+// slick-carousel
+$slick-font-path: "/node_modules/slick-carousel/slick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "/node_modules/slick-carousel/slick/" !default;
+$slick-arrow-color: black !default;
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
 //! utilities
 @import "./styles/utils/mixins"; // global mixins
 @import "./styles/utils/variables"; // global variables

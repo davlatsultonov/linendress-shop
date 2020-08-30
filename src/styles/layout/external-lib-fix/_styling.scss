@@ -18,3 +18,60 @@
 .compensate-for-scrollbar {
   padding-right: 15px;
 }
+
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+  .prev, .next {
+    width: 8px;
+    height: 14px;
+    cursor: pointer;
+  }
+
+  $arrow-distance: 10px;
+
+  .prev {
+    background: url("/images/icons/slider/arrow-left.svg") no-repeat;
+    margin-right: $arrow-distance;
+  }
+
+  .next {
+    background: url("/images/icons/slider/arrow-right.svg") no-repeat;
+    margin-left: $arrow-distance;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: $black;
+    margin: 0 5px;
+
+    &.active {
+      background-color: $active-orange;
+    }
+  }
+}
+
+.slick-prev, .slick-next {
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    transform: rotate(-90deg);
+  }
+}
+
+.slick-prev:before {
+  background: url('/images/icons/slider/arrow-left_bold.png') no-repeat;
+}
+
+.slick-next:before {
+  background: url('/images/icons/slider/arrow-right_bold.png') no-repeat;
+}

@@ -40,4 +40,8 @@
     z-index: 1;
     @include shift(cubic-bezier(0, -1.13, 0.93, 1.11), 175ms);
   }
+
+  &__btn {
+    padding-bottom: 8px;
+  }
 }

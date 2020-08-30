@@ -42,12 +42,15 @@
       right: $offset;
     }
 
-    &_header {
-
-      .substrate__item {
-        right: -62.5%;
-        top: -75px;
-      }
+    &_header .substrate__item{
+      right: -62.5%;
+      top: -150px;
     }
+  }
+
+  &_with-slider .substrate__item {
+    height: 805px;
+    right: -62.5%;
+    top: -92px;
   }
 }

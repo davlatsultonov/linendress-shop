@@ -1,4 +1,33 @@
+$('.main-slider').slick({
+    dots: true,
+    slidesToShow: 1,
+    vertical: true,
+    verticalSwiping: true,
+});
+
 // sliders init
+$('.has-slider').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: true,
+    nav: true,
+    smartSpeed: 800,
+    autoHeight: true,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+});
+
+$('.slider-with-arrows').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: false,
+    smartSpeed :800,
+    nav: true,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+});
+
+/*
 $('.info-cards').owlCarousel({
     items: 1,
     margin: 40,
@@ -14,7 +43,6 @@ $('#products-group').owlCarousel({
     margin: 40,
     smartSpeed: 800,
     loop: true,
-    autoHeight: true
 });
 
 $('.product-card__gallery').owlCarousel({
@@ -42,7 +70,7 @@ $('.product-full-info__gallery').owlCarousel({
     smartSpeed :900,
     nav: true,
     navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-});
+});*/
 
 // динамическая высота для подложки
 $(window).on('load', function() {
@@ -53,12 +81,12 @@ $(window).on('load', function() {
     });
 
     // setting dynamic height to bg-layers
-    $('.info-block').each(function () {
+  /*  $('.info-block').each(function () {
         let totalHeight = $(this).find('.info-block__img').css('height') + $(this).find('.info-block__statement').css('height');
         $(this).children('.substrate__item').height(totalHeight);
     });
 
-    $('.header').find('.substrate__item').height($('.header').outerHeight() + 105);
+    $('.header').find('.substrate__item').height($('.header').outerHeight());*/
 
     // product-card__btn-more
     let cardBtnMore = $('.product-card__btn-more--js'),

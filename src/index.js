@@ -2,6 +2,7 @@ import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+import 'slick-carousel';
 import '@fancyapps/fancybox';
 
 import './fonts/roboto/Roboto-Black.ttf';
