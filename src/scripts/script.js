@@ -1,10 +1,48 @@
-import './components/lang-switcher/_script';
-import './components/nav-menu/_script';
-import './components/color-picker/_script';
-import './components/sliders/_script';
-import './components/custom-select/_script';
-import './components/add-counter/_script';
-import './components/pattern-group/_script';
+// sliders init
+$('.info-cards').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    smartSpeed: 800,
+    autoplay: true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+});
+
+$('#products-group').owlCarousel({
+    items: 1,
+    margin: 40,
+    smartSpeed: 800,
+    loop: true
+});
+
+$('.product-card__gallery').owlCarousel({
+    items: 1,
+    margin: 40,
+    smartSpeed: 800,
+    loop: true
+});
+
+$('.product-view__gallery').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: false,
+    smartSpeed :900,
+    nav: true,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+});
+
+$('.product-full-info__gallery').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: true,
+    smartSpeed :900,
+    nav: true,
+    adaptiveHeight: true,
+    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+});
 
 // динамическая высота для подложки
 $(window).on('load', function() {
@@ -79,8 +117,116 @@ $(window).on('load', function() {
         window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
     }
 
+    // counting products count
+    let addCounterBtn = $('.add-counter .add-counter__btn'),
+        countBox = $('.add-counter .add-counter__num'),
+        addToCartButtons = $('.button-add-js');
 
-    $('[data-fancybox="gallery"]').fancybox({
+    countBox.keyup(function (e) {
+        if (e.which === 13) {
+            if (Number(e.target.value)) {
+                console.log(Number(e.target.value));
+                e.stopPropagation();
+                $(this).val(e.target.value).blur();
+            }
 
+            if (e.target.value === '') $(this).val(1).blur();
+        }
+    });
+
+    addToCartButtons.click(function (e) {
+        e.preventDefault();
+        $(this).addClass('show-counter');
+    });
+
+    addCounterBtn.on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        let parent = $(this).closest('.add-counter'),
+            counterBox = parent.children('.add-counter__num');
+
+        if ($(this).hasClass('add-counter__decrease')) {
+            if (+counterBox.val() <= 1) {
+                parent.parent().removeClass('show-counter');
+            } else {
+                counterBox.val(+counterBox.val() - 1)
+            }
+        }
+
+        if ($(this).hasClass('add-counter__increase')) {
+            counterBox.val(+counterBox.val() + 1);
+        }
+    })
+
+    // color picker
+    let colorPicker = $('.color-picker'),
+        colorPickerItem = $('.color-picker__item');
+
+    colorPickerItem.on('click', function () {
+        colorPicker.find('li').removeClass('checked');
+        $(this).addClass('checked');
+    });
+
+    // dropdown
+
+    let defaultItem = $('.select-block__default'), // начальный/дефолтный выбранный элемент блока селект
+        dropdownItems =  $('.select-block__list li'); // все элементы внутри дропдовна
+    // инициализация кликов
+    openDropdown(defaultItem);
+    selectDropdownItem(dropdownItems);
+    // функция для показа дропдовна
+    function openDropdown(defaultItem) {
+        if (defaultItem) {
+            defaultItem.click(function () {
+                $(this).parent().toggleClass('active');
+            });
+        }
+        return false;
+    }
+    // функция для выбора элемента дропдовна
+    function selectDropdownItem(items) {
+        items.click(function () {
+            let current = $(this).html();
+            defaultItem.find('li').html(current);
+            $(this).parents('.select-block').removeClass('active');
+        });
+    }
+
+    // выбор языка
+    let langSwticherWrapper = $( ".lang-switcher" ),
+        langSwticherWrapperLinks = langSwticherWrapper.find('a'),
+        currentLang = $('.lang-switcher__current');
+
+    langSwticherWrapper.click(function() {
+        $(this).toggleClass("active");
+        $(this).find(".lang-switcher__popover").toggleClass("visible");
+    });
+
+    langSwticherWrapperLinks.click(function(){
+        langSwticherWrapperLinks.removeClass('sel');
+        $(this).addClass('sel');
+        let selectedValue = $(this).text();
+        currentLang.html(selectedValue);
+        currentLang.attr("title", selectedValue);
+        $('.lang-switcher .hover').html(selectedValue);
+    });
+
+    // navmenu select
+    let navMenuWrapper = $('#nav-menu'),
+        navMenuLinks = navMenuWrapper.find('a');
+
+    navMenuLinks.click(function () {
+        $(this).closest(navMenuWrapper).find('a.current').removeClass('current');
+        $(this).addClass('current');
+    });
+
+    // patterns select
+    let patternsWrapper = $('.pattern-group'),
+        patternItems = $('.pattern-group__item').not('.pattern-item_type_btn').not('.pattern-group__item_blank');
+
+    patternItems.click(function () {
+        $(this).closest(patternsWrapper).find('.pattern-group__item').removeClass('active');
+        $(this).addClass('active');
     });
 });

@@ -1,7 +1,7 @@
 .lang-switcher {
   display: inline-block;
   color: #000;
-  padding: 5px 14px 6px 15px;
+  padding: 6px 14px 5px 15px;
   position: relative;
   cursor: pointer;
   border: 1px solid;
@@ -16,7 +16,7 @@
     position: absolute;
     opacity: 0;
     z-index: 100;
-    transform: scale(.8)  translateX(-50%);
+    transform: translateX(-50%);
     left: 50%;
     top: 110%;
     transform-origin: top left;
@@ -26,7 +26,7 @@
 
     &.visible {
       opacity: 1;
-      transform: scale(1) translateX(-50%);
+      transform: translateX(-50%);
       pointer-events: auto;
     }
   }

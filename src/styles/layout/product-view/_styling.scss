@@ -27,6 +27,7 @@
 
     .product-view__img {
       height: 570px;
+      max-height: 570px;
     }
   }
 
@@ -48,6 +49,7 @@
 
       .product-view__img {
         height: 375px;
+        max-height: 375px;
       }
     }
 

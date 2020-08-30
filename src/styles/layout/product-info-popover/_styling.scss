@@ -23,7 +23,7 @@
   .product-card {
     @include flexbox;
     width: 520px;
-    min-height: 447px;
+    max-height: 447px;
     border-radius: 5px 5px 30px;
     background-color: #ffffff;
     padding: 25px 20px 20px 20px;
@@ -60,6 +60,8 @@
   }
 
   &__gallery {
+    overflow: hidden;
+    max-height: 375px;
 
     .owl-dots {
       position: relative;
