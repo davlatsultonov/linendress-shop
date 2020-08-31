@@ -1,30 +1,32 @@
-$('.main-slider').slick({
-    dots: true,
-    slidesToShow: 1,
-    vertical: true,
-    verticalSwiping: true,
-});
+$(document).ready(function () {
+    $('.main-slider').slick({
+        dots: true,
+        slidesToShow: 1,
+        vertical: true,
+        verticalSwiping: true,
+    });
 
 // sliders init
-$('.has-slider').owlCarousel({
-    items: 1,
-    margin: 40,
-    loop: true,
-    dots: true,
-    nav: true,
-    smartSpeed: 800,
-    autoHeight: true,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-});
+    $('.has-slider').owlCarousel({
+        items: 1,
+        margin: 40,
+        loop: true,
+        dots: true,
+        nav: true,
+        smartSpeed: 800,
+        autoHeight: true,
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    });
 
-$('.slider-with-arrows').owlCarousel({
-    items: 1,
-    margin: 40,
-    loop: true,
-    dots: false,
-    smartSpeed :800,
-    nav: true,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    $('.slider-with-arrows').owlCarousel({
+        items: 1,
+        margin: 40,
+        loop: true,
+        dots: false,
+        smartSpeed :800,
+        nav: true,
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    });
 });
 
 /*
