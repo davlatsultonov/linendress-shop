@@ -326,3 +326,58 @@ $types: ('margin', 'padding');
   &::-moz-placeholder { @content; }
   &::-webkit-input-placeholder { @content; }
 }
+
+@mixin slick-dots-custom-color($activeColor: #000, $notActiveState: background, $bg-color: #000, $border-color: #000, $width: 10) {
+  &.slick-active {
+    button:before {
+      background-color: $activeColor;
+      opacity: 1;
+    }
+  }
+
+  button {
+
+    &:hover, &:focus {
+
+      &:before {
+        background-color: $activeColor;
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      width: #{$width}px;
+      height: #{$width}px;
+      top: 5px;
+      left: 5px;
+      border-radius: 100%;
+      opacity: 1;
+      @if $notActiveState == border {
+        border: 2px solid $border-color;
+        background-color: transparent;
+      } @else if $notActiveState == background {
+        background-color: $bg-color;
+      }
+
+    }
+  }
+}
+
+@mixin slick-arrows-inside($arrow-indent: 15) {
+  .slick-prev {
+    left: #{$arrow-indent}px;
+
+    &:before {
+      background: url('/images/icons/slider/arrow-left.svg') no-repeat;
+    }
+  }
+
+  .slick-next {
+    right: #{$arrow-indent}px;
+
+    &:before {
+      background: url('/images/icons/slider/arrow-right.svg') no-repeat;
+    }
+  }
+}

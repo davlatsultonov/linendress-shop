@@ -1,24 +1,18 @@
-.owl-carousel .owl-stage-outer {
-  padding: 14px 11px;
-  margin: -14px -11px;
-}
-
-.owl-carousel .owl-item img {
-  max-width: 100%;
-}
-
-.owl-theme .owl-dots .owl-dot span{
-  background: #000000;
-}
-
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: #fa6400;
-}
-
 .compensate-for-scrollbar {
   padding-right: 15px;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slick-arrow {
+  z-index: 55;
+}
 
 .slider-controls {
   display: flex;
@@ -64,7 +58,13 @@
     display: inline-block;
     width: 10px;
     height: 18px;
-    transform: rotate(-90deg);
+  }
+}
+
+.slick-dots {
+
+  li {
+    @include slick-dots-custom-color($active-orange);
   }
 }
 
@@ -74,4 +74,37 @@
 
 .slick-next:before {
   background: url('/images/icons/slider/arrow-right_bold.png') no-repeat;
+}
+
+.slick-list {margin: 0 -15px;}
+.slick-slide>div {padding: 0 15px;}
+
+.custom-controls {
+  width: 100%;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  position: absolute;
+  bottom: -8px;
+
+  .slick-dots {
+    position: relative;
+    bottom: unset;
+  }
+
+  &__btn {
+    @include inline-flex;
+    cursor: pointer;
+    width: 12px;
+  }
+
+  $arrow-btn-indent: 43px;
+
+  &__prev {
+    margin-right: $arrow-btn-indent;
+  }
+
+  &__next {
+    margin-left: $arrow-btn-indent;
+  }
 }

@@ -59,31 +59,13 @@
     }
   }
 
-  .owl-theme .owl-nav {
-    margin-top: 0;
-    height: 0;
+  .slick-dots {
+    bottom: -31px;
+
+    li {
+      @include slick-dots-custom-color($black, border, transparent, $black, 12);
+    }
   }
 
-  .owl-carousel .nav-btn{
-    height: 19px;
-    width: 11px;
-    position: absolute;
-    bottom: 48%;
-    cursor: pointer;
-  }
-
-  .owl-carousel .owl-prev.disabled,
-  .owl-carousel .owl-next.disabled{
-    pointer-events: none;
-    opacity: 0.2;
-  }
-
-  .owl-carousel .prev-slide{
-    background: url('/images/icons/slider/arrow-left.svg') no-repeat ;
-    left: 20px;
-  }
-  .owl-carousel .next-slide{
-    background: url('/images/icons/slider/arrow-right.svg') no-repeat;
-    right: 20px;
-  }
+  @include slick-arrows-inside;
 }

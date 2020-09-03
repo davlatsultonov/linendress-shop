@@ -6,79 +6,41 @@ $(document).ready(function () {
         verticalSwiping: true,
     });
 
-// sliders init
-    $('.has-slider').owlCarousel({
-        items: 1,
-        margin: 40,
-        loop: true,
+    $('#products-group-slider').slick({
         dots: true,
-        nav: true,
-        smartSpeed: 800,
-        autoHeight: true,
-        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+        arrows: true,
+        adaptiveHeight: true,
+        swipe: false,
+        swipeToSlide: false,
+        appendDots: $("#products-group-controls .custom-controls__dots"),
+        prevArrow: $("#products-group-controls .custom-controls__prev"),
+        nextArrow: $("#products-group-controls .custom-controls__next")
     });
 
-    $('.slider-with-arrows').owlCarousel({
-        items: 1,
-        margin: 40,
-        loop: true,
+    $('.info-cards').slick({
+        dots: true,
+        arrows: true,
+        appendDots: $("#info-cards-controls .custom-controls__dots"),
+        prevArrow: $("#info-cards-controls .custom-controls__prev"),
+        nextArrow: $("#info-cards-controls .custom-controls__next")
+    });
+
+    $('.has-slider').slick({
+        dots: true,
+        arrows: true,
+    });
+
+    $('.has-slider_only-arrows').slick({
         dots: false,
-        smartSpeed :800,
-        nav: true,
-        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+        arrows: true,
     });
 });
 
-/*
-$('.info-cards').owlCarousel({
-    items: 1,
-    margin: 40,
-    loop: true,
-    smartSpeed: 800,
-    autoplay: true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true,
-});
-
-$('#products-group').owlCarousel({
-    items: 1,
-    margin: 40,
-    smartSpeed: 800,
-    loop: true,
-});
-
-$('.product-card__gallery').owlCarousel({
-    items: 1,
-    margin: 40,
-    smartSpeed: 800,
-    loop: true
-});
-
-$('.product-view__gallery').owlCarousel({
-    items: 1,
-    margin: 40,
-    loop: true,
-    dots: false,
-    smartSpeed :900,
-    nav: true,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-});
-
-$('.product-full-info__gallery').owlCarousel({
-    items: 1,
-    margin: 40,
-    loop: true,
-    dots: true,
-    smartSpeed :900,
-    nav: true,
-    navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-});*/
-
-// динамическая высота для подложки
 $(window).on('load', function() {
     let productCardItems = $('.product-card  a');
 
     productCardItems.click(function (e) {
+        e.preventDefault();
         e.stopPropagation();
     });
 
@@ -98,12 +60,12 @@ $(window).on('load', function() {
         let popover = $(this).parents('.product-card').children('.product-full-info:hidden');
         e.preventDefault();
         popover.addClass('visible');
-        //disableScroll();
+        //disableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 
     closeBtn.on('click', function () {
         $(this).closest('.product-full-info').removeClass('visible');
-        //enableScroll();
+        //enableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 
     // disable scrolling when modal is open

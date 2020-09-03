@@ -1,9 +1,6 @@
-@import "~owl.carousel/dist/assets/owl.carousel.min.css";
-@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
-
 @import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
-
 // slick-carousel
+// this styles are needed to fix slick
 $slick-font-path: "/node_modules/slick-carousel/slick/fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "/node_modules/slick-carousel/slick/" !default;

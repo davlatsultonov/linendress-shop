@@ -17,7 +17,7 @@
   &_column-4 {
 
     .products-group__item:nth-child(3n) {
-      margin-right: auto;
+      margin-right: 56px;
     }
 
     .products-group__item:nth-child(4n) {
@@ -26,11 +26,18 @@
   }
 }
 
+#products-group-controls {
+  position: relative;
+  bottom: 46px;
+  margin-bottom: 20px;
+}
+
 .product-card {
   box-shadow: $base-shadow;
   border-radius: 5px 5px 30px;
   background-color: #ffffff;
   display: inline-block;
+  float: left;
   @include shift(ease-in-out);
   width: 250px;
 
@@ -102,52 +109,15 @@
   &__gallery {
     overflow: hidden;
 
-    .owl-dots {
-      width: 100%;
-      @include center(horizontal);
-      bottom: 35px;
+    .slick-dots {
+      bottom: 9px;
 
-      .owl-dot {
-
-        span {
-          width: 12px;
-          height: 12px;
-          background: transparent;
-          border: 2px solid #000000;
-        }
-
-        &.active span, &:hover span{
-          background: #000;
-        }
+      li {
+        width: 14px;
+        @include slick-dots-custom-color($black, border, transparent, $black, 12);
       }
     }
-/*
-    .owl-nav {
-      width: 100%;
-      position: absolute;
-      bottom: 44%;
-    }
 
-    .nav-btn {
-      height: 14px;
-      position: absolute;
-      width: 8px;
-      cursor: pointer;
-    }
-
-    .owl-prev.disabled,
-    .owl-next.disabled{
-      pointer-events: none;
-      opacity: 0.2;
-    }
-
-    .prev-slide{
-      background: url("/images/icons/slider/arrow-left.svg") no-repeat;
-      left: 8px;
-    }
-    .next-slide{
-      background: url("/images/icons/slider/arrow-right.svg") no-repeat;
-      right: 8px;
-    }*/
+    @include slick-arrows-inside(5);
   }
 }

@@ -56,40 +56,15 @@
     li {
       margin-top: 3px;
       margin-bottom: 3px;
-
-      &.slick-active {
-        button:before {
-          background-color: #fa6400;
-          opacity: 1;
-        }
-      }
-
-      button {
-
-        &:hover, &:focus {
-
-          &:before {
-            background-color: #fa6400;
-            opacity: 1;
-          }
-        }
-
-        &:before {
-          content: '';
-          width: 10px;
-          height: 10px;
-          top: 5px;
-          left: 5px;
-          border-radius: 100%;
-          background-color: $black;
-          opacity: 1;
-        }
-      }
     }
   }
 
   .slick-prev, .slick-next {
     right: -39px;
+
+    &:before {
+      transform: rotate(-90deg);
+    }
   }
 
   .slick-prev {
