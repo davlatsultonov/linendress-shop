@@ -119,6 +119,12 @@ module.exports = {
       inject: 'head'
     }),
     new HtmlWebpackPlugin({
+      title: 'cooperation',
+      filename: 'cooperation.html',
+      template: './src/cooperation.html',
+      inject: 'head'
+    }),
+    new HtmlWebpackPlugin({
       title: '404-page',
       filename: '404.html',
       template: './src/404.html',

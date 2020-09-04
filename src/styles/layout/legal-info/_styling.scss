@@ -35,6 +35,8 @@
   }
 
   &__text {
+    max-width: 230px;
+    display: inline-block;
     color: #1299dd;
     text-decoration: underline;
   }
