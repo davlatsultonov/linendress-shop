@@ -4,11 +4,7 @@
     height: 330px;
     border-radius: 30px;
     overflow: hidden;
-
-    img {
-      width: 100%;
-      border-radius: 30px;
-    }
+    @include cover-background;
   }
 
   &--wrapper {

@@ -1,9 +1,12 @@
 $(document).ready(function () {
     $('.main-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 7000,
         dots: true,
         slidesToShow: 1,
-        vertical: true,
-        verticalSwiping: true,
+        fade: true,
+        speed: 1000,
+        cssEase: 'ease'
     });
 
     $('#products-group-slider').slick({
@@ -12,6 +15,9 @@ $(document).ready(function () {
         adaptiveHeight: true,
         swipe: false,
         swipeToSlide: false,
+        fade: true,
+        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+        speed: 500,
         appendDots: $("#products-group-controls .custom-controls__dots"),
         prevArrow: $("#products-group-controls .custom-controls__prev"),
         nextArrow: $("#products-group-controls .custom-controls__next")
@@ -28,11 +34,13 @@ $(document).ready(function () {
     $('.has-slider').slick({
         dots: true,
         arrows: true,
+        speed: 700,
     });
 
     $('.has-slider_only-arrows').slick({
         dots: false,
         arrows: true,
+        speed: 700
     });
 });
 
