@@ -61,24 +61,5 @@
 
   &__gallery {
     max-height: 375px;
-
-    .owl-dots {
-      position: relative;
-      top: 12px;
-
-      .owl-dot {
-
-        span {
-          width: 12px;
-          height: 12px;
-          background: transparent;
-          border: 2px solid #000000;
-        }
-
-        &.active span, &:hover span{
-          background: #000;
-        }
-      }
-    }
   }
 }

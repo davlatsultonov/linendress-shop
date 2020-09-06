@@ -1,12 +1,3 @@
-.info-cards {
-
-  .owl-nav.disabled + .owl-dots, .owl-dots {
-    position: absolute;
-    bottom: 27px;
-    width: 100%;
-  }
-}
-
 .info-card {
   @include prefix(border-radius, 30px);
   @include prefix(box-shadow, $base-shadow);
