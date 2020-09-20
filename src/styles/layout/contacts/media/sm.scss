@@ -1,0 +1,22 @@
+.contacts {
+  width: 100%;
+  margin-right: auto;
+
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  &__icon {
+    height: 20px;
+  }
+
+  &__item {
+    @include flexbox;
+    width: auto;
+    margin: 0 auto 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

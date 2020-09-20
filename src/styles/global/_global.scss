@@ -14,9 +14,6 @@ body {
   @include flexbox;
   @include flex-direction(column);
   height: 100%;
-  // prevent resizing window to mobile width
-  min-width: 1200px;
-  margin: auto;
 }
 
 .content {
@@ -31,7 +28,7 @@ body {
   position: relative;
   margin: 0 auto;
 
-  /*@media #{$lg} {
+  @media #{$lg} {
     width: $md-wrap;
   }
 
@@ -41,7 +38,7 @@ body {
 
   @media #{$sm} {
     width: $xs-wrap;
-  }*/
+  }
 }
 
 .content-aligned-center {
@@ -88,4 +85,19 @@ ul {
 
 .text-cursive {
   font-style: italic;
+}
+
+.hide-on-smart {
+
+  @media #{$sm} {
+    display: none;
+  }
+}
+
+.show-on-smart {
+  display: none;
+
+  @media #{$sm} {
+    display: block;
+  }
 }

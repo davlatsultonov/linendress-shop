@@ -1,0 +1,9 @@
+.social-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+}

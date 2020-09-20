@@ -1,0 +1,11 @@
+.social-block {
+  text-align: left;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 16px;
+      margin-bottom: 5px;
+    }
+  }
+}

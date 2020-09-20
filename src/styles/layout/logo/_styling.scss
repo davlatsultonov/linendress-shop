@@ -1,3 +1,12 @@
 .main-logo {
+  width: 210px;
   margin-left: 30px;
+  
+  @media #{$sm} {
+    margin: 0 auto 33px;
+  }
+
+  img {
+    width:100%
+  }
 }

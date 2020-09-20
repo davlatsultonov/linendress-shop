@@ -1,4 +1,5 @@
 .social-block {
+  display: inline-block;
 
   &__item {
     display: inline-block;
@@ -38,4 +39,12 @@
       color: #fff;
     }
   }
+}
+
+@media #{$sm} {
+  @import "media/sm";
+}
+
+@media (max-width: 440px) {
+  @import "media/xs";
 }

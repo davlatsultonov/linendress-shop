@@ -25,18 +25,9 @@
     border-collapse: collapse;
     margin-bottom: 43px;
 
-    tr {
-
-      &:nth-child(n+2) {
-
-        td {
-          padding-top: 10px;
-        }
-      }
-    }
-
     td {
       padding-right: 45px;
+      padding-bottom: 10px;
 
       a {
         font-size: 1.6rem;
@@ -64,10 +55,15 @@
   }
 
   &__copyright {
-    @include flexbox;
+    @include inline-flex;
     @include align-items(center);
     color: #fff;
     font-size: 1.6rem;
     margin-left: auto;
+    float: right;
   }
+}
+
+@media #{$sm} {
+  @import "media/sm";
 }
