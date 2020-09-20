@@ -5,8 +5,9 @@
     padding-left: 30px;
     cursor: pointer;
     line-height: 24px;
-    @include flexbox;
+    @include inline-flex;
     @include align-items(center);
+    user-select: none;
 
     &:before {
       content: '';
@@ -26,8 +27,14 @@
       background: url("/images/icons/checkbox-icon/check-icon.svg") no-repeat;
       position: absolute;
       left: 3px;
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
+      @include shift(cubic-bezier(0.4, 0, 0.05, 2.35), 264ms);
+    }
+
+    &:hover {
+
+      &:before {
+        border-color: $active-orange !important;
+      }
     }
   }
 
@@ -45,8 +52,8 @@
 
     &:not(:checked) + .check-block__label:after {
       opacity: 0;
-      -webkit-transform: scale(0);
-      transform: scale(0);
+      -webkit-transform: scale(2);
+      transform: scale(2);
     }
 
     &:checked + .check-block__label:after {

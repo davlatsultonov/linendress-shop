@@ -5,7 +5,8 @@
 .pagination {
   text-align: center;
 
-  &__link {
+  &__item {
+    margin: 0 2.5px;
     min-width: 28px;
     height: 28px;
     @include inline-flex;
@@ -21,25 +22,9 @@
       text-decoration: underline;
     }
 
-    &_active {
+    &--current {
       background-color: #fa6400;
       color: #ffffff;
-    }
-  }
-
-  &__item {
-    display: inline-block;
-    margin: 0 2.5px;
-
-    &.active {
-      a {
-        background: #fff;
-
-        &:hover {
-          text-decoration: none;
-          cursor: default;
-        }
-      }
     }
   }
 

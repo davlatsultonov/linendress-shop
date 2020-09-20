@@ -794,31 +794,22 @@
                 </div>
             </div>
 
-            <ul class="pagination page-pagination">
-                <li class="pagination__item">
-                    <span class="pagination__nav-prev disabled"><img src="/images/icons/pagination/pagin-arrow-left.svg"
-                                                                     alt="">Назад</span>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__link" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__link" href="#">...</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__link pagination__link_active" href="#">5</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__link" href="#">...</a>
-                </li>
-                <li class="pagination__item">
-                    <a class="pagination__link" href="#">100</a>
-                </li>
-                <li class="pagination__item">
-                    <span class="pagination__nav-next">Вперед<img src="/images/icons/pagination/pagin-arrow-right.svg"
-                                                                  alt=""></span>
-                </li>
-            </ul>
+            <nav class="pagination page-pagination">
+                <a href="#" class="pagination__item pagination__nav-prev disabled">
+                    <img
+                            src="/images/icons/pagination/pagin-arrow-left.svg" alt="">
+                    Назад
+                </a>
+                <a href="#" class="pagination__item">1</a>
+                <a href="#" class="pagination__item">...</a>
+                <a href="#" class="pagination__item pagination__item--current">5</a>
+                <a href="#" class="pagination__item">...</a>
+                <a href="#" class="pagination__item">100</a>
+                <a href="#" class="pagination__item pagination__nav-next">
+                    Вперед
+                    <img src="/images/icons/pagination/pagin-arrow-right.svg" alt="">
+                </a>
+            </nav>
 
             <h3 class="main-title main-title_size_md item-bordered main-title_indent-bottom">
                 Отзывы к изделию
@@ -1386,99 +1377,97 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container footer__items">
-            <div class="footer__logo">
-                <div class="main-logo ">
+        <div class="container">
+            <div class="footer__items">
+                <div class="main-logo footer__logo">
                     <a href='./index.html'>
                         <img src="/images/logo/logo-white.svg" alt="footer-logo">
                     </a>
                 </div>
-            </div>
-            <div class="footer__info">
-                <table class="footer__nav">
-                    <tr>
-                        <td>
-                            <a href="./finished-products.html">Каталог</a>
-                        </td>
-                        <td>
-                            <a href="./about.html">О компании</a>
-                        </td>
-                        <td>
-                            <a href="#">Помощь покупателю</a>
-                        </td>
-                        <td>
-                            <a href="#">Доставка и оплата</a>
-                        </td>
-                        <td>
-                            <a href="#">Отзывы</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="./look-book.html">Look book</a>
-                        </td>
-                        <td>
-                            <a href="./cooperation.html">Сотрудничество</a>
-                        </td>
-                        <td>
-                            <a href="#">Акции и события</a>
-                        </td>
-                        <td>
-                            <a href="#">Возврат и гарантия</a>
-                        </td>
-                        <td>
-                            <a href="#">Контакты</a>
-                        </td>
-                    </tr>
-                </table>
-                <div class="footer__item">
-                    <ul class="contacts contacts_color_white">
-                        <li class="contacts__item">
-                            <span class="contacts__icon">
-                                <img src="/images/icons/contacts/white-filled/address.svg"
-                                     alt="address-icon">
-                            </span>
-                            <a href="#" class="contacts__text">Омск, ул. Ленина 14/1, 3 этаж, офис 312</a>
-                        </li>
-                        <li class="contacts__item">
-                            <span class="contacts__icon">
-                                <img src="/images/icons/contacts/white-filled/phone.svg"
-                                     alt="address-icon">
-                            </span>
-                            <a href="#" class="contacts__text">+7 (995) 914-06-16</a>
-                        </li>
-                        <li class="contacts__item">
-                            <span class="contacts__icon">
-                                <img src="/images/icons/contacts/white-filled/mail.svg"
-                                     alt="address-icon">
-                            </span>
-                            <a href="#" class="contacts__text">linen.omsk@gmail.com</a>
-                        </li>
-                    </ul>
-                    <ul class="contacts contacts_color_white contacts_mode_only-read footer__schedule">
-                        <li class="contacts__item">
-                            <span class="contacts__icon">
-                                <img src="/images/icons/time.svg"
-                                     alt="time-icon">
-                            </span>
-                            <a href="#" class="contacts__text">Время работы мастерской:</a>
-                        </li>
-                        <li class="contacts__item">
-                            <span class="contacts__icon"></span>
-                            <a href="#" class="contacts__text contacts__text_time-range">
-                                Пн - Пт, 10:00 до 20:00
-                                Сб, 11:00 до 18:00
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="footer__btn">
-                        <button class="button button_size_md button_theme_white">
-                            Напишите нам
-                            <img src="/images/icons/pen-with-paper.svg" class="button__icon" alt="pen-with-paper-icon">
-                        </button>
+                <div class="footer__info">
+                    <table class="footer__nav">
+                        <tr>
+                            <td>
+                                <a href="./finished-products.html">Каталог</a>
+                            </td>
+                            <td>
+                                <a href="./about.html">О компании</a>
+                            </td>
+                            <td>
+                                <a href="#">Помощь покупателю</a>
+                            </td>
+                            <td>
+                                <a href="#">Доставка и оплата</a>
+                            </td>
+                            <td>
+                                <a href="#">Отзывы</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="./look-book.html">Look book</a>
+                            </td>
+                            <td>
+                                <a href="./cooperation.html">Сотрудничество</a>
+                            </td>
+                            <td>
+                                <a href="#">Акции и события</a>
+                            </td>
+                            <td>
+                                <a href="#">Возврат и гарантия</a>
+                            </td>
+                            <td>
+                                <a href="#">Контакты</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="footer__item">
+                        <ul class="contacts contacts_color_white">
+                            <li class="contacts__item">
+                                <span class="contacts__icon">
+                                    <img src="/images/icons/contacts/white-filled/address.svg"
+                                         alt="address-icon">
+                                </span>
+                                <a href="#" class="contacts__text">Омск, ул. Ленина 14/1, 3 этаж, офис 312</a>
+                            </li>
+                            <li class="contacts__item">
+                                <span class="contacts__icon">
+                                    <img src="/images/icons/contacts/white-filled/phone.svg"
+                                         alt="address-icon">
+                                </span>
+                                <a href="#" class="contacts__text">+7 (995) 914-06-16</a>
+                            </li>
+                            <li class="contacts__item">
+                                <span class="contacts__icon">
+                                    <img src="/images/icons/contacts/white-filled/mail.svg"
+                                         alt="address-icon">
+                                </span>
+                                <a href="#" class="contacts__text">linen.omsk@gmail.com</a>
+                            </li>
+                        </ul>
+                        <ul class="contacts contacts_color_white contacts_mode_only-read footer__schedule">
+                            <li class="contacts__item">
+                                <span class="contacts__icon">
+                                    <img src="/images/icons/time.svg"
+                                         alt="time-icon">
+                                </span>
+                                <a href="#" class="contacts__text">Время работы мастерской:</a>
+                            </li>
+                            <li class="contacts__item">
+                                <span class="contacts__icon"></span>
+                                <a href="#" class="contacts__text contacts__text_time-range">
+                                    Пн - Пт, 10:00 до 20:00<br/>
+                                    Сб, 11:00 до 18:00
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="footer__btn hide-on-smart">
+                            <button class="button button_size_md button_theme_white">
+                                Напишите нам
+                                <img src="/images/icons/pen-with-paper.svg" class="button__icon" alt="pen-with-paper-icon">
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="footer__item">
                     <ul class="social-block social-block_color_white">
                         <li class="social-block__item">
                             <a href="#" class="social-block__link">
@@ -1511,6 +1500,12 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="footer__btn show-on-smart">
+                        <button class="button button_size_md button_theme_white">
+                            Напишите нам
+                            <img src="/images/icons/pen-with-paper.svg" class="button__icon" alt="pen-with-paper-icon">
+                        </button>
+                    </div>
                     <div class="footer__copyright">
                         © 2020, Linendress.ru
                     </div>
