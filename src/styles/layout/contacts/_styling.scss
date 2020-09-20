@@ -3,10 +3,6 @@
   font-weight: 500;
   margin-right: 45px;
 
-  &:last-of-type {
-    margin-right: 0;
-  }
-
   &__item {
     @include flexbox;
     @include align-items(center);
@@ -35,7 +31,7 @@
     line-height: 21px;
 
     &_time-range {
-      width: 70%;
+      width: 78%;
     }
   }
 
@@ -62,6 +58,14 @@
   }
 }
 
+@media #{$lg} {
+  @import "media/lg";
+}
+
 @media #{$sm} {
   @import "media/sm";
+}
+
+@media #{$xsm} {
+  @import "media/xsm";
 }

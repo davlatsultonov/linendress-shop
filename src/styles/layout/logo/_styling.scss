@@ -1,6 +1,16 @@
 .main-logo {
   width: 210px;
   margin-left: 30px;
+
+  @media #{$lg} {
+    margin-left: 0;
+  }
+
+  @media #{$md} {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   @media #{$sm} {
     margin: 0 auto 33px;

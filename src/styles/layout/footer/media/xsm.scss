@@ -1,0 +1,11 @@
+.footer {
+
+  &__item {
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  &__schedule {
+    margin-top: 5px;
+  }
+}

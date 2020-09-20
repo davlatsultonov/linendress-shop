@@ -2,29 +2,19 @@
   border-top: 5px solid #fa6400;
   padding: 39px 16px 30px;
 
-  &__items {
-    @include flexbox;
-    @include flex-direction(column);
-  }
-
   &__info {
     @include flexbox;
     @include justify-content(center);
     @include flex-wrap(wrap);
-    width: 100%;
-    margin-left: 0;
   }
 
   &__item {
     width: auto;
     @include flexbox;
-    @include flex-direction(column);
-    @include align-items(center);
   }
 
   &__schedule {
     width: auto;
-    margin-top: 5px;
   }
 
   &__copyright {
