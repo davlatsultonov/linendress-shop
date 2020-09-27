@@ -5,6 +5,10 @@
     border-radius: 30px;
     overflow: hidden;
     @include cover-background;
+
+    @media #{$md} {
+      height: 240px;
+    }
   }
 
   &--wrapper {
@@ -13,6 +17,11 @@
     width: 96%;
     position: relative;
     margin-bottom: 90px;
+    
+    @media #{$md} {
+      height: 240px;
+      max-height: 240px;
+    }
 
     &:after, &:before {
       content: '';
@@ -49,6 +58,10 @@
     height: 84%;
     margin: 26px 0;
 
+    @media #{$md} {
+      bottom: -8px;
+    }
+
     li {
       margin-top: 3px;
       margin-bottom: 3px;
@@ -66,6 +79,10 @@
   .slick-prev {
     left: unset;
     top: 315px;
+
+    @media #{$md} {
+      top: 221px;
+    }
   }
 
   .slick-next {

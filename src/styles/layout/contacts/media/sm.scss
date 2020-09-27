@@ -1,9 +1,9 @@
 .contacts {
   width: auto;
-  margin-right: 25px;
 
   &:not(:last-of-type) {
     margin-bottom: 15px;
+    margin-right: 25px;
   }
 
   &__icon {

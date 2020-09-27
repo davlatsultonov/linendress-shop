@@ -1,0 +1,42 @@
+.header {
+
+  &__info {
+    width: 69%;
+    margin-left: 7%;
+    margin-top: 0;
+  }
+
+  &__logo {
+
+    .main-logo {
+      width: 140px;
+      margin-top: 10px;
+    }
+  }
+
+  &__item {
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 25px 0 15px;
+  }
+
+  .social-block {
+    width: 52%;
+
+    &__item:not(:last-child) {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  .contacts {
+    width: 42%;
+  }
+}

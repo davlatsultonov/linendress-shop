@@ -1,7 +1,10 @@
 .contacts {
   font-size: 1.6rem;
   font-weight: 500;
-  margin-right: 45px;
+
+  &:not(:last-child) {
+    margin-right: 45px;
+  }
 
   &__item {
     @include flexbox;

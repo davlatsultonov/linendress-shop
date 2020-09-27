@@ -87,14 +87,28 @@ ul {
   font-style: italic;
 }
 
-.hide-on-smart {
+.hide-1024 {
+
+  @media #{$md} {
+    display: none;
+  }
+}
+
+.show-1024 {
+
+  @media #{$md} {
+    display: block;
+  }
+}
+
+.hide-768 {
 
   @media #{$sm} {
     display: none;
   }
 }
 
-.show-on-smart {
+.show-768 {
   display: none;
 
   @media #{$sm} {

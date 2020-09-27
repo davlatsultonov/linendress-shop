@@ -5,6 +5,7 @@
 
   &__items {
     @include flexbox;
+    @include flex-wrap(wrap);
   }
 
   &__logo {
@@ -16,15 +17,17 @@
   }
 
   &__info {
-    margin-left: 12%;
+    margin-left: 11.5%;
     margin-top: 10px;
-    width: 69%;
+    width: 66%;
   }
 
   &__item {
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
+    @include flex-wrap(wrap);
+    min-height: 24px;
 
     &:not(:last-child) {
       margin-bottom: 35px;
@@ -32,10 +35,27 @@
   }
 
   &__title {
+    width: 80%;
     margin: 37px 0 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    width: auto;
   }
 }
 
 @media #{$lg} {
   @import "media/lg";
+}
+
+@media #{$md} {
+  @import "media/md";
+}
+
+@media #{$sm} {
+  @import "media/sm";
 }

@@ -212,11 +212,10 @@ $(window).on('load', function() {
     });
 
     // navmenu select
-    let navMenuWrapper = $('#nav-menu'),
-        navMenuLinks = navMenuWrapper.find('a');
+    let navMenuLinks = $('.nav-menu').find('a');
 
-    navMenuLinks.click(function () {
-        $(this).closest(navMenuWrapper).find('a.current').removeClass('current');
+    navMenuLinks.click(() => {
+        navMenuLinks.removeClass('current');
         $(this).addClass('current');
     });
 

@@ -3,11 +3,24 @@
   @include flex-wrap(wrap);
   margin-bottom: 30px;
 
+  @media #{$md} {
+    margin-bottom: 25px;
+  }
+
   &__item {
     cursor: pointer;
+    margin-bottom: 14px;
 
     &:not(:last-child) {
       margin-right: 50px;
+
+      @media #{$lg} {
+        margin-right: 40px;
+      }
+
+      @media #{$md} {
+        margin-right: 21px;
+      }
     }
 
     &:nth-child(n+6) {
@@ -18,6 +31,10 @@
   &__link {
     font-size: 1.6rem;
     font-weight: 500;
+
+    @media #{$md} {
+      font-size: 1.5rem;
+    }
 
     &:hover{
       color: $active-orange;
@@ -38,6 +55,14 @@
         height: 2px;
         background-color: #fa6400;
       }
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media #{$md} {
+      display: flex;
     }
   }
 }

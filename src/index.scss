@@ -17,10 +17,6 @@ $slick-arrow-color: black !default;
 @import "./styles/setup/clearfix"; // clearfix for floats
 @import "./styles/setup/border-box"; // global border-box setting
 
-//! global styles
-@import "./styles/global/typography"; // global typography
-@import "./styles/global/global"; // global styles
-
 //! sections
 @import "styles/layout/external-lib-fix/styling";
 @import "./styles/layout/navbar-menu/styling";
@@ -67,3 +63,7 @@ $slick-arrow-color: black !default;
 @import "./styles/layout/text-info/styling";
 @import "./styles/layout/text-action/styling";
 @import "./styles/layout/notifications/styling";
+
+//! global styles
+@import "./styles/global/typography"; // global typography
+@import "./styles/global/global"; // global styles

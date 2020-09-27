@@ -62,3 +62,7 @@
 @media #{$lg} {
   @import "media/lg";
 }
+
+@media #{$md} {
+  @import "media/md";
+}
