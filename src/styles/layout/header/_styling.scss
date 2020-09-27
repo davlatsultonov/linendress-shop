@@ -35,3 +35,7 @@
     margin: 37px 0 50px;
   }
 }
+
+@media #{$lg} {
+  @import "media/lg";
+}

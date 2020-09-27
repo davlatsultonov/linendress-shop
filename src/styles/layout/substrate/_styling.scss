@@ -58,3 +58,7 @@
     bottom: 12px;
   }
 }
+
+@media #{$lg} {
+  @import "media/lg";
+}
