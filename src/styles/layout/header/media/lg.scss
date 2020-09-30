@@ -1,6 +1,7 @@
 .header {
 
   &__info {
+    width: 69%;
     margin-left: 9%;
   }
 
@@ -10,6 +11,6 @@
   }
 
   .social-block {
-    width: 67%;
+    width: calc(100% - 205px);
   }
 }

@@ -1,7 +1,7 @@
 .header {
 
   &__info {
-    width: 69%;
+    width: 71%;
     margin-left: 7%;
     margin-top: 0;
   }
@@ -15,7 +15,6 @@
   }
 
   &__item {
-    align-items: flex-start;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -28,7 +27,6 @@
   }
 
   .social-block {
-    width: 52%;
 
     &__item:not(:last-child) {
       display: block;

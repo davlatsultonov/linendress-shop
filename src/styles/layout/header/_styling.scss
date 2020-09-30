@@ -46,6 +46,15 @@
   .contacts {
     width: auto;
   }
+
+  .social-block {
+    width: calc(100% - 250px);
+    margin-top: 5px;
+
+    &__item {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 @media #{$lg} {
