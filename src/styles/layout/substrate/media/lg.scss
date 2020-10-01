@@ -1,6 +1,28 @@
 .substrate {
 
+  &__sm {
+
+    &_left .substrate__item{
+      transform: translateX(-77%);
+    }
+  }
+
+  &__lg {
+
+    &_left .substrate__item {
+      transform: translateX(-72%);
+    }
+
+    &_right .substrate__item {
+      transform: translateX(30%);
+    }
+
+    &_header .substrate__item{
+      transform: translateX(16%);
+    }
+  }
+
   &_with-slider .substrate__item {
-    right: -93.5%;
+    transform: translate(16%, -17%);
   }
 }

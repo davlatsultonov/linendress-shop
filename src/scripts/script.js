@@ -45,19 +45,13 @@ $(document).ready(function () {
 });
 
 $(window).on('load', function() {
+    dynamicSubstrateHeight();
+
     let productCardItems = $('.product-card  a');
 
     productCardItems.click(function (e) {
         e.stopPropagation();
     });
-
-    // setting dynamic height to bg-layers
-  /*  $('.info-block').each(function () {
-        let totalHeight = $(this).find('.info-block__img').css('height') + $(this).find('.info-block__statement').css('height');
-        $(this).children('.substrate__item').height(totalHeight);
-    });
-
-    $('.header').find('.substrate__item').height($('.header').outerHeight());*/
 
     // product-card__btn-more
     let cardBtnMore = $('.product-card__btn-more--js'),
@@ -228,3 +222,28 @@ $(window).on('load', function() {
         $(this).addClass('active');
     });
 });
+
+$(window).on('resize', throttle(dynamicSubstrateHeight, 60));
+
+function dynamicSubstrateHeight() {
+    // setting dynamic height to bg-layers
+    let infoBlocks = $('.info-block'),
+        header = $('.header');
+
+    infoBlocks.each(function () {
+      let totalHeight = $(this).find('.info-block__img').css('height') + $(this).find('.info-block__statement').css('height');
+      $(this).children('.substrate__item').height(totalHeight);
+    });
+
+    header.find('.substrate__item').height(header.outerHeight() + 120);
+}
+
+function throttle(fn, wait) {
+    var time = Date.now();
+    return function() {
+        if ((time + wait - Date.now()) < 0) {
+            fn();
+            time = Date.now();
+        }
+    }
+}

@@ -14,7 +14,7 @@
     @include align-items(center);
     width: 45px;
     height: 40px;
-    box-shadow: $base-shadow;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.38);
     border-radius: 3px;
     background-color: #606060;
     cursor: pointer;
@@ -23,6 +23,10 @@
       width: auto !important;
       pointer-events: none;
       user-select: none;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.20);
     }
   }
   

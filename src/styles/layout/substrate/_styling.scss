@@ -18,40 +18,38 @@
     }
 
     &_left .substrate__item{
-      left: -204%;
+      transform: translateX(-70%);
     }
 
     &_right .substrate__item {
-      right: -186%;
+      transform: translateX(3%);
       top: 44px;
     }
   }
 
   &__lg {
-    $offset: -89.4%;
 
     .substrate__item {
       height: 471px;
     }
 
     &_left .substrate__item {
-      left: $offset;
+      transform: translateX(-66%);
     }
 
     &_right .substrate__item {
-      right: $offset;
+      transform: translateX(38%);
     }
 
     &_header .substrate__item{
-      right: -62.5%;
-      top: -150px;
+      transform: translateX(21%);
+      top: -64px;
     }
   }
 
   &_with-slider .substrate__item {
     height: 805px;
-    right: -62.5%;
-    top: -92px;
+    transform: translate(21%, -15%);
   }
 
   #info-cards-controls {

@@ -56,10 +56,10 @@
   }
 
   &__copyright {
-    @include inline-flex;
-    @include align-items(center);
+    display: inline-block;
     color: #fff;
     font-size: 1.6rem;
+    line-height: 25px;
     margin-left: auto;
     float: right;
   }

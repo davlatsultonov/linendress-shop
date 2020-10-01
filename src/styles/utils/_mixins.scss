@@ -266,59 +266,6 @@ position: relative;
   overflow: hidden;
 }
 
-$queries: (
-        $xs: 'xs',
-        $sm: 'sm',
-);
-$num-of-classes: 150;
-$directions: ('top', 'bottom', 'left', 'right');
-$types: ('margin', 'padding');
-
-@mixin generate-margins-px () {
-  @each $type in $types {
-
-    @each $direction in $directions {
-      @for $i from 0 through ($num-of-classes) - 1 {
-        .#{$type}-#{$i} {
-          #{$type}: (#{$i}px) !important;
-        }
-      }
-    }
-
-    @each $query, $z in $queries {
-      @media(min-width: #{$query}) {
-        @for $i from 0 through ($num-of-classes) - 1 {
-          .#{$type}-#{$z}-#{$i} {
-            #{$type}: (#{$i}px) !important;
-          }
-        }
-      }
-    }
-
-    @each $direction in $directions {
-      @for $i from 0 through ($num-of-classes) - 1 {
-        .#{$type}-#{$direction}-#{$i} {
-          #{$type}-#{$direction}: (#{$i}px) !important;
-        }
-      }
-    }
-
-    @each $query, $z in $queries {
-      @media(min-width: #{$query}) {
-        @each $direction in $directions {
-          @for $i from 0 through ($num-of-classes) - 1 {
-            .#{$type}-#{$direction}-#{$z}-#{$i} {
-              #{$type}-#{$direction}: (#{$i}px) !important;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@include generate-margins-px();
-
 @mixin placeholder {
   &.placeholder { @content; }
   &:-moz-placeholder { @content; }
