@@ -1,0 +1,30 @@
+.products-group {
+
+  &__item {
+    margin-right: 24px;
+  }
+
+  &_column-4 {
+
+    .products-group__item {
+      margin-right: 35px;
+
+      &:nth-child(3n) {
+        margin-right: 35px;
+      }
+    }
+  }
+}
+
+.product-card {
+  width: 206px;
+
+  &__content {
+    padding: 15px;
+
+    .button_size_md {
+      min-width: 135px;
+      line-height: 14px;
+    }
+  }
+}

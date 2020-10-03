@@ -18,11 +18,12 @@
     }
 
     &_header .substrate__item{
-      transform: translateX(16%);
+      transform: translate(16%, -44%);
     }
   }
 
   &_with-slider .substrate__item {
-    transform: translate(16%, -17%);
+    transform: translate(16%, -15%);
   }
+
 }

@@ -19,13 +19,11 @@
     }
 
     &_header .substrate__item{
-      transform: translateX(11%);
-      top: -136px;
+      transform: translate(11%, -44%);
     }
   }
 
   &_with-slider .substrate__item {
     transform: translate(11%, -19%);
-    margin: 0;
   }
 }

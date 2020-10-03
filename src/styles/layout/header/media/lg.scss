@@ -11,10 +11,10 @@
   }
 
   .social-block {
-    width: calc(100% - 225px);
+    width: calc(100% - 255px);
 
     &__item:not(:last-child) {
-      margin-right: 25px;
+      margin-right: 20px;
     }
   }
 }

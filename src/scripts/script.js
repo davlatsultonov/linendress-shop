@@ -133,24 +133,29 @@ $(window).on('load', function() {
     });
 
     addCounterBtn.on('click', function (e) {
+        let decreaseBtn = $(this).hasClass('add-counter__decrease') ? $(this) : null,
+            increaseBtn = $(this).hasClass('add-counter__increase') ? $(this) : null,
+            parent = $(this).closest('.add-counter'),
+            counterBox = parent.children('.add-counter__num');
+
         e.preventDefault();
         e.stopPropagation();
 
-        let parent = $(this).closest('.add-counter'),
-            counterBox = parent.children('.add-counter__num');
 
-        if ($(this).hasClass('add-counter__decrease')) {
-            if (+counterBox.val() <= 1) {
-                parent.parent().removeClass('show-counter');
-            } else {
-                counterBox.val(+counterBox.val() - 1)
+        if (+counterBox.val()) {
+            if (decreaseBtn) {
+                if (+counterBox.val() <= 1) {
+                    parent.parent().removeClass('show-counter');
+                } else {
+                    counterBox.val(+counterBox.val() - 1)
+                }
+            }
+
+            if (increaseBtn) {
+                counterBox.val(+counterBox.val() + 1);
             }
         }
-
-        if ($(this).hasClass('add-counter__increase')) {
-            counterBox.val(+counterBox.val() + 1);
-        }
-    })
+    });
 
     // color picker
     let colorPicker = $('.color-picker'),

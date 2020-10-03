@@ -92,11 +92,11 @@ position: relative;
 // Flexbox  mixins
 // Flexbox display
 @mixin flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
 }
 
 // Inline flex display

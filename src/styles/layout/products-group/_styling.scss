@@ -75,6 +75,10 @@
     &_discount {
       @include flexbox;
 
+      .total-price {
+        color: $active-orange;
+      }
+
       .discount-label {
         margin-left: 5px;
       }
@@ -120,4 +124,12 @@
 
     @include slick-arrows-inside(5);
   }
+}
+
+@media #{$lg} {
+  @import "media/lg";
+}
+
+@media #{$md} {
+  @import "media/md";
 }
