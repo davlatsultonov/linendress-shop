@@ -38,7 +38,7 @@
     }
 
     &_right .substrate__item {
-      transform: translateX(38%);
+      transform: translateX(2%);
     }
 
     &_header .substrate__item{
@@ -62,4 +62,8 @@
 
 @media #{$md} {
   @import "media/md";
+}
+
+@media #{$xxs} {
+  @import "media/xxs";
 }

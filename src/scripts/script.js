@@ -228,11 +228,11 @@ $(window).on('load', function() {
     });
 });
 
-$(window).on('resize', throttle(dynamicSubstrateHeight, 60));
+$(window).on('resize', throttle(dynamicSubstrateHeight, 40));
 
 function dynamicSubstrateHeight() {
     // setting dynamic height to bg-layers
-    let infoBlocks = $('.info-block'),
+    let infoBlocks = $('.info-block__item'),
         header = $('.header');
 
     infoBlocks.each(function () {

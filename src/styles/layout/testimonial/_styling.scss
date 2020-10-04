@@ -16,6 +16,12 @@
       width: 100px;
     }
 
+    @media #{$xs} {
+      height: 81px;
+      width: 81px;
+      border-width: 5px;
+    }
+
     img {
       width: 100%;
     }

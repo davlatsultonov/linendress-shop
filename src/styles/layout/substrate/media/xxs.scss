@@ -1,0 +1,9 @@
+.substrate {
+
+  &__lg {
+
+    &_left .substrate__item {
+      transform: translateX(-83%);
+    }
+  }
+}
