@@ -1,0 +1,18 @@
+.about-work-group {
+
+  &__item {
+
+    &:nth-child(3n) {
+      margin-right: 15px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.about-work-item {
+  width: 48%;
+  min-height: 157px;
+}
