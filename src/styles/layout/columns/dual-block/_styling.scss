@@ -1,12 +1,28 @@
 .dual-block {
   @include flexbox;
 
+  @media #{$md} {
+    @include flex-wrap(wrap);
+  }
+
   &__item {
     width: 49%;
     margin-bottom: 30px;
 
+    @media #{$md} {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 58px;
+      
+      @media #{$lg} {
+        margin-right: 20px;
+      }
+
+      @media #{$md} {
+        margin-right: 0;
+      }
     }
   }
 

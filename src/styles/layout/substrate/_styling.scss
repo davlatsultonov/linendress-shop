@@ -13,9 +13,9 @@
 
   &__sm {
 
-    .substrate__item {
+    /*.substrate__item {
       height: 323px;
-    }
+    }*/
 
     &_left .substrate__item{
       transform: translateX(-70%);
@@ -29,9 +29,9 @@
 
   &__lg {
 
-    .substrate__item {
+    /*.substrate__item {
       height: 471px;
-    }
+    }*/
 
     &_left .substrate__item {
       transform: translateX(-66%);
@@ -47,7 +47,7 @@
   }
 
   &_with-slider .substrate__item {
-    height: 805px;
+    /*height: 805px;*/
     transform: translate(21%, -15%);
   }
 

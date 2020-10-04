@@ -17,13 +17,29 @@
     height: 290px;
     float: left;
     @include cover-background;
+
+    @media #{$md} {
+      width: 34%;
+    }
   }
 
   &__content {
+    height: 100%;
     width: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
     float: right;
-    padding: 33px;
+    padding: 30px;
     background-color: #ffffff;
+
+    @media #{$lg} {
+      padding: 20px 18px;
+    }
+
+    @media #{$md} {
+      width: 66%;
+      padding: 28px 40px 28px 30px;
+    }
   }
 
   &__des {

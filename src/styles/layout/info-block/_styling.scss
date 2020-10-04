@@ -23,22 +23,41 @@
   }
 
   &__des {
+    $padding-offset: 60px;
+    $padding-offset--md: 30px;
+
     font-size: 1.4rem;
-    padding-right: 60px;
+    padding-right: $padding-offset;
     padding-top: 18px;
+
+    @media #{$md} {
+      padding-right: $padding-offset--md;
+    }
 
     p:not(:last-child){
       margin-bottom: 30px;
+
+      @media #{$md} {
+        margin-bottom: 15px;
+      }
     }
 
     &_position_right {
       padding-right: 0;
-      padding-left: 60px;
+      padding-left: $padding-offset;
+
+      @media #{$md} {
+        padding-left: $padding-offset--md;
+      }
     }
   }
 
   &__statement {
     padding: 15px 55px 20px;
+
+    @media #{$md} {
+      padding: 15px 20px 20px 35px;
+    }
 
     p {
       width: 80%;
