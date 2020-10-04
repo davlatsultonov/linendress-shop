@@ -6,6 +6,10 @@
 
     &:not(:last-child) {
       margin-right: 15px;
+
+      @media (max-width: 414px) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -13,6 +17,18 @@
 
     &__item:not(:last-child) {
       margin-bottom: 15px;
+    }
+
+    @media #{$md} {
+      display: none;
+    }
+
+    @media (max-width: 720px) {
+      display: block;
+    }
+
+    @media (max-width: 424px) {
+      display: none;
     }
   }
 
@@ -27,6 +43,12 @@
   &__img {
     overflow: hidden;
     border-radius: 8px;
+    width: 300px;
+    height: 300px;
+
+    @media (max-width: 719px) {
+      width: 290px;
+    }
 
     img {
       border-radius: 8px;
@@ -37,22 +59,31 @@
 
       &_lg {
         width: 436px;
-        height: 300px;
+
+        @media #{$md} {
+          width: 386px;
+        }
       }
 
       &_md {
-        width: 300px;
-        height: 300px;
 
         &-half {
-          width: 300px;
           height: 142px;
+
+          @media (max-width: 719px) {
+            height: 147px;
+          }
         }
       }
 
       &_sm {
         width: 142px;
         height: 142px;
+
+        @media (max-width: 719px) {
+          width: 138px;
+          height: 138px;
+        }
       }
 
       &_xs {

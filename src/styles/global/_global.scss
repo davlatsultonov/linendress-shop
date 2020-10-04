@@ -88,6 +88,21 @@ ul {
   font-style: italic;
 }
 
+.hide-1200 {
+
+  @media #{$lg} {
+    display: none;
+  }
+}
+
+.show-1200 {
+  display: none;
+
+  @media #{$lg} {
+    display: block;
+  }
+}
+
 .hide-1024 {
 
   @media #{$md} {
@@ -113,6 +128,36 @@ ul {
   display: none;
 
   @media #{$sm} {
+    display: block;
+  }
+}
+
+.hide-720 {
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+.show-720 {
+  display: none;
+
+  @media (max-width: 720px) {
+    display: block;
+  }
+}
+
+.hide-480 {
+
+  @media #{$xs} {
+    display: none;
+  }
+}
+
+.show-480 {
+  display: none;
+
+  @media #{$xs} {
     display: block;
   }
 }
