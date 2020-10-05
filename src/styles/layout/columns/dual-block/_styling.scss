@@ -1,10 +1,6 @@
 .dual-block {
   @include flexbox;
 
-  @media #{$md} {
-    @include flex-wrap(wrap);
-  }
-
   &__item {
     width: 49%;
     margin-bottom: 30px;
@@ -23,6 +19,13 @@
       @media #{$md} {
         margin-right: 0;
       }
+    }
+  }
+
+  &_info-cards {
+
+    @media #{$md} {
+      @include flex-wrap(wrap);
     }
   }
 

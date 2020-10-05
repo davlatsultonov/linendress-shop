@@ -1,10 +1,14 @@
 .info-card {
-  @include prefix(border-radius, 30px);
+  border-radius: 30px;
   @include prefix(box-shadow, $base-shadow);
   height: 290px;
   background: #fff;
   margin-bottom: 60px;
   overflow: hidden;
+
+  @media #{$xs} {
+    height: auto;
+  }
 
   &__title {
     font-size: 1.8rem;
@@ -20,6 +24,10 @@
 
     @media #{$md} {
       width: 34%;
+    }
+
+    @media #{$xs} {
+      width: 100%;
     }
   }
 
@@ -39,6 +47,13 @@
     @media #{$md} {
       width: 66%;
       padding: 28px 40px 28px 30px;
+    }
+
+    @media #{$xs} {
+      width: 100%;
+      border-top: 5px solid #fa6400;
+      padding-top: 18px;
+      padding-bottom: 24px;
     }
   }
 

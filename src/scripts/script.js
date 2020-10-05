@@ -237,8 +237,6 @@ function dynamicSubstrateHeight() {
 
     infoBlocks.each(function () {
       let totalHeight = $(this).find('.info-block__img').outerHeight() + $(this).find('.info-block__statement').outerHeight();
-      console.log(totalHeight);
-
       $(this).children('.substrate__item').height(totalHeight - 30);
     });
 
