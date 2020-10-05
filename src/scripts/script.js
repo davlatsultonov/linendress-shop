@@ -228,7 +228,7 @@ $(window).on('load', function() {
     });
 });
 
-$(window).on('resize', throttle(dynamicSubstrateHeight, 40));
+$(window).on('resize', dynamicSubstrateHeight);
 
 function dynamicSubstrateHeight() {
     // setting dynamic height to bg-layers

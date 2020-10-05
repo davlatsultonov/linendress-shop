@@ -1,6 +1,6 @@
 .substrate {
 
-  &__sm {
+  /*&__sm {
 
     &_left .substrate__item{
       transform: translateX(-77%);
@@ -16,10 +16,10 @@
     &_header .substrate__item{
       transform: translate(16%, -44%);
     }
-  }
+  }*/
 
   &_with-slider .substrate__item {
-    transform: translate(16%, -15%);
+    margin-left: 27%;
   }
 
 }

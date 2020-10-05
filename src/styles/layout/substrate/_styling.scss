@@ -4,7 +4,7 @@
 
   &__item {
     border-radius: 30px;
-    width: 1600px;
+    width: 200%;
     background-color: #ffeee2;
     position: absolute;
     z-index: -1;
@@ -13,42 +13,40 @@
 
   &__sm {
 
-    /*.substrate__item {
+    .substrate__item {
       height: 323px;
-    }*/
+    }
 
     &_left .substrate__item{
-      transform: translateX(-70%);
+      margin-left: -109%;
     }
 
     &_right .substrate__item {
-      transform: translateX(3%);
+      margin-left: 7%;
       top: 44px;
     }
   }
 
   &__lg {
 
-    /*.substrate__item {
-      height: 471px;
-    }*/
-
     &_left .substrate__item {
-      transform: translateX(-66%);
+      margin-left: -105%;
     }
 
     &_right .substrate__item {
-      transform: translateX(2%);
+      margin-left: 5%;
     }
 
     &_header .substrate__item{
-      transform: translate(21%, -42%);
+      margin-left: 26%;
+      margin-top: -170px;
+      top: 0;
     }
   }
 
   &_with-slider .substrate__item {
-    /*height: 805px;*/
-    transform: translate(21%, -15%);
+    margin-left: 28%;
+    margin-top: -130px;
   }
 
   #info-cards-controls {
