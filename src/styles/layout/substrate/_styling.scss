@@ -41,27 +41,31 @@
       margin-left: 25%;
       margin-top: -170px;
       top: 0;
+
+      @media #{$sm} {
+        display: none;
+      }
     }
   }
 
   &_with-slider .substrate__item {
     margin-left: 28%;
     margin-top: -130px;
+
+    @media #{$lg} {
+      margin-left: 27%;
+    }
+
+    @media #{$md} {
+      margin-left: 25%;
+    }
+
+    @media #{$sm} {
+      display: none;
+    }
   }
 
   #info-cards-controls {
     bottom: 12px;
   }
-}
-
-@media #{$lg} {
-  @import "media/lg";
-}
-
-@media #{$md} {
-  @import "media/md";
-}
-
-@media #{$xxs} {
-  @import "media/xxs";
 }
