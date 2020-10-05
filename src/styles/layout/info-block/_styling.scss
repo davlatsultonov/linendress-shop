@@ -4,14 +4,14 @@
   line-height: 24px;
   margin-bottom: 57px;
 
-  @media #{$xs} {
+  @media #{$xsm} {
     @include flex-direction(column);
   }
 
   &:not(:last-child) {
     margin-bottom: 50px;
 
-    @media #{$xs} {
+    @media #{$xsm} {
       margin-bottom: 25px;
     }
   }
@@ -19,12 +19,12 @@
   &__item {
     width: 50%;
 
-    @media #{$xs} {
+    @media #{$xsm} {
       width: 100%;
     }
 
     &--first-order {
-      @media #{$xs} {
+      @media #{$xsm} {
         order: -1;
       }
     }
@@ -39,7 +39,7 @@
     @media #{$md} {
       height: 250px;
     }
-
+    
     @media #{$xxs} {
       height: 169px;
     }
@@ -61,7 +61,7 @@
       padding-right: $padding-offset--md;
     }
 
-    @media #{$xs} {
+    @media #{$xsm} {
       margin-bottom: 25px;
       padding-right: 0;
       padding-top: 0;
@@ -83,7 +83,7 @@
         padding-left: $padding-offset--md;
       }
 
-      @media #{$xs} {
+      @media #{$xsm} {
         padding-left: 0;
       }
     }
@@ -96,7 +96,7 @@
       padding: 15px 20px 20px 35px;
     }
 
-    @media #{$xs} {
+    @media #{$xsm} {
       padding: 15px 5px 20px 24px;
     }
 
