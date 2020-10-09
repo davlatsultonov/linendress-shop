@@ -19,6 +19,7 @@ body {
 .content {
   @include flex;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .container {
@@ -90,73 +91,85 @@ ul {
 .hide-1200 {
 
   @media #{$lg} {
-    display: none;
+    display: none !important;
   }
 }
 
 .show-1200 {
-  display: none;
+  display: none !important;
 
   @media #{$lg} {
-    display: block;
+    display: block !important;
   }
 }
 
 .hide-1024 {
 
   @media #{$md} {
-    display: none;
+    display: none !important;
   }
 }
 
 .show-1024 {
 
   @media #{$md} {
-    display: block;
+    display: block !important;
   }
 }
 
 .hide-768 {
 
   @media #{$sm} {
-    display: none;
+    display: none !important;
   }
 }
 
 .show-768 {
-  display: none;
+  display: none !important;
 
   @media #{$sm} {
-    display: block;
+    display: block !important;
   }
 }
 
 .hide-720 {
 
   @media (max-width: 720px) {
-    display: none;
+    display: none !important;
   }
 }
 
 .show-720 {
-  display: none;
+  display: none !important;
 
   @media (max-width: 720px) {
-    display: block;
+    display: block !important;
   }
 }
 
 .hide-480 {
 
   @media #{$xs} {
-    display: none;
+    display: none !important;
   }
 }
 
 .show-480 {
-  display: none;
+  display: none !important;
 
   @media #{$xs} {
+    display: block !important;
+  }
+}
+
+.hamburger-btn {
+  display: none;
+  cursor: pointer;
+  margin-right: 40px;
+  background: transparent;
+  border: none;
+
+  @media #{$sm} {
     display: block;
   }
 }

@@ -153,6 +153,25 @@
       }
     }
   }
+
+  &-basket {
+
+    &--active-dot {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 2px;
+        background-color: #fa741b;
+        position: absolute;
+        top: -1px;
+        right: -8px;
+      }
+    }
+  }
 }
 
 // delivery btn

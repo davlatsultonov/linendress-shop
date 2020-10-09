@@ -47,6 +47,20 @@ $(document).ready(function () {
 $(window).on('load', function() {
     dynamicSubstrateHeight();
 
+
+    // mobile-menu
+    let mobileHamburgerBtn = $('.hamburger-btn_js'),
+        mobileMenuCloseBtn = $('.header-mobile__btn-close_js'),
+        mobileNavbar = $('.header-mobile__navbar_js');
+
+    mobileHamburgerBtn.click(function () {
+        mobileNavbar.addClass('header-mobile__navbar--active');
+    });
+
+    mobileMenuCloseBtn.click(function () {
+        mobileNavbar.removeClass('header-mobile__navbar--active');
+    });
+
     let productCardItems = $('.product-card  a');
 
     productCardItems.click(function (e) {

@@ -3,6 +3,10 @@
   margin: 65px 0 40px;
   overflow: hidden;
 
+  @media #{$sm} {
+    display: none;
+  }
+
   &__item {
     float: left;
 

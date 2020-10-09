@@ -11,6 +11,10 @@
     cursor: pointer;
     margin-bottom: 14px;
 
+    @media #{$sm} {
+      margin-bottom: 0;
+    }
+
     &:not(:last-child) {
       margin-right: 50px;
 
@@ -21,10 +25,18 @@
       @media #{$md} {
         margin-right: 21px;
       }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
     }
 
     &:nth-child(n+6) {
       margin-top: 10px;
+
+      @media #{$sm} {
+        margin-top: 0;
+      }
     }
   }
 
@@ -63,6 +75,40 @@
 
     @media #{$md} {
       display: flex;
+    }
+  }
+
+  &--mobile {
+    display: block;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .nav-menu__item {
+      text-align: center;
+      height: 20vh;
+      line-height: 20vh;
+    }
+
+    .nav-menu__link {
+      display: block;
+      font-size: 2rem;
+    }
+
+    .menu-dropdown {
+      display: block;
+      width: 100%;
+
+      &__btn {
+        padding-bottom: 0;
+      }
+
+      &__item {
+        height: 9vh;
+        line-height: 9vh;
+      }
     }
   }
 }

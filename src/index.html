@@ -12,10 +12,90 @@
 <body>
 <div class="wrapper">
     <div class="content">
+        <header class="header-mobile">
+            <div class="container">
+                <div class="header-mobile__items">
+                    <div class="header-mobile__item">
+                        <button class="hamburger-btn hamburger-btn_js">
+                            <img src="/images/icons/hamburger-icon.svg" alt="hamburger-icon">
+                        </button>
+                    </div>
+                    <div class="header-mobile__item">
+                        <div class="main-logo">
+                            <a href='./index.html'>
+                                <img src="/images/logo/sm/logo-black_sm.svg" alt="header-logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-mobile__item header-mobile__item--right">
+                        <div class="auth-block">
+                            <a href="./customerArea.html">
+                                <img src="/images/icons/authorization/person.svg"
+                                     class="auth-block__icon"
+                                     alt="auth-person-icon">
+                                <!--<span class="auth-block__phone hide-768">
+                                  +7 (913) 93*-**-*9
+                                </span>-->
+                            </a>
+                            <!--<a href="#">
+                              <img src="/images/icons/authorization/exit.svg"
+                                   class="auth-block__icon"
+                                   alt="auth-exit-icon">
+                            </a>-->
+                        </div>
+                        <a href="./basket.html" class="button-basket button-basket--active-dot">
+                            <img src="/images/icons/basket.svg" class="button__icon" alt="basket-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-mobile__navbar header-mobile__navbar_js">
+                    <button class="header-mobile__btn-close header-mobile__btn-close_js">
+                        <img src="/images/icons/close-icon.svg" alt="close-icon">
+                    </button>
+                    <ul class="nav-menu nav-menu--mobile">
+                        <li class="menu-dropdown">
+                            <a href="./finished-products.html"
+                               class="nav-menu__link nav-menu__item menu-dropdown__btn">
+                                Каталог
+                            </a>
+                            <div class="menu-dropdown__content">
+                                <a href="./finished-products.html" class="nav-menu__link menu-dropdown__item">Готовые
+                                    изделия</a>
+                                <a href="http://linendress.store/" class="nav-menu__link menu-dropdown__item">Конструктор
+                                    платья</a>
+                                <a href="./fancywork.html" class="nav-menu__link menu-dropdown__item">Вышивка</a>
+                                <a href="./accessory.html" class="nav-menu__link menu-dropdown__item">Аксессуары</a>
+                            </div>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="./look-book.html" class="nav-menu__link">
+                                Look book
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="./about.html" class="nav-menu__link">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="./cooperation.html" class="nav-menu__link">
+                                Сотрудничество
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         <header class="header substrate substrate__lg substrate_with-slider">
             <div class="container">
-                <div class="header__items">
+                <div class="header__items hide-768">
                     <div class="substrate__item"></div>
+
                     <div class="header__logo">
                         <div class="lang-switcher header__lang-switcher">
                             <span class="lang-switcher__current" title="English">EN</span>
@@ -29,8 +109,7 @@
 
                         <div class="main-logo">
                             <a href='./index.html'>
-                                <img class="hide-768" src="/images/logo/logo-black.svg" alt="header-logo">
-                                <img class="show-768" src="/images/logo/sm/logo-black_sm.svg" alt="header-logo">
+                                <img src="/images/logo/logo-black.svg" alt="header-logo">
                             </a>
                         </div>
                     </div>
@@ -48,13 +127,13 @@
 
                             <div class="auth-block">
                                 <a href="./customerArea.html">
-                                    <span class="auth-block__text">
+                                    <span class="auth-block__text hide-768">
                                         Войти в личный кабинет
                                     </span>
                                     <img src="/images/icons/authorization/person.svg"
                                          class="auth-block__icon"
                                          alt="auth-person-icon">
-                                    <!--<span class="auth-block__phone">
+                                    <!--<span class="auth-block__phone hide-768">
                                       +7 (913) 93*-**-*9
                                     </span>-->
                                 </a>
@@ -98,7 +177,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <a href="./basket.html" class="button button_theme_white button_size_lg button_border-r_lg">
+                            <a href="./basket.html" class="button button_theme_white button_size_lg button_border-r_lg button--basket hide-768">
                                 Корзина пуста
                                 <img src="/images/icons/basket.svg" class="button__icon" alt="basket-icon">
                             </a>
