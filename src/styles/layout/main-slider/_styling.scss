@@ -9,6 +9,10 @@
     @media #{$md} {
       height: 240px;
     }
+
+    @media #{$xs} {
+      height: 162px;
+    }
   }
 
   &--wrapper {
@@ -21,6 +25,16 @@
     @media #{$md} {
       height: 240px;
       max-height: 240px;
+    }
+
+    @media #{$sm} {
+      width: 100%;
+    }
+
+    @media #{$xs} {
+      height: 162px;
+      max-height: 162px;
+      margin-bottom: 35px;
     }
 
     &:after, &:before {
@@ -49,7 +63,7 @@
   }
 
   .slick-dots {
-    display: flex;
+    display: flex !important;
     width: auto;
     flex-direction: column-reverse;
     justify-content: center;
@@ -62,6 +76,17 @@
       bottom: -8px;
     }
 
+    @media #{$sm} {
+      right: 14px;
+      height: 77%;
+      bottom: 4px;
+    }
+
+    @media #{$xs} {
+      display: none !important;
+    }
+
+
     li {
       margin-top: 3px;
       margin-bottom: 3px;
@@ -70,6 +95,10 @@
 
   .slick-prev, .slick-next {
     right: -39px;
+
+    @media #{$sm} {
+      right: 20px;
+    }
 
     &:before {
       transform: rotate(-90deg);
@@ -83,9 +112,17 @@
     @media #{$md} {
       top: 221px;
     }
+
+    @media #{$xs} {
+      top: 146px;
+    }
   }
 
   .slick-next {
     top: 23px;
+
+    @media #{$sm} {
+      top: 18px;
+    }
   }
 }

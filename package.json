@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "keywords": [],
-  "license": "ISC",
-  "author": "tr1s",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
