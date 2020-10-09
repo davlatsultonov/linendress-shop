@@ -3,12 +3,48 @@
   @include flex-wrap(wrap);
   margin-top: 15px;
 
+  @media #{$md} {
+    @include justify-content(space-between)
+  }
+
   &__item {
+    $lg-margin-offset: 90px;
+
     margin-right: 56px;
     margin-bottom: 35px;
 
+    @media #{$lg} {
+      margin-right: $lg-margin-offset;
+    }
+
+    @media #{$md} {
+      margin-right: 0;
+    }
+
     &:nth-child(4n) {
       margin-right: 0;
+
+      @media #{$lg} {
+        margin-right: $lg-margin-offset;
+      }
+
+      @media #{$md} {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3n) {
+
+      @media #{$lg} {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(2n) {
+
+      @media #{$md} {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -22,6 +58,18 @@
   padding: 30px 16px 40px 30px;
   position: relative;
 
+  @media #{$md} {
+    width: 320px;
+  }
+
+  @media #{$sm} {
+    width: 290px;
+  }
+
+  @media #{$xsm} {
+    width: 100%;
+  }
+
   &__title {
     font-size: 1.8rem;
     font-weight: 500;
@@ -29,10 +77,20 @@
 
   &__content {
     margin-top: 10px;
+    margin-bottom: 10px;
+    height: 75px;
+    max-height: 100px;
+    line-height: 1.4;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @media #{$xsm} {
+      max-height: 250px;
+    }
   }
 
   &__footer {
-    width: 80%;
+    width: calc(100% - 47px);
     @include flexbox;
     @include justify-content(space-between);
     position: absolute;
