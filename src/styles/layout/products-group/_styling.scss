@@ -1,4 +1,5 @@
 .products-group {
+  @include cards-slide-fix;
 
   &__wrapper {
     @include flexbox;

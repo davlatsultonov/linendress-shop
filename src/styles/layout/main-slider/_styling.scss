@@ -29,12 +29,13 @@
 
     @media #{$sm} {
       width: 100%;
+      margin-bottom: 35px;
+      margin-top: 15px;
     }
 
     @media #{$xs} {
       height: 162px;
       max-height: 162px;
-      margin-bottom: 35px;
     }
 
     &:after, &:before {
@@ -77,15 +78,8 @@
     }
 
     @media #{$sm} {
-      right: 14px;
-      height: 77%;
-      bottom: 4px;
-    }
-
-    @media #{$xs} {
       display: none !important;
     }
-
 
     li {
       margin-top: 3px;

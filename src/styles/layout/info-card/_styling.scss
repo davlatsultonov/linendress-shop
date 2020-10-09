@@ -1,3 +1,7 @@
+.info-cards {
+  @include cards-slide-fix;
+}
+
 .info-card {
   border-radius: 30px;
   @include prefix(box-shadow, $base-shadow);

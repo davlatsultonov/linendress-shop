@@ -1,3 +1,7 @@
 .header {
   padding-top: 0;
+
+  &-mobile {
+    display: block;
+  }
 }

@@ -1,0 +1,26 @@
+.navigation-back {
+  display: none;
+  border-bottom: 1px solid #323232;
+  margin-bottom: 20px;
+
+  @media #{$sm} {
+    display: block;
+  }
+
+  &__items {
+    @include flexbox;
+    @include align-items(center);
+    height: 40px;
+  }
+
+  &__title {
+    margin-left: 8px;
+    color: #1e1e1e;
+    font-weight: 500;
+  }
+
+  &__icon {
+    padding: 12px;
+    margin-left: -11px;
+  }
+}
