@@ -7,6 +7,10 @@
     @include justify-content(space-between)
   }
 
+  @media #{$xsm} {
+    padding: 0 25px;
+  }
+
   &__item {
     $lg-margin-offset: 90px;
 

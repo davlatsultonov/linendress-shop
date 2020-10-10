@@ -3,7 +3,9 @@
 }
 
 .pagination {
-  text-align: center;
+  @include flexbox;
+  @include justify-content(center);
+  min-height: 28px;
 
   &__item {
     margin: 0 2.5px;
