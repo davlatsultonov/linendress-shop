@@ -48,16 +48,23 @@
   }
 
   &_catalog {
-    margin-bottom: 80px;
 
     .dual-block__item {
 
       &:nth-child(1) {
         width: 219px;
+
+        @media #{$sm} {
+          display: none;
+        }
       }
 
       &:nth-child(2) {
         width: 74%;
+
+        @media #{$sm} {
+          width: 100%;
+        }
       }
 
       &:not(:last-child) {
@@ -69,6 +76,10 @@
 
         @media #{$md} {
           margin-right: 40px;
+        }
+
+        @media #{$sm} {
+          margin-right: 0;
         }
       }
     }
