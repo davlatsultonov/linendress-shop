@@ -95,7 +95,7 @@
       width: 100%;
       height: 100%;
       background: #fff;
-      z-index: 55;
+      z-index: 155;
       position: fixed;
       top: -100%;
       left: -100%;
@@ -125,7 +125,7 @@
       border-radius: 100%;
       padding: 8px;
       cursor: pointer;
-      z-index: 56;
+      z-index: 156;
 
       &:hover {
         box-shadow: $base-shadow;
