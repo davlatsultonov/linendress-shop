@@ -139,21 +139,6 @@
     }
   }
 
-  &-add-js {
-
-    &.show-counter {
-
-      .add-counter {
-        display: inline-flex;
-        opacity: 1;
-      }
-
-      .button {
-        display: none;
-      }
-    }
-  }
-
   &-basket {
 
     &--active-dot {
@@ -170,6 +155,10 @@
         top: -1px;
         right: -8px;
       }
+    }
+
+    .button__icon {
+      margin-top: 1px;
     }
   }
 }

@@ -9,7 +9,11 @@
   transition-delay: 60ms;
 
   @media #{$lg} {
-    min-width: 141px;
+    min-width: 167.5px;
+  }
+
+  @media #{$md} {
+    min-width: 128px;
   }
 
   &__btn {
@@ -68,5 +72,17 @@
       margin: 0 10px;
       background: none;
     }
+  }
+}
+
+.show-counter {
+
+  .add-counter {
+    display: inline-flex;
+    opacity: 1;
+  }
+
+  .button {
+    display: none;
   }
 }
