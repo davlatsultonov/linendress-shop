@@ -8,14 +8,6 @@
   @include shift;
   transition-delay: 60ms;
 
-  @media #{$lg} {
-    min-width: 167.5px;
-  }
-
-  @media #{$md} {
-    min-width: 128px;
-  }
-
   &__btn {
     @include inline-flex;
     @include justify-content(center);
@@ -36,10 +28,6 @@
     &:active {
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.20);
     }
-
-    @media #{$lg} {
-      width: 40px;
-    }
   }
   
   &__num {
@@ -47,10 +35,6 @@
     border: none;
     text-align: center;
     padding: 0 5px;
-
-    @media #{$lg} {
-      width: 35px;
-    }
   }
 
   &_thin {
@@ -78,11 +62,11 @@
 .show-counter {
 
   .add-counter {
-    display: inline-flex;
+    display: inline-flex !important;
     opacity: 1;
   }
 
   .button {
-    display: none;
+    display: none !important;
   }
 }

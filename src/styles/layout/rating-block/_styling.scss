@@ -7,6 +7,10 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @media #{$xs} {
+        margin-right: 10px;
+      }
     }
 
     &:hover {
@@ -19,6 +23,12 @@
     font-size: 2.4rem;
     margin-right: 4px;
     padding-top: 3px;
+    
+    @media #{$xs} {
+      font-size: 1.6rem;
+      margin-right: 2px;
+      padding-top: 0px;
+    }
 
     &_size_sm {
       font-size: 1.4rem;
@@ -28,6 +38,10 @@
 
   &__icon {
     vertical-align: top;
+    
+    @media #{$xs} {
+      width: 17px;
+    }
 
     &_size_sm {
       width: 18px;

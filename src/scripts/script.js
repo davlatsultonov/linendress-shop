@@ -9,6 +9,24 @@ $(document).ready(function () {
         cssEase: 'ease'
     });
 
+    /*$('.product-view__parts').slick({
+        dots: false,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 7,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 639,
+                settings: {
+                    dots: true
+                }
+            }
+        ]
+    });*/
+
     $('#products-group-slider').slick({
         dots: true,
         arrows: true,
