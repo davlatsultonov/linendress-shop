@@ -55,12 +55,10 @@ $(window).on('load', function() {
 
     mobileHamburgerBtn.click(function () {
         mobileNavbar.addClass('header-mobile__navbar--active');
-        disableScroll();
     });
 
     mobileMenuCloseBtn.click(function () {
         mobileNavbar.removeClass('header-mobile__navbar--active');
-        enableScroll();
     });
 
     let productCardItems = $('.product-card  a');
