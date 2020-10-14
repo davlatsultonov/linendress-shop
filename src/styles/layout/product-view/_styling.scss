@@ -55,6 +55,11 @@
     .product-view__img {
       height: 570px;
       max-height: 570px;
+
+      @media #{$xsm} {
+        height: 400px;
+        max-height: 400px;
+      }
     }
   }
 
