@@ -1,6 +1,15 @@
 .main-title {
   font-weight: 500;
   font-size: 2.4rem;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  min-height: 10px;
+
+  @media #{$xs} {
+    font-size: 1.8rem;
+    @include justify-content(center);
+  }
 
   &_type {
 
@@ -24,6 +33,10 @@
   &_indent-bottom {
     margin-bottom: 25px;
 
+    @media #{$xs} {
+      margin-bottom: 20px;
+    }
+
     &_md {
       margin-bottom: 20px;
     }
@@ -33,7 +46,7 @@
     }
   }
 
-  &__external-item {
-    float: right;
+  &_with-item {
+    justify-content: space-between;
   }
 }

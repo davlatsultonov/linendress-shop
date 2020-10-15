@@ -89,10 +89,7 @@ ul {
 }
 
 .hide-1200 {
-
-  @media #{$lg} {
-    display: none !important;
-  }
+  @include hide-el($lg);
 }
 
 .show-1200 {
@@ -104,13 +101,11 @@ ul {
 }
 
 .hide-1024 {
-
-  @media #{$md} {
-    display: none !important;
-  }
+  @include hide-el($md);
 }
 
 .show-1024 {
+  display: none;
 
   @media #{$md} {
     display: block !important;
@@ -118,10 +113,7 @@ ul {
 }
 
 .hide-768 {
-
-  @media #{$sm} {
-    display: none !important;
-  }
+  @include hide-el($sm);
 }
 
 .show-768 {
@@ -133,10 +125,7 @@ ul {
 }
 
 .hide-720 {
-
-  @media (max-width: 720px) {
-    display: none !important;
-  }
+  @include hide-el((max-width: 720px));
 }
 
 .show-720 {
@@ -148,10 +137,7 @@ ul {
 }
 
 .hide-480 {
-
-  @media #{$xs} {
-    display: none !important;
-  }
+  @include hide-el($xs);
 }
 
 .show-480 {
@@ -160,6 +146,10 @@ ul {
   @media #{$xs} {
     display: block !important;
   }
+}
+
+.show-480-inline-flex {
+  @include show-el($xs, flex);
 }
 
 .hamburger-btn {

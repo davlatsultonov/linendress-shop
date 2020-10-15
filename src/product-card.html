@@ -251,21 +251,19 @@
                     Готовые изделия
                 </li>
             </ul>
-            <h1 class="main-title main-title_indent-bottom_md hide-768">
+            <h1 class="main-title main-title_indent-bottom_md main-title_with-item">
                 Платье Шанхай, прямой с пуговками до пояса
 
-                <div class="main-title__external-item">
-                    <div class="rating-block">
-                        <a href="#" class="rating-block__item">
-                            <span class="rating-block__text">4,7</span>
-                            <img src="/images/icons/rating-block/star.svg" class="rating-block__icon" alt="rating-star">
-                        </a>
-                        <a href="#" class="rating-block__item">
-                            <span class="rating-block__text">3</span>
-                            <img src="/images/icons/rating-block/comment.svg" class="rating-block__icon"
-                                 alt="rating-comment">
-                        </a>
-                    </div>
+                <div class="rating-block hide-1024">
+                    <a href="#" class="rating-block__item">
+                        <span class="rating-block__text">4,7</span>
+                        <img src="/images/icons/rating-block/star.svg" class="rating-block__icon" alt="rating-star">
+                    </a>
+                    <a href="#" class="rating-block__item">
+                        <span class="rating-block__text">3</span>
+                        <img src="/images/icons/rating-block/comment.svg" class="rating-block__icon"
+                             alt="rating-comment">
+                    </a>
                 </div>
             </h1>
 
@@ -292,8 +290,20 @@
                     </div>
                 </div>
                 <div class="dual-block__item">
-                    <h3 class="main-title main-title_size_sm item-bordered main-title_indent-bottom">
+                    <h3 class="main-title main-title_size_sm item-bordered main-title_indent-bottom main-title_with-item">
                         Подробнее о товаре
+
+                        <div class="rating-block show-1024">
+                            <a href="#" class="rating-block__item">
+                                <span class="rating-block__text">4,7</span>
+                                <img src="/images/icons/rating-block/star.svg" class="rating-block__icon" alt="rating-star">
+                            </a>
+                            <a href="#" class="rating-block__item">
+                                <span class="rating-block__text">3</span>
+                                <img src="/images/icons/rating-block/comment.svg" class="rating-block__icon"
+                                     alt="rating-comment">
+                            </a>
+                        </div>
                     </h3>
 
                     <div class="about-product">
@@ -360,8 +370,8 @@
                             3 500 руб.
                         </div>
 
-                        <div class="button-add-js about-product__btn">
-                            <button class="button button_size_md button_font_sm">Добавить в корзину</button>
+                        <div class="about-product__btn">
+                            <button class="button button_size_md button_font_sm button-add-js">Добавить в корзину</button>
                             <div class="add-counter">
                                 <span role="button" class="add-counter__btn add-counter__decrease">
                                     <img src="/images/icons/decrease-icon.svg" alt="">
@@ -415,21 +425,90 @@
                 Рекомендуем приобрести к изделию
             </h3>
 
-            <div class="products-group products-group_column-4">
+            <div class="products-group products-group_column-4 products-group_no-grid">
                 <div class="products-group__wrapper">
-                    <div class="products-group__wrapper">
-                        <div class="product-card products-group__item">
-                            <div class="product-card__gallery has-slider">
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img1.png')"></div>
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img1.png')"></div>
-                            </div>
-                            <div class="product-card__content">
-                                <a href="./accessory.html">
-                                    <div class="product-card__title">
-                                        Карман с вышивкой
+                    <div class="product-card products-group__item">
+                        <div class="product-card__gallery has-slider">
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img1.png')"></div>
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img1.png')"></div>
+                        </div>
+                        <div class="product-card__content">
+                            <a href="./accessory.html">
+                                <div class="product-card__title">
+                                    Карман с вышивкой
+                                </div>
+                                <div class="product-card__properties">
+                                    <table class="product-selection product-selection_size_sm">
+                                        <tr>
+                                            <td>Размер:</td>
+                                            <td>100x100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цвет:</td>
+                                            <td>Морской</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="product-card__price product-card__price_discount">
+                                    <div class="total-price total-price_size_md">
+                                        1 000 руб.
                                     </div>
+                                    <div class="discount-label">
+                                        <img class="discount-label__img"
+                                             src="/images/icons/discount-label/discount-label--sm.svg"
+                                             alt="discount-icon--sm">
+                                        <span class="discount-label__price">
+                                            1 100 руб.
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
+                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Выбрать
+                                </a>
+                            </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
+                        </div>
+
+                        <div class="product-full-info">
+                            <div class="product-card">
+                                <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
+                                <div class="product-view product-view_small">
+                                    <div class="product-view__full">
+                                        <div class="product-full-info__gallery has-slider">
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                        </div>
+                                        <div class="product-view__btn-expand">
+                                            <button class="button button_theme_no-shadow button_type_expand button_theme_white">
+                                                <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__content">
+                                    <a href="./accessory.html" class="product-card__title">
+                                        Карман с вышивкой
+                                    </a>
                                     <div class="product-card__properties">
                                         <table class="product-selection product-selection_size_sm">
                                             <tr>
@@ -456,9 +535,9 @@
                                         </div>
                                     </div>
                                     <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
                                             </button>
                                             <div class="add-counter">
                                                 <span role="button" class="add-counter__btn add-counter__decrease">
@@ -469,95 +548,94 @@
                                                     <img src="/images/icons/increase-icon.svg" alt="">
                                                 </span>
                                             </div>
-                                        </div>
-                                        <span class="product-card__btn-more product-card__btn-more--js">
-                                            <img src="/images/icons/config.svg" alt="details-icon">
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="product-full-info">
-                                <div class="product-card">
-                                    <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
-                                    <div class="product-view product-view_small">
-                                        <div class="product-view__full">
-                                            <div class="product-full-info__gallery has-slider">
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
-                                            </div>
-                                            <div class="product-view__btn-expand">
-                                                <button class="button button_theme_no-shadow button_type_expand button_theme_white">
-                                                    <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <a href="./accessory.html" class="product-card__title">
-                                            Карман с вышивкой
-                                        </a>
-                                        <div class="product-card__properties">
-                                            <table class="product-selection product-selection_size_sm">
-                                                <tr>
-                                                    <td>Размер:</td>
-                                                    <td>100x100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Цвет:</td>
-                                                    <td>Морской</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="product-card__price product-card__price_discount">
-                                            <div class="total-price total-price_size_md">
-                                                1 000 руб.
-                                            </div>
-                                            <div class="discount-label">
-                                                <img class="discount-label__img"
-                                                     src="/images/icons/discount-label/discount-label--sm.svg"
-                                                     alt="discount-icon--sm">
-                                                <span class="discount-label__price">
-                                                    1 100 руб.
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="product-card__bottom">
-                                            <div class="product-card__button button-add-js">
-                                                <button class="button button_size_md button_font_sm">Добавить в
-                                                    корзину
-                                                </button>
-                                                <div class="add-counter">
-                                                    <span role="button" class="add-counter__btn add-counter__decrease">
-                                                        <img src="/images/icons/decrease-icon.svg" alt="">
-                                                    </span>
-                                                    <input type="text" value="1" class="add-counter__num">
-                                                    <span role="button" class="add-counter__btn add-counter__increase">
-                                                        <img src="/images/icons/increase-icon.svg" alt="">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a href="./accessory.html" class="product-card__btn-more">
-                                                <img src="/images/icons/config.svg" alt="details-icon">
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Выбрать
                                             </a>
                                         </div>
+                                        <a href="#" class="product-card__btn-more product-card__btn-more--js ">
+                                            <img src="/images/icons/config.svg" alt="details-icon">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="product-card products-group__item">
-                            <div class="product-card__gallery has-slider">
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img2.png')"></div>
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img2.png')"></div>
-                            </div>
-                            <div class="product-card__content">
-                                <a href="./accessory.html">
-                                    <div class="product-card__title">
-                                        Карман без вышивки
+                    <div class="product-card products-group__item">
+                        <div class="product-card__gallery has-slider">
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img2.png')"></div>
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img2.png')"></div>
+                        </div>
+                        <div class="product-card__content">
+                            <a href="./accessory.html">
+                                <div class="product-card__title">
+                                    Карман без вышивки
+                                </div>
+                                <div class="product-card__properties">
+                                    <table class="product-selection product-selection_size_sm">
+                                        <tr>
+                                            <td>Размер:</td>
+                                            <td>100x100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цвет:</td>
+                                            <td>на выбор</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="total-price total-price_size_md">
+                                        100 руб.
                                     </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
+                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Выбрать
+                                </a>
+                            </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
+                        </div>
+
+                        <div class="product-full-info">
+                            <div class="product-card">
+                                <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
+                                <div class="product-view product-view_small">
+                                    <div class="product-view__full">
+                                        <div class="product-full-info__gallery has-slider">
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                        </div>
+                                        <div class="product-view__btn-expand">
+                                            <button class="button button_theme_no-shadow button_type_expand button_theme_white">
+                                                <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__content">
+                                    <a href="./accessory.html" class="product-card__title">
+                                        Карман с вышивкой
+                                    </a>
                                     <div class="product-card__properties">
                                         <table class="product-selection product-selection_size_sm">
                                             <tr>
@@ -566,19 +644,27 @@
                                             </tr>
                                             <tr>
                                                 <td>Цвет:</td>
-                                                <td>на выбор</td>
+                                                <td>Морской</td>
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="product-card__price">
+                                    <div class="product-card__price product-card__price_discount">
                                         <div class="total-price total-price_size_md">
-                                            100 руб.
+                                            1 000 руб.
+                                        </div>
+                                        <div class="discount-label">
+                                            <img class="discount-label__img"
+                                                 src="/images/icons/discount-label/discount-label--sm.svg"
+                                                 alt="discount-icon--sm">
+                                            <span class="discount-label__price">
+                                                1 100 руб.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
                                             </button>
                                             <div class="add-counter">
                                                 <span role="button" class="add-counter__btn add-counter__decrease">
@@ -589,108 +675,123 @@
                                                     <img src="/images/icons/increase-icon.svg" alt="">
                                                 </span>
                                             </div>
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Выбрать
+                                            </a>
                                         </div>
-                                        <span class="product-card__btn-more product-card__btn-more--js">
+                                        <a href="#" class="product-card__btn-more product-card__btn-more--js ">
                                             <img src="/images/icons/config.svg" alt="details-icon">
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="product-full-info">
-                                <div class="product-card">
-                                    <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
-                                    <div class="product-view product-view_small">
-                                        <div class="product-view__full">
-                                            <div class="product-full-info__gallery has-slider">
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img2.png')"></div>
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img2.png')"></div>
-                                            </div>
-                                            <div class="product-view__btn-expand">
-                                                <button class="button button_theme_no-shadow button_type_expand button_theme_white">
-                                                    <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <a href="./accessory.html" class="product-card__title">
-                                            Карман без вышивки
                                         </a>
-                                        <div class="product-card__properties">
-                                            <table class="product-selection product-selection_size_sm">
-                                                <tr>
-                                                    <td>Размер:</td>
-                                                    <td>100x100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Цвет:</td>
-                                                    <td>на выбор</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="product-card__price">
-                                            <div class="total-price total-price_size_md">
-                                                100 руб.
-                                            </div>
-                                        </div>
-                                        <div class="product-card__bottom">
-                                            <div class="product-card__button button-add-js">
-                                                <button class="button button_size_md button_font_sm">Добавить в
-                                                    корзину
-                                                </button>
-                                                <div class="add-counter">
-                                                    <span role="button" class="add-counter__btn add-counter__decrease">
-                                                        <img src="/images/icons/decrease-icon.svg" alt="">
-                                                    </span>
-                                                    <input type="text" value="1" class="add-counter__num">
-                                                    <span role="button" class="add-counter__btn add-counter__increase">
-                                                        <img src="/images/icons/increase-icon.svg" alt="">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a href="./accessory.html" class="product-card__btn-more">
-                                                <img src="/images/icons/config.svg" alt="details-icon">
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="product-card products-group__item">
-                            <div class="product-card__gallery has-slider">
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img3.png')"></div>
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img3.png')"></div>
-                            </div>
-                            <div class="product-card__content">
-                                <a href="./accessory.html">
-                                    <div class="product-card__title">
-                                        Ремень кожаный
+                    <div class="product-card products-group__item">
+                        <div class="product-card__gallery has-slider">
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img3.png')"></div>
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img3.png')"></div>
+                        </div>
+                        <div class="product-card__content">
+                            <a href="./accessory.html">
+                                <div class="product-card__title">
+                                    Ремень кожаный
+                                </div>
+                                <div class="product-card__properties">
+                                    <table class="product-selection product-selection_size_sm">
+                                        <tr>
+                                            <td>Размер:</td>
+                                            <td>800х30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цвет:</td>
+                                            <td>Коричневый</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="total-price total-price_size_md">
+                                        100 руб.
                                     </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
+                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Выбрать
+                                </a>
+                            </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
+                        </div>
+
+                        <div class="product-full-info">
+                            <div class="product-card">
+                                <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
+                                <div class="product-view product-view_small">
+                                    <div class="product-view__full">
+                                        <div class="product-full-info__gallery has-slider">
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                        </div>
+                                        <div class="product-view__btn-expand">
+                                            <button class="button button_theme_no-shadow button_type_expand button_theme_white">
+                                                <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__content">
+                                    <a href="./accessory.html" class="product-card__title">
+                                        Карман с вышивкой
+                                    </a>
                                     <div class="product-card__properties">
                                         <table class="product-selection product-selection_size_sm">
                                             <tr>
                                                 <td>Размер:</td>
-                                                <td>800х30</td>
+                                                <td>100x100</td>
                                             </tr>
                                             <tr>
                                                 <td>Цвет:</td>
-                                                <td>Коричневый</td>
+                                                <td>Морской</td>
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="product-card__price">
+                                    <div class="product-card__price product-card__price_discount">
                                         <div class="total-price total-price_size_md">
-                                            100 руб.
+                                            1 000 руб.
+                                        </div>
+                                        <div class="discount-label">
+                                            <img class="discount-label__img"
+                                                 src="/images/icons/discount-label/discount-label--sm.svg"
+                                                 alt="discount-icon--sm">
+                                            <span class="discount-label__price">
+                                                1 100 руб.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
                                             </button>
                                             <div class="add-counter">
                                                 <span role="button" class="add-counter__btn add-counter__decrease">
@@ -701,108 +802,122 @@
                                                     <img src="/images/icons/increase-icon.svg" alt="">
                                                 </span>
                                             </div>
-                                        </div>
-                                        <span class="product-card__btn-more product-card__btn-more--js">
-                                            <img src="/images/icons/config.svg" alt="details-icon">
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="product-full-info">
-                                <div class="product-card">
-                                    <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
-                                    <div class="product-view product-view_small">
-                                        <div class="product-view__full">
-                                            <div class="product-full-info__gallery has-slider">
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img3.png')"></div>
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img3.png')"></div>
-                                            </div>
-                                            <div class="product-view__btn-expand">
-                                                <button class="button button_theme_no-shadow button_type_expand button_theme_white">
-                                                    <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <div class="product-card__title">
-                                            Ремень кожаный
-                                        </div>
-                                        <div class="product-card__properties">
-                                            <table class="product-selection product-selection_size_sm">
-                                                <tr>
-                                                    <td>Размер:</td>
-                                                    <td>800х30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Цвет:</td>
-                                                    <td>Коричневый</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="product-card__price">
-                                            <div class="total-price total-price_size_md">
-                                                100 руб.
-                                            </div>
-                                        </div>
-                                        <div class="product-card__bottom">
-                                            <div class="product-card__button button-add-js">
-                                                <button class="button button_size_md button_font_sm">Добавить в
-                                                    корзину
-                                                </button>
-                                                <div class="add-counter">
-                                                    <span role="button" class="add-counter__btn add-counter__decrease">
-                                                        <img src="/images/icons/decrease-icon.svg" alt="">
-                                                    </span>
-                                                    <input type="text" value="1" class="add-counter__num">
-                                                    <span role="button" class="add-counter__btn add-counter__increase">
-                                                        <img src="/images/icons/increase-icon.svg" alt="">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a href="./accessory.html" class="product-card__btn-more">
-                                                <img src="/images/icons/config.svg" alt="details-icon">
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Выбрать
                                             </a>
                                         </div>
+                                        <a href="#" class="product-card__btn-more product-card__btn-more--js ">
+                                            <img src="/images/icons/config.svg" alt="details-icon">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="product-card products-group__item">
-                            <div class="product-card__gallery has-slider">
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img4.png')"></div>
-                                <div class="product-card__img product-card__img_size_sm"
-                                     style="background-image: url('/images/accessories/img4.png')"></div>
-                            </div>
-                            <div class="product-card__content">
-                                <a href="./accessory.html">
-                                    <div class="product-card__title">
-                                        Ремень Кардиган
+                    <div class="product-card products-group__item">
+                        <div class="product-card__gallery has-slider">
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img4.png')"></div>
+                            <div class="product-card__img product-card__img_size_sm"
+                                 style="background-image: url('/images/accessories/img4.png')"></div>
+                        </div>
+                        <div class="product-card__content">
+                            <a href="./accessory.html">
+                                <div class="product-card__title">
+                                    Ремень Кардиган
+                                </div>
+                                <div class="product-card__properties">
+                                    <table class="product-selection product-selection_size_sm">
+                                        <tr>
+                                            <td>Размер:</td>
+                                            <td>Стандарт</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цвет:</td>
+                                            <td>на выбор</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="total-price total-price_size_md">
+                                        2 500 руб.
                                     </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
+                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Выбрать
+                                </a>
+                            </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
+                        </div>
+
+                        <div class="product-full-info">
+                            <div class="product-card">
+                                <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
+                                <div class="product-view product-view_small">
+                                    <div class="product-view__full">
+                                        <div class="product-full-info__gallery has-slider">
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/accessories/img1.png')"></div>
+                                        </div>
+                                        <div class="product-view__btn-expand">
+                                            <button class="button button_theme_no-shadow button_type_expand button_theme_white">
+                                                <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__content">
+                                    <a href="./accessory.html" class="product-card__title">
+                                        Карман с вышивкой
+                                    </a>
                                     <div class="product-card__properties">
                                         <table class="product-selection product-selection_size_sm">
                                             <tr>
                                                 <td>Размер:</td>
-                                                <td>Стандарт</td>
+                                                <td>100x100</td>
                                             </tr>
                                             <tr>
                                                 <td>Цвет:</td>
-                                                <td>на выбор</td>
+                                                <td>Морской</td>
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="product-card__price">
+                                    <div class="product-card__price product-card__price_discount">
                                         <div class="total-price total-price_size_md">
-                                            2 500 руб.
+                                            1 000 руб.
+                                        </div>
+                                        <div class="discount-label">
+                                            <img class="discount-label__img"
+                                                 src="/images/icons/discount-label/discount-label--sm.svg"
+                                                 alt="discount-icon--sm">
+                                            <span class="discount-label__price">
+                                                1 100 руб.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
                                             </button>
                                             <div class="add-counter">
                                                 <span role="button" class="add-counter__btn add-counter__decrease">
@@ -813,70 +928,13 @@
                                                     <img src="/images/icons/increase-icon.svg" alt="">
                                                 </span>
                                             </div>
-                                        </div>
-                                        <span class="product-card__btn-more product-card__btn-more--js">
-                                            <img src="/images/icons/config.svg" alt="details-icon">
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="product-full-info">
-                                <div class="product-card">
-                                    <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
-                                    <div class="product-view product-view_small">
-                                        <div class="product-view__full">
-                                            <div class="product-full-info__gallery has-slider">
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img4.png')"></div>
-                                                <div class="product-view__img" style="background-image: url('/images/accessories/img4.png')"></div>
-                                            </div>
-                                            <div class="product-view__btn-expand">
-                                                <button class="button button_theme_no-shadow button_type_expand button_theme_white">
-                                                    <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <div class="product-card__title">
-                                            Ремень Кардиган
-                                        </div>
-                                        <div class="product-card__properties">
-                                            <table class="product-selection product-selection_size_sm">
-                                                <tr>
-                                                    <td>Размер:</td>
-                                                    <td>Стандарт</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Цвет:</td>
-                                                    <td>на выбор</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="product-card__price">
-                                            <div class="total-price total-price_size_md">
-                                                2 500 руб.
-                                            </div>
-                                        </div>
-                                        <div class="product-card__bottom">
-                                            <div class="product-card__button button-add-js">
-                                                <button class="button button_size_md button_font_sm">Добавить в
-                                                    корзину
-                                                </button>
-                                                <div class="add-counter">
-                                                    <span role="button" class="add-counter__btn add-counter__decrease">
-                                                        <img src="/images/icons/decrease-icon.svg" alt="">
-                                                    </span>
-                                                    <input type="text" value="1" class="add-counter__num">
-                                                    <span role="button" class="add-counter__btn add-counter__increase">
-                                                        <img src="/images/icons/increase-icon.svg" alt="">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a href="./accessory.html" class="product-card__btn-more">
-                                                <img src="/images/icons/config.svg" alt="details-icon">
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Выбрать
                                             </a>
                                         </div>
+                                        <a href="#" class="product-card__btn-more product-card__btn-more--js ">
+                                            <img src="/images/icons/config.svg" alt="details-icon">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -902,10 +960,10 @@
                 </a>
             </nav>
 
-            <h3 class="main-title main-title_size_md item-bordered main-title_indent-bottom">
+            <h3 class="main-title main-title_size_md item-bordered main-title_indent-bottom main-title_with-item">
                 Отзывы к изделию
 
-                <button class="button button_type_link button_size_md button_font_sm main-title__external-item">
+                <button class="button button_type_link button_size_md button_font_sm hide-480">
                     <img src="/images/icons/rating-block/comment.svg"
                          class="button__icon button__icon_comment button__icon_pos_right" alt="basket-icon">
                     Оставить отзыв
@@ -1025,12 +1083,175 @@
                 </div>
             </div>
 
+            <button class="button button_type_link button_size_md button_font_sm button_aligned-center button_indent-bottom show-480-inline-flex">
+                <img src="/images/icons/rating-block/comment.svg"
+                     class="button__icon button__icon_comment button__icon_pos_right" alt="basket-icon">
+                Оставить отзыв
+            </button>
+
             <h3 class="main-title main-title_size_md item-bordered main-title_indent-bottom">
                 Похожие изделия
             </h3>
 
             <div class="products-group products-group_column-4">
                 <div class="products-group__wrapper">
+                    <div class="product-card products-group__item">
+                        <div class="product-card__img"
+                             style="background-image: url('/images/product-card/img1.png')"></div>
+                        <div class="product-card__content">
+                            <a href="./product-card.html">
+                                <div class="product-card__title">
+                                    Платье Классика, прямое с пояском
+                                </div>
+                                <div class="product-card__properties">
+                                    <table class="product-selection product-selection_size_sm">
+                                        <tr>
+                                            <td>Размер:</td>
+                                            <td>L</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Длина:</td>
+                                            <td>175</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цвет:</td>
+                                            <td>Натуральный</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="total-price total-price_size_md">
+                                        3500 руб.
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
+                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Купить
+                                </a>
+                            </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
+                        </div>
+                        <div class="product-full-info">
+                            <div class="product-card">
+                                <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
+                                <div class="product-view product-view_small">
+                                    <div class="product-view__full">
+                                        <div class="product-full-info__gallery has-slider">
+                                            <div class="product-view__img" style="background-image: url('/images/product-card/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/product-card/img1.png')"></div>
+                                        </div>
+                                        <div class="product-view__btn-expand">
+                                            <button class="button button_theme_no-shadow button_type_expand button_theme_white">
+                                                <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__content">
+                                    <a href="./product-card.html" class="product-card__title">
+                                        Платье Шанхай, прямой с пуговками до пояса
+                                    </a>
+                                    <div class="product-card__properties">
+                                        <table class="product-selection product-selection_size_md">
+                                            <tr>
+                                                <td>Фасон:</td>
+                                                <td>Прямое</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Цвет верха:</td>
+                                                <td>
+                                                    Горчичный
+                                                    <span class="product-selection__color" style="background-color: #c38120"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Цвет юбки:</td>
+                                                <td>
+                                                    Горчичный
+                                                    <span class="product-selection__color" style="background-color: #c38120"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Принт:</td>
+                                                <td>Без принта</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Размер:</td>
+                                                <td>M</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Длина платья:</td>
+                                                <td>165</td>
+                                            </tr>
+                                        </table>
+
+                                        <table class="product-selection product-selection_size_md">
+                                            <tr>
+                                                <td>Воротник:</td>
+                                                <td>Стойка</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Пуговки:</td>
+                                                <td>На груди, 3/4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Рукава:</td>
+                                                <td>3/4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Карманы:</td>
+                                                <td>Да</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="product-card__price">
+                                        <div class="total-price total-price_size_md">
+                                            3500 руб.
+                                        </div>
+                                    </div>
+                                    <div class="product-card__bottom">
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
+                                            </button>
+                                            <div class="add-counter">
+                                                <span role="button" class="add-counter__btn add-counter__decrease">
+                                                    <img src="/images/icons/decrease-icon.svg" alt="">
+                                                </span>
+                                                <input type="text" value="1" class="add-counter__num">
+                                                <span role="button" class="add-counter__btn add-counter__increase">
+                                                    <img src="/images/icons/increase-icon.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Купить
+                                            </a>
+                                        </div>
+                                        <a href="./product-card.html" class="product-card__btn-more product-card__btn-more--js ">
+                                            <img src="/images/icons/config.svg" alt="details-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-card products-group__item">
                         <div class="product-card__img"
                              style="background-image: url('/images/product-card/img2.png')"></div>
@@ -1068,40 +1289,38 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="product-card__bottom">
-                                    <div class="product-card__button button-add-js">
-                                        <button class="button button_size_md button_font_sm">Добавить в
-                                            корзину
-                                        </button>
-                                        <div class="add-counter">
-                                            <span role="button" class="add-counter__btn add-counter__decrease">
-                                                <img src="/images/icons/decrease-icon.svg" alt="">
-                                            </span>
-                                            <input type="text" value="1" class="add-counter__num">
-                                            <span role="button" class="add-counter__btn add-counter__increase">
-                                                <img src="/images/icons/increase-icon.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <span class="product-card__btn-more product-card__btn-more--js">
-                                        <img src="/images/icons/config.svg" alt="details-icon">
-                                    </span>
-                                </div>
                             </a>
                         </div>
-
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
+                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Купить
+                                </a>
+                            </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
+                        </div>
                         <div class="product-full-info">
                             <div class="product-card">
                                 <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
                                 <div class="product-view product-view_small">
                                     <div class="product-view__full">
                                         <div class="product-full-info__gallery has-slider">
-                                            <div class="product-view__img">
-                                                <img src="/images/product-card/img2.png" alt="">
-                                            </div>
-                                            <div class="product-view__img">
-                                                <img src="/images/product-card/img2.png" alt="">
-                                            </div>
+                                            <div class="product-view__img" style="background-image: url('/images/product-card/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/product-card/img1.png')"></div>
                                         </div>
                                         <div class="product-view__btn-expand">
                                             <button class="button button_theme_no-shadow button_type_expand button_theme_white">
@@ -1173,9 +1392,9 @@
                                         </div>
                                     </div>
                                     <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
                                             </button>
                                             <div class="add-counter">
                                                 <span role="button" class="add-counter__btn add-counter__decrease">
@@ -1186,8 +1405,11 @@
                                                     <img src="/images/icons/increase-icon.svg" alt="">
                                                 </span>
                                             </div>
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Купить
+                                            </a>
                                         </div>
-                                        <a href="./product-card.html" class="product-card__btn-more">
+                                        <a href="./product-card.html" class="product-card__btn-more product-card__btn-more--js ">
                                             <img src="/images/icons/config.svg" alt="details-icon">
                                         </a>
                                     </div>
@@ -1197,7 +1419,7 @@
                     </div>
                     <div class="product-card products-group__item">
                         <div class="product-card__img"
-                             style="background-image: url('/images/product-card/img7.png')"></div>
+                             style="background-image: url('/images/product-card/img3.png')"></div>
                         <div class="product-card__content">
                             <a href="./product-card.html">
                                 <div class="product-card__title">
@@ -1211,209 +1433,59 @@
                                         </tr>
                                         <tr>
                                             <td>Длина:</td>
-                                            <td>185</td>
+                                            <td>165</td>
                                         </tr>
                                         <tr>
                                             <td>Цвет:</td>
-                                            <td>Горчичный</td>
+                                            <td>Хвоя</td>
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="product-card__price">
+                                <div class="product-card__price product-card__price_discount">
                                     <div class="total-price total-price_size_md">
                                         3500 руб.
                                     </div>
-                                </div>
-                                <div class="product-card__bottom">
-                                    <div class="product-card__button button-add-js">
-                                        <button class="button button_size_md button_font_sm">Добавить в
-                                            корзину
-                                        </button>
-                                        <div class="add-counter">
-                                            <span role="button" class="add-counter__btn add-counter__decrease">
-                                                <img src="/images/icons/decrease-icon.svg" alt="">
-                                            </span>
-                                            <input type="text" value="1" class="add-counter__num">
-                                            <span role="button" class="add-counter__btn add-counter__increase">
-                                                <img src="/images/icons/increase-icon.svg" alt="">
-                                            </span>
-                                        </div>
+                                    <div class="discount-label">
+                                        <img class="discount-label__img"
+                                             src="/images/icons/discount-label/discount-label--sm.svg"
+                                             alt="discount-icon--sm">
+                                        <span class="discount-label__price">
+                                            1 100 руб.
+                                        </span>
                                     </div>
-                                    <span class="product-card__btn-more product-card__btn-more--js">
-                                        <img src="/images/icons/config.svg" alt="details-icon">
-                                    </span>
                                 </div>
                             </a>
                         </div>
-
-                        <div class="product-full-info">
-                            <div class="product-card">
-                                <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
-                                <div class="product-view product-view_small">
-                                    <div class="product-view__full">
-                                        <div class="product-full-info__gallery has-slider">
-                                            <div class="product-view__img">
-                                                <img src="/images/product-card/img7.png" alt="">
-                                            </div>
-                                            <div class="product-view__img">
-                                                <img src="/images/product-card/img7.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="product-view__btn-expand">
-                                            <button class="button button_theme_no-shadow button_type_expand button_theme_white">
-                                                <img src="/images/icons/expand-icon.svg" class="button__icon" alt="expand-icon">
-                                            </button>
-                                        </div>
-                                    </div>
+                        <div class="product-card__bottom">
+                            <div class="product-card__button">
+                                <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                    Добавить в корзину
+                                </button>
+                                <div class="add-counter">
+                                    <span role="button" class="add-counter__btn add-counter__decrease">
+                                        <img src="/images/icons/decrease-icon.svg" alt="">
+                                    </span>
+                                    <input type="text" value="1" class="add-counter__num">
+                                    <span role="button" class="add-counter__btn add-counter__increase">
+                                        <img src="/images/icons/increase-icon.svg" alt="">
+                                    </span>
                                 </div>
-                                <div class="product-card__content">
-                                    <a href="./product-card.html" class="product-card__title">
-                                        Платье Шанхай, прямой с пуговками до пояса
-                                    </a>
-                                    <div class="product-card__properties">
-                                        <table class="product-selection product-selection_size_md">
-                                            <tr>
-                                                <td>Фасон:</td>
-                                                <td>Прямое</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Цвет верха:</td>
-                                                <td>
-                                                    Горчичный
-                                                    <span class="product-selection__color" style="background-color: #c38120"></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Цвет юбки:</td>
-                                                <td>
-                                                    Горчичный
-                                                    <span class="product-selection__color" style="background-color: #c38120"></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Принт:</td>
-                                                <td>Без принта</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Размер:</td>
-                                                <td>M</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Длина платья:</td>
-                                                <td>165</td>
-                                            </tr>
-                                        </table>
-
-                                        <table class="product-selection product-selection_size_md">
-                                            <tr>
-                                                <td>Воротник:</td>
-                                                <td>Стойка</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Пуговки:</td>
-                                                <td>На груди, 3/4</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Рукава:</td>
-                                                <td>3/4</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Карманы:</td>
-                                                <td>Да</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="product-card__price">
-                                        <div class="total-price total-price_size_md">
-                                            3500 руб.
-                                        </div>
-                                    </div>
-                                    <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
-                                            </button>
-                                            <div class="add-counter">
-                                                <span role="button" class="add-counter__btn add-counter__decrease">
-                                                    <img src="/images/icons/decrease-icon.svg" alt="">
-                                                </span>
-                                                <input type="text" value="1" class="add-counter__num">
-                                                <span role="button" class="add-counter__btn add-counter__increase">
-                                                    <img src="/images/icons/increase-icon.svg" alt="">
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <a href="./product-card.html" class="product-card__btn-more">
-                                            <img src="/images/icons/config.svg" alt="details-icon">
-                                        </a>
-                                    </div>
-                                </div>
+                                <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                    Купить
+                                </a>
                             </div>
+                            <span class="product-card__btn-more product-card__btn-more--js ">
+                                <img src="/images/icons/config.svg" alt="details-icon">
+                            </span>
                         </div>
-                    </div>
-                    <div class="product-card products-group__item">
-                        <div class="product-card__img"
-                             style="background-image: url('/images/product-card/img4.png')"></div>
-                        <div class="product-card__content">
-                            <a href="./product-card.html">
-                                <div class="product-card__title">
-                                    Платье Классика, прямое с пояском
-                                </div>
-                                <div class="product-card__properties">
-                                    <table class="product-selection product-selection_size_sm">
-                                        <tr>
-                                            <td>Размер:</td>
-                                            <td>L</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Длина:</td>
-                                            <td>160</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Цвет:</td>
-                                            <td>Графитовый</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="product-card__price">
-                                    <div class="total-price total-price_size_md">
-                                        3500 руб.
-                                    </div>
-                                </div>
-                                <div class="product-card__bottom">
-                                    <div class="product-card__button button-add-js">
-                                        <button class="button button_size_md button_font_sm">Добавить в
-                                            корзину
-                                        </button>
-                                        <div class="add-counter">
-                                            <span role="button" class="add-counter__btn add-counter__decrease">
-                                                <img src="/images/icons/decrease-icon.svg" alt="">
-                                            </span>
-                                            <input type="text" value="1" class="add-counter__num">
-                                            <span role="button" class="add-counter__btn add-counter__increase">
-                                                <img src="/images/icons/increase-icon.svg" alt="">
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <span class="product-card__btn-more product-card__btn-more--js">
-                                        <img src="/images/icons/config.svg" alt="details-icon">
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-
                         <div class="product-full-info">
                             <div class="product-card">
                                 <div class="product-full-info__close-btn">Закрыть <img src="/images/icons/close-icon_white.svg"></div>
                                 <div class="product-view product-view_small">
                                     <div class="product-view__full">
                                         <div class="product-full-info__gallery has-slider">
-                                            <div class="product-view__img">
-                                                <img src="/images/product-card/img4.png" alt="">
-                                            </div>
-                                            <div class="product-view__img">
-                                                <img src="/images/product-card/img4.png" alt="">
-                                            </div>
+                                            <div class="product-view__img" style="background-image: url('/images/product-card/img1.png')"></div>
+                                            <div class="product-view__img" style="background-image: url('/images/product-card/img1.png')"></div>
                                         </div>
                                         <div class="product-view__btn-expand">
                                             <button class="button button_theme_no-shadow button_type_expand button_theme_white">
@@ -1485,9 +1557,9 @@
                                         </div>
                                     </div>
                                     <div class="product-card__bottom">
-                                        <div class="product-card__button button-add-js">
-                                            <button class="button button_size_md button_font_sm">Добавить в
-                                                корзину
+                                        <div class="product-card__button">
+                                            <button class="button button_size_md button_font_sm product-card__button-add button-add-js">
+                                                Добавить в корзину
                                             </button>
                                             <div class="add-counter">
                                                 <span role="button" class="add-counter__btn add-counter__decrease">
@@ -1498,8 +1570,11 @@
                                                     <img src="/images/icons/increase-icon.svg" alt="">
                                                 </span>
                                             </div>
+                                            <a href="product-card.html" class="button button_size_sm button_font_sm product-card__button-buy">
+                                                Купить
+                                            </a>
                                         </div>
-                                        <a href="./product-card.html" class="product-card__btn-more">
+                                        <a href="./product-card.html" class="product-card__btn-more product-card__btn-more--js ">
                                             <img src="/images/icons/config.svg" alt="details-icon">
                                         </a>
                                     </div>

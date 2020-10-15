@@ -9,6 +9,24 @@ $(document).ready(function () {
         cssEase: 'ease'
     });
 
+    /*$('.product-view__parts').slick({
+        dots: false,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 7,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 639,
+                settings: {
+                    dots: true
+                }
+            }
+        ]
+    });*/
+
     $('#products-group-slider').slick({
         dots: true,
         arrows: true,
@@ -73,7 +91,6 @@ $(window).on('load', function() {
 
     cardBtnMore.click(function (e) {
         let popover = $(this).parents('.product-card').children('.product-full-info:hidden');
-        e.preventDefault();
         popover.addClass('visible');
         //disableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
@@ -132,7 +149,6 @@ $(window).on('load', function() {
     countBox.keyup(function (e) {
         if (e.which === 13) {
             if (Number(e.target.value)) {
-                console.log(Number(e.target.value));
                 e.stopPropagation();
                 $(this).val(e.target.value).blur();
             }
@@ -141,24 +157,23 @@ $(window).on('load', function() {
         }
     });
 
-    addToCartButtons.click(function (e) {
-        e.preventDefault();
-        $(this).addClass('show-counter');
+    addToCartButtons.click(function () {
+        $(this).parent().addClass('show-counter');
     });
 
-    addCounterBtn.on('click', function (e) {
+    addCounterBtn.on('click', function () {
         let decreaseBtn = $(this).hasClass('add-counter__decrease') ? $(this) : null,
             increaseBtn = $(this).hasClass('add-counter__increase') ? $(this) : null,
-            parent = $(this).closest('.add-counter'),
+            parent = $(this).parent(),
             counterBox = parent.children('.add-counter__num');
-
-        e.preventDefault();
-        e.stopPropagation();
-
 
         if (+counterBox.val()) {
             if (decreaseBtn) {
+
                 if (+counterBox.val() <= 1) {
+                    console.log(parent.parent());
+
+
                     parent.parent().removeClass('show-counter');
                 } else {
                     counterBox.val(+counterBox.val() - 1)

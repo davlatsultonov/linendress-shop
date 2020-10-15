@@ -332,3 +332,32 @@ position: relative;
   .slick-list {margin: 0 -15px;}
   .slick-slide>div {padding: 0 15px;}
 }
+
+
+@mixin hide-el($breakpoint) {
+
+  @media #{$breakpoint} {
+    display: none !important;
+  }
+}
+
+@mixin show-el($breakpoint, $display-type) {
+  display: none !important;
+
+  @media #{$breakpoint} {
+    @if $display-type == 'flex' {
+      display: -webkit-box !important;
+      display: -moz-box !important;
+      display: -ms-flexbox !important;
+      display: -webkit-flex !important;
+      display: flex !important;
+    } @else if $display-type == 'inline-flex' {
+      display: -moz-inline-box !important;
+      display: -webkit-inline-flex !important;
+      display: -ms-inline-flexbox !important;
+      display: inline-flex !important;
+    } @else {
+      display: #{$display-type} !important;
+    }
+  }
+}

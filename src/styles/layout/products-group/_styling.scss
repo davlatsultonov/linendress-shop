@@ -1,3 +1,273 @@
+.product-card {
+  box-shadow: $base-shadow;
+  border-radius: 5px 5px 30px;
+  background-color: #ffffff;
+  display: inline-block;
+  @include shift(ease-in-out);
+  width: 250px;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  }
+
+  &__title {
+    font-weight: 500;
+    min-height: 15px;
+    max-height: 42px;
+    line-height: 21px;
+    @include ellipsis(2);
+
+    @media #{$md} {
+      max-height: 45px;
+      -webkit-line-clamp: 2;
+    }
+
+    @media #{$xs} {
+      max-height: 39px;
+      -webkit-line-clamp: 3;
+      line-height: 13px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 375px;
+    @include cover-background;
+
+    &_size_sm {
+      height: 250px;
+    }
+
+    @media #{$md} {
+      height: 270px;
+    }
+
+    @media #{$xs} {
+      height: 217px;
+    }
+  }
+
+  &__properties {
+    margin-top: 14px;
+    min-height: 54px;
+
+    @media #{$sm} {
+      display: none;
+    }
+  }
+
+  &__price {
+    margin-top: 14px;
+    font-weight: 700;
+
+    @media #{$sm} {
+      margin-top: 8px;
+    }
+
+    &_discount {
+      @include flexbox;
+      @include flex-wrap(wrap);
+
+      @media #{$xs} {
+        flex-direction: column;
+      }
+
+      .total-price {
+        color: $active-orange;
+      }
+
+      .discount-label {
+        margin-left: 5px;
+
+        @media #{$xs} {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+
+        &__img {
+
+          @media #{$sm} {
+            width: 18px !important;
+          }
+        }
+
+        &__price {
+          @media #{$sm} {
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-decoration: line-through;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+
+    .total-price {
+
+      @media #{$xs} {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__content {
+    padding: 15px 20px 65px;
+    font-size: 1.6rem;
+
+    @media #{$sm} {
+      padding-bottom: 48px;
+    }
+
+    @media #{$xs} {
+      padding-bottom: 40px;
+      font-size: 1.2rem;
+    }
+
+    @media #{$xxs} {
+      padding: 10px 10px 40px 10px;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 84%;
+
+    @media #{$md} {
+      width: 81%;
+    }
+
+    @media #{$sm} {
+      bottom: 10px;
+      width: 82%;
+    }
+
+    @media #{$xxs} {
+      left: 10px;
+    }
+  }
+
+  &__button {
+    float: left;
+
+    .button {
+      padding: 0 27px;
+
+      @media #{$md} {
+        padding: 0 7px;
+      }
+
+      &_size_md {
+
+        @media #{$lg} {
+          min-width: 135px;
+          line-height: 14px;
+        }
+
+        @media #{$md} {
+          min-width: 128px;
+        }
+      }
+
+      &_size_sm {
+
+        @media #{$xs} {
+          min-width: 80px;
+          min-height: 22px;
+          height: 22px;
+        }
+      }
+    }
+
+    &-add {
+      @media #{$sm} {
+        display: none;
+      }
+    }
+
+    &-buy {
+      display: none;
+
+      @media #{$sm} {
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__btn-more {
+    float: left;
+    margin-top: 11px;
+    margin-left: 15px;
+
+    img {
+
+      @media #{$xs} {
+        width: 18px;
+      }
+    }
+
+    @media #{$sm} {
+      margin-top: 5px;
+    }
+
+    @media #{$xs} {
+      margin-top: 2px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .add-counter {
+
+    @media #{$lg} {
+      min-width: 167.5px;
+    }
+
+    @media #{$md} {
+      min-width: 128px;
+    }
+
+    @media #{$sm} {
+      display: none;
+    }
+
+    &__btn {
+      @media #{$lg} {
+        width: 40px;
+      }
+    }
+
+    &__num {
+      @media #{$lg} {
+        width: 35px;
+      }
+    }
+  }
+
+  // slider styles overwriting
+  &__gallery {
+    overflow: hidden;
+
+    .slick-dots {
+      bottom: 9px;
+
+      li {
+        width: 14px;
+        @include slick-dots-custom-color($black, border, transparent, $black, 12);
+      }
+    }
+
+    @include slick-arrows-inside(5);
+  }
+}
+
 .products-group {
   @include cards-slide-fix;
 
@@ -166,7 +436,7 @@
   &_column-4 {
 
     .products-group__item {
-      margin-right: 4.3%;
+      margin-right: 4.6%;
 
       @media #{$lg} {
         margin-right: 5.3%;
@@ -200,9 +470,10 @@
     }
 
     .product-card {
+      width: 21.5%;
 
       @media #{$lg} {
-        width: 29.3%;
+        width: 29.8%;
       }
 
       @media #{$xsm} {
@@ -285,7 +556,11 @@
         @media #{$xs} {
           bottom: 15px;
           left: 20px;
-          width: 86%;
+          width: 90%;
+        }
+
+        @media #{$xxs} {
+          width: 88%;
         }
       }
 
@@ -347,6 +622,38 @@
           }
         }
       }
+
+      .add-counter {
+        @media #{$xs} {
+          min-width: 170px;
+        }
+
+        &__btn {
+          @media #{$xs} {
+            width: 45px;
+          }
+        }
+
+        &__num {
+          @media #{$xs} {
+            width: 46px;
+          }
+        }
+      }
+    }
+  }
+
+  &_look-books {
+
+    .product-card {
+
+      &__content {
+        padding-bottom: 15px;
+
+        @media #{$xs} {
+          padding-bottom: 10px;
+        }
+      }
     }
   }
 }
@@ -355,263 +662,4 @@
   position: relative;
   bottom: 46px;
   margin-bottom: 20px;
-}
-
-.product-card {
-  box-shadow: $base-shadow;
-  border-radius: 5px 5px 30px;
-  background-color: #ffffff;
-  display: inline-block;
-  @include shift(ease-in-out);
-  width: 21.5%;
-  position: relative;
-
-  @media #{$lg} {
-    width: 206px;
-  }
-
-  @media #{$sm} {
-    width: 27.33%;
-  }
-
-  @media #{$xsm} {
-    width: 42%;
-  }
-
-  @media #{$xs} {
-    width: 48%;
-  }
-
-  &:hover {
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-  }
-
-  &__title {
-    font-weight: 500;
-    min-height: 15px;
-    max-height: 42px;
-    line-height: 21px;
-    @include ellipsis(2);
-
-    @media #{$md} {
-      max-height: 45px;
-      -webkit-line-clamp: 2;
-    }
-    
-    @media #{$xs} {
-      max-height: 39px;
-      -webkit-line-clamp: 3;
-      line-height: 13px;
-    }
-  }
-
-  &__img {
-    width: 100%;
-    height: 375px;
-    @include cover-background;
-
-    &_size_sm {
-      height: 250px;
-    }
-
-    @media #{$md} {
-      height: 270px;
-    }
-
-    @media #{$xs} {
-      height: 217px;
-    }
-  }
-
-  &__properties {
-    margin-top: 14px;
-    min-height: 54px;
-
-    @media #{$sm} {
-      display: none;
-    }
-  }
-
-  &__price {
-    margin-top: 14px;
-    font-weight: 700;
-
-    @media #{$sm} {
-      margin-top: 8px;
-    }
-
-    &_discount {
-      @include flexbox;
-      @include flex-wrap(wrap);
-
-      @media #{$xs} {
-        flex-direction: column;
-      }
-
-      .total-price {
-        color: $active-orange;
-      }
-
-      .discount-label {
-        margin-left: 5px;
-
-        @media #{$xs} {
-          margin-left: 0;
-          margin-top: 5px;
-        }
-
-        &__img {
-
-          @media #{$sm} {
-            width: 18px !important;
-          }
-        }
-
-        &__price {
-          @media #{$sm} {
-            font-size: 1.2rem;
-            font-weight: 400;
-            text-decoration: line-through;
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 3px;
-          }
-        }
-      }
-    }
-
-    .total-price {
-
-      @media #{$xs} {
-        font-size: 1.2rem;
-      }
-    }
-  }
-
-  &__content {
-    padding: 15px 20px 65px;
-    font-size: 1.6rem;
-
-    @media #{$sm} {
-      padding-bottom: 48px;
-    }
-
-    @media #{$xs} {
-      padding-bottom: 40px;
-      font-size: 1.2rem;
-    }
-
-    @media #{$xxs} {
-      padding: 10px 10px 40px 10px;
-      font-size: 1.2rem;
-    }
-  }
-
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    width: 86%;
-
-    @media #{$md} {
-      width: 81%;
-    }
-
-    @media #{$sm} {
-      bottom: 10px;
-      width: 82%;
-    }
-
-    @media #{$xxs} {
-      left: 10px;
-    }
-  }
-
-  &__button {
-    float: left;
-
-    .button {
-      padding: 0 27px;
-
-      @media #{$md} {
-        padding: 0 7px;
-      }
-
-      &_size_md {
-
-        @media #{$lg} {
-          min-width: 135px;
-          line-height: 14px;
-        }
-
-        @media #{$md} {
-          min-width: 128px;
-        }
-      }
-
-      &_size_sm {
-
-        @media #{$xs} {
-          min-width: 80px;
-          min-height: 22px;
-          height: 22px;
-        }
-      }
-    }
-
-    &-add {
-      @media #{$sm} {
-        display: none;
-      }
-    }
-
-    &-buy {
-      display: none;
-
-      @media #{$sm} {
-        display: block;
-      }
-    }
-  }
-
-  &__btn-more {
-    float: left;
-    margin-top: 11px;
-    margin-left: 15px;
-
-    img {
-
-      @media #{$xs} {
-        width: 18px;
-      }
-    }
-
-    @media #{$sm} {
-      margin-top: 5px;
-    }
-
-    @media #{$xs} {
-      margin-top: 2px;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-  }
-
-  // slider styles overwriting
-  &__gallery {
-    overflow: hidden;
-
-    .slick-dots {
-      bottom: 9px;
-
-      li {
-        width: 14px;
-        @include slick-dots-custom-color($black, border, transparent, $black, 12);
-      }
-    }
-
-    @include slick-arrows-inside(5);
-  }
 }

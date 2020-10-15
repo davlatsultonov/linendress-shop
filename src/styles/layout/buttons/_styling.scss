@@ -90,6 +90,10 @@
     padding: 0 14px;
   }
 
+  &_aligned-center {
+    margin: 0 auto;
+  }
+
   &_indent-top {
     margin-top: 20px;
   }
@@ -139,21 +143,6 @@
     }
   }
 
-  &-add-js {
-
-    &.show-counter {
-
-      .add-counter {
-        display: inline-flex;
-        opacity: 1;
-      }
-
-      .button {
-        display: none;
-      }
-    }
-  }
-
   &-basket {
 
     &--active-dot {
@@ -170,6 +159,10 @@
         top: -1px;
         right: -8px;
       }
+    }
+
+    .button__icon {
+      margin-top: 1px;
     }
   }
 }

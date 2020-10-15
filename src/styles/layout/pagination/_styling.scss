@@ -7,6 +7,10 @@
   @include justify-content(center);
   min-height: 28px;
 
+  @media #{$xsm} {
+    display: none;
+  }
+
   &__item {
     margin: 0 2.5px;
     min-width: 28px;

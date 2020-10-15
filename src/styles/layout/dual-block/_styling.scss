@@ -87,18 +87,51 @@
 
   &_product-card {
 
+    @media #{$md} {
+      @include flex-direction(column);
+    }
+
     .dual-block__item {
 
       &:nth-child(1) {
         width: 470px;
+
+        @media #{$md} {
+          width: 100%;
+          padding-right: 100px;
+          padding-left: 100px;
+        }
+
+        @media #{$xsm} {
+          padding-right: 70px;
+          padding-left: 70px;
+        }
+
+        @media (max-width: 580px) {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+
+        @media #{$xs} {
+          padding-right: 0;
+          padding-left: 0;
+        }
       }
 
       &:nth-child(2) {
         width: calc(100% - 500px);
+
+        @media #{$md} {
+          width: 100%;
+        }
       }
 
       &:not(:last-child) {
         margin-right: 30px;
+
+        @media #{$md} {
+          margin-right: 0;
+        }
       }
     }
   }
