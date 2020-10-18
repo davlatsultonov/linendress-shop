@@ -55,7 +55,7 @@
         width: 219px;
 
         @media #{$sm} {
-          display: none;
+          width: 0;
         }
       }
 

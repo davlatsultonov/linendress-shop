@@ -123,6 +123,10 @@
         width: 18px;
       }
     }
+
+    &-no-decoration {
+      text-decoration: none;
+    }
   }
 
   &_type_expand {
@@ -145,6 +149,13 @@
 
   &-basket {
 
+    .button__icon {
+
+      @media #{$sm} {
+        margin-top: 1px;
+      }
+    }
+
     &--active-dot {
       position: relative;
 
@@ -157,7 +168,7 @@
         background-color: #fa741b;
         position: absolute;
         top: -1px;
-        right: -8px;
+        right: -7px;
       }
     }
 

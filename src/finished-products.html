@@ -100,6 +100,10 @@
                     <div class="navigation-back__title">
                         Готовые изделия
                     </div>
+                    <button class="button button_type_link button_type_link-no-decoration button_font_sm button_thin navigation-back__item-right" id="filter-toggle-btn">
+                        Фильтры
+                        <img src="/images/icons/filter-icon.svg" class="button__icon" alt="filter-icon">
+                    </button>
                 </div>
             </div>
         </div>
@@ -283,239 +287,241 @@
             <div class="dual-block dual-block_catalog">
                 <div class="dual-block__item">
                     <div class="filter-block">
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Показывать только
-                        </h4>
-                        <form action="#" class="filter-radio filter-block__item">
-                            <div class="radio-block filter-radio__item">
-                                <input class="radio-block__input" type="radio" id="discount" name="filter-radio-group"
-                                       checked>
-                                <label for="discount" class="radio-block__label">Скидки</label>
+                        <div class="filter-block__content">
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Показывать только
+                            </h4>
+                            <form action="#" class="filter-radio filter-block__item">
+                                <div class="radio-block filter-radio__item">
+                                    <input class="radio-block__input" type="radio" id="discount" name="filter-radio-group"
+                                           checked>
+                                    <label for="discount" class="radio-block__label">Скидки</label>
+                                </div>
+                                <div class="radio-block filter-radio__item">
+                                    <input class="radio-block__input" type="radio" id="special-offers"
+                                           name="filter-radio-group">
+                                    <label for="special-offers" class="radio-block__label">Спецпредложения</label>
+                                </div>
+                                <div class="radio-block filter-radio__item">
+                                    <input class="radio-block__input" type="radio" id="popular" name="filter-radio-group">
+                                    <label for="popular" class="radio-block__label">Популярные</label>
+                                </div>
+                            </form>
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Цена, руб.
+                            </h4>
+                            <div class="price-range filter-block__item">
+                                <input type="text" name="quantity" class="price-range__input" placeholder="от 500">
+                                <span class="price-range__separator"></span>
+                                <input type="text" name="quantity" class="price-range__input" placeholder="от 20 000">
                             </div>
-                            <div class="radio-block filter-radio__item">
-                                <input class="radio-block__input" type="radio" id="special-offers"
-                                       name="filter-radio-group">
-                                <label for="special-offers" class="radio-block__label">Спецпредложения</label>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Цвет
+                            </h4>
+                            <ul class="color-picker filter-block__item">
+                                <li class="color-picker__item checked" style="background-color: #543c31"></li>
+                                <li class="color-picker__item" style="background-color: #8a2220"></li>
+                                <li class="color-picker__item" style="background-color: #a2522f"></li>
+                                <li class="color-picker__item" style="background-color: #c4867b"></li>
+                                <li class="color-picker__item" style="background-color: #c38120"></li>
+                                <li class="color-picker__item" style="background-color: #365130"></li>
+                                <li class="color-picker__item" style="background-color: #004c4b"></li>
+                                <li class="color-picker__item" style="background-color: #245366"></li>
+                                <li class="color-picker__item" style="background-color: #154f90"></li>
+                                <li class="color-picker__item" style="background-color: #5989b9"></li>
+                                <li class="color-picker__item" style="background-color: #f3f4f5"></li>
+                                <li class="color-picker__item" style="background-color: #c8c7c0"></li>
+                                <li class="color-picker__item" style="background-color: #353228"></li>
+                            </ul>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Принт
+                            </h4>
+
+                            <div class="pattern-group">
+                                <div class="pattern-item pattern-group__item active">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img1.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img2.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img3.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img4.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img5.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img6.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img7.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img8.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-group__item">
+                                    <div class="pattern-item__img">
+                                        <img src="/images/patterns/img9.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="pattern-item pattern-item_type_btn pattern-group__item">
+                                    <img class="pattern-item__icon" src="/images/icons/eye-icon.svg" alt="">
+                                    <span class="pattern-item__text">
+                                        еще +<span>7</span>
+                                    </span>
+                                </div>
+
+                                <!--
+                                    при натягивании шаблона
+                                    блок ниже будет включатся если остаток от количества элементов группы будет равно 2  -- group-items.length % 3 === 2
+                                    это исплользуется для фикса css свойства flexbox justify-content: space-between
+                                -->
+                                <!--<div class="pattern-group__item pattern-group__item_blank"></div>-->
                             </div>
-                            <div class="radio-block filter-radio__item">
-                                <input class="radio-block__input" type="radio" id="popular" name="filter-radio-group">
-                                <label for="popular" class="radio-block__label">Популярные</label>
-                            </div>
-                        </form>
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Цена, руб.
-                        </h4>
-                        <div class="price-range filter-block__item">
-                            <input type="text" name="quantity" class="price-range__input" placeholder="от 500">
-                            <span class="price-range__separator"></span>
-                            <input type="text" name="quantity" class="price-range__input" placeholder="от 20 000">
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Фасон
+                            </h4>
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="fashion-checked-item1" checked/>
+                                    <label class="check-block__label" for="fashion-checked-item1">Прямое</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="fashion-checked-item2"/>
+                                    <label class="check-block__label" for="fashion-checked-item2">Трапеция</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="fashion-checked-item3"/>
+                                    <label class="check-block__label" for="fashion-checked-item3">Отрезное</label>
+                                </div>
+                            </form>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Пуговки
+                            </h4>
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="buttons-checked-item1" checked/>
+                                    <label class="check-block__label" for="buttons-checked-item1">На груди</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="buttons-checked-item2"/>
+                                    <label class="check-block__label" for="buttons-checked-item2">На спине</label>
+                                </div>
+                            </form>
+
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="buttons-checked-item3" checked/>
+                                    <label class="check-block__label" for="buttons-checked-item3">3/4</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="buttons-checked-item4"/>
+                                    <label class="check-block__label" for="buttons-checked-item4">До талии</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="buttons-checked-item5"/>
+                                    <label class="check-block__label" for="buttons-checked-item5">Всю длину</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="buttons-checked-item6"/>
+                                    <label class="check-block__label" for="buttons-checked-item6">Без пуговок</label>
+                                </div>
+                            </form>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Воротник
+                            </h4>
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="collar-checked-item1" checked/>
+                                    <label class="check-block__label" for="collar-checked-item1">Шанхай</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="collar-checked-item2"/>
+                                    <label class="check-block__label" for="collar-checked-item2">Лондон</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="collar-checked-item3"/>
+                                    <label class="check-block__label" for="collar-checked-item3">Классика</label>
+                                </div>
+                            </form>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Рукава
+                            </h4>
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="sleeves-checked-item1" checked/>
+                                    <label class="check-block__label" for="sleeves-checked-item1">3/4</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="sleeves-checked-item2"/>
+                                    <label class="check-block__label" for="sleeves-checked-item2">Стандартные</label>
+                                </div>
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="sleeves-checked-item3"/>
+                                    <label class="check-block__label" for="sleeves-checked-item3">Без рукавов</label>
+                                </div>
+                            </form>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Завязки (пояс)
+                            </h4>
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="belt-checked-item1" checked/>
+                                    <label class="check-block__label" for="belt-checked-item1">В боковых швах</label>
+                                </div>
+                            </form>
+
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
+                                Карманы
+                            </h4>
+                            <form action="#" class="filter-checkbox filter-block__item">
+                                <div class="check-block filter-checkbox__item">
+                                    <input class="check-block__input" type="checkbox" id="pocket-checked-item1" checked/>
+                                    <label class="check-block__label" for="pocket-checked-item1">В боковых швах</label>
+                                </div>
+                            </form>
+
+                            <button class="button button_theme_white button_theme_no-shadow button_size_md button_font_sm filter-block__btn-reset">
+                                <img src="/images/icons/filter-reset-icon.svg" class="button__icon button__icon_pos_right"
+                                     alt="basket-icon">
+                                Сбросить фильтр
+                            </button>
                         </div>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Цвет
-                        </h4>
-                        <ul class="color-picker filter-block__item">
-                            <li class="color-picker__item checked" style="background-color: #543c31"></li>
-                            <li class="color-picker__item" style="background-color: #8a2220"></li>
-                            <li class="color-picker__item" style="background-color: #a2522f"></li>
-                            <li class="color-picker__item" style="background-color: #c4867b"></li>
-                            <li class="color-picker__item" style="background-color: #c38120"></li>
-                            <li class="color-picker__item" style="background-color: #365130"></li>
-                            <li class="color-picker__item" style="background-color: #004c4b"></li>
-                            <li class="color-picker__item" style="background-color: #245366"></li>
-                            <li class="color-picker__item" style="background-color: #154f90"></li>
-                            <li class="color-picker__item" style="background-color: #5989b9"></li>
-                            <li class="color-picker__item" style="background-color: #f3f4f5"></li>
-                            <li class="color-picker__item" style="background-color: #c8c7c0"></li>
-                            <li class="color-picker__item" style="background-color: #353228"></li>
-                        </ul>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Принт
-                        </h4>
-
-                        <div class="pattern-group">
-                            <div class="pattern-item pattern-group__item active">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img1.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img2.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img3.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img4.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img5.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img6.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img7.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img8.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-group__item">
-                                <div class="pattern-item__img">
-                                    <img src="/images/patterns/img9.svg" alt="">
-                                </div>
-                            </div>
-
-                            <div class="pattern-item pattern-item_type_btn pattern-group__item">
-                                <img class="pattern-item__icon" src="/images/icons/eye-icon.svg" alt="">
-                                <span class="pattern-item__text">
-                                    еще +<span>7</span>
-                                </span>
-                            </div>
-
-                            <!--
-                                при натягивании шаблона
-                                блок ниже будет включатся если остаток от количества элементов группы будет равно 2  -- group-items.length % 3 === 2
-                                это исплользуется для фикса css свойства flexbox justify-content: space-between
-                            -->
-                            <!--<div class="pattern-group__item pattern-group__item_blank"></div>-->
-                        </div>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Фасон
-                        </h4>
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="fashion-checked-item1" checked/>
-                                <label class="check-block__label" for="fashion-checked-item1">Прямое</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="fashion-checked-item2"/>
-                                <label class="check-block__label" for="fashion-checked-item2">Трапеция</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="fashion-checked-item3"/>
-                                <label class="check-block__label" for="fashion-checked-item3">Отрезное</label>
-                            </div>
-                        </form>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Пуговки
-                        </h4>
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="buttons-checked-item1" checked/>
-                                <label class="check-block__label" for="buttons-checked-item1">На груди</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="buttons-checked-item2"/>
-                                <label class="check-block__label" for="buttons-checked-item2">На спине</label>
-                            </div>
-                        </form>
-
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="buttons-checked-item3" checked/>
-                                <label class="check-block__label" for="buttons-checked-item3">3/4</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="buttons-checked-item4"/>
-                                <label class="check-block__label" for="buttons-checked-item4">До талии</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="buttons-checked-item5"/>
-                                <label class="check-block__label" for="buttons-checked-item5">Всю длину</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="buttons-checked-item6"/>
-                                <label class="check-block__label" for="buttons-checked-item6">Без пуговок</label>
-                            </div>
-                        </form>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Воротник
-                        </h4>
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="collar-checked-item1" checked/>
-                                <label class="check-block__label" for="collar-checked-item1">Шанхай</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="collar-checked-item2"/>
-                                <label class="check-block__label" for="collar-checked-item2">Лондон</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="collar-checked-item3"/>
-                                <label class="check-block__label" for="collar-checked-item3">Классика</label>
-                            </div>
-                        </form>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Рукава
-                        </h4>
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="sleeves-checked-item1" checked/>
-                                <label class="check-block__label" for="sleeves-checked-item1">3/4</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="sleeves-checked-item2"/>
-                                <label class="check-block__label" for="sleeves-checked-item2">Стандартные</label>
-                            </div>
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="sleeves-checked-item3"/>
-                                <label class="check-block__label" for="sleeves-checked-item3">Без рукавов</label>
-                            </div>
-                        </form>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Завязки (пояс)
-                        </h4>
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="belt-checked-item1" checked/>
-                                <label class="check-block__label" for="belt-checked-item1">В боковых швах</label>
-                            </div>
-                        </form>
-
-                        <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
-                            Карманы
-                        </h4>
-                        <form action="#" class="filter-checkbox filter-block__item">
-                            <div class="check-block filter-checkbox__item">
-                                <input class="check-block__input" type="checkbox" id="pocket-checked-item1" checked/>
-                                <label class="check-block__label" for="pocket-checked-item1">В боковых швах</label>
-                            </div>
-                        </form>
-
-                        <button class="button button_theme_white button_theme_no-shadow button_size_md button_font_sm filter-block__btn-reset">
-                            <img src="/images/icons/filter-reset-icon.svg" class="button__icon button__icon_pos_right"
-                                 alt="basket-icon">
-                            Сбросить фильтр
-                        </button>
                     </div>
                 </div>
                 <div class="dual-block__item">

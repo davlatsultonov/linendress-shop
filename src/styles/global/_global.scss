@@ -19,7 +19,7 @@ body {
 .content {
   @include flex;
   overflow: hidden;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .container {

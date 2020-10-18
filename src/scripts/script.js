@@ -60,11 +60,20 @@ $(document).ready(function () {
         arrows: true,
         speed: 700
     });
-});
 
-$(window).on('load', function() {
+    //filter-block
+    let filterBlockToggleBtn = $('#filter-toggle-btn'),
+        filterBlock = $('.filter-block');
+
+    filterBlockToggleBtn.click(() => {
+        filterBlock.toggleClass('filter-block--active');
+    });
+    //checking filter-block
+    if (filterBlock.length) {
+        $('.content').css('overflow', 'visible');
+    }
+
     dynamicSubstrateHeight();
-
 
     // mobile-menu
     let mobileHamburgerBtn = $('.hamburger-btn_js'),
