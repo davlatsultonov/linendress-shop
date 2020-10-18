@@ -9,9 +9,10 @@
   font-weight: 500;
   min-width: 107px;
   min-height: 30px;
+  font-size: 1.4rem;
   border: 0;
   cursor: pointer;
-  padding: 0 19px;
+  padding: 0 15px;
   @include shift(ease-in-out, 256ms);
   position: relative;
 
@@ -38,12 +39,11 @@
   }
 
   &_border-r_lg {
-    @include prefix(border-radius, 8px);
+    border-radius: 8px;
   }
 
   &_size_lg {
     min-height: 46px;
-    height: 46px;
 
     &::after {
       padding-top: 30%;
@@ -53,16 +53,10 @@
   &_size_md {
     min-width: 170px;
     min-height: 40px;
-    height: 40px;
   }
 
   &_size_sm {
     min-height: 30px;
-    height: 30px;
-  }
-
-  &_width_md {
-    min-width: 170px;
   }
 
   &_font_lg {
@@ -131,7 +125,7 @@
 
   &_type_expand {
     min-width: 46px;
-    height: 38px;
+    min-height: 38px;
     border-radius: 5px;
     border: none;
     padding: 0;
@@ -144,6 +138,23 @@
     &:hover {
       box-shadow: $base-shadow;
       opacity: 1;
+    }
+  }
+
+  &_type_block {
+    @include flexbox;
+  }
+
+  &_type_show-more {
+
+    @media #{$xsm} {
+      min-height: 36px;
+      font-size: 1.4rem;
+      box-shadow: none;
+      border: 1px solid #606060;
+      border-radius: 25px;
+      width: 100% ;
+      max-width: 290px;
     }
   }
 

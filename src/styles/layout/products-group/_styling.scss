@@ -155,31 +155,22 @@
   }
 
   &__button {
-    float: left;
+    flex-basis: 100%;
 
     .button {
       padding: 0 27px;
+
+      @media #{$lg} {
+        min-width: 100%;
+      }
 
       @media #{$md} {
         padding: 0 7px;
       }
 
-      &_size_md {
-
-        @media #{$lg} {
-          min-width: 135px;
-          line-height: 14px;
-        }
-
-        @media #{$md} {
-          min-width: 128px;
-        }
-      }
-
       &_size_sm {
 
         @media #{$xs} {
-          min-width: 80px;
           min-height: 22px;
           height: 22px;
         }
@@ -202,7 +193,6 @@
   }
 
   &__btn-more {
-    float: left;
     margin-top: 11px;
     margin-left: 15px;
 
@@ -392,29 +382,14 @@
 
       &__button {
 
-        .button {
+        .button_size_md {
 
-          @media #{$lg} {
-            padding: 0 7px;
+          @media #{$sm} {
+            min-height: 30px;
           }
 
-          &_size_md {
-
-            @media #{$lg} {
-              min-width: 130px;
-            }
-
-            @media #{$sm} {
-              min-width: 105px;
-              min-height: 30px;
-              height: 30px;
-            }
-
-            @media #{$xs} {
-              min-width: 80px;
-              min-height: 22px;
-              height: 22px;
-            }
+          @media #{$xxs} {
+            min-height: 22px;
           }
         }
       }
@@ -566,18 +541,10 @@
 
       &__button {
 
-        .button {
+        .button_size_md {
 
           @media #{$xs} {
-            padding: 0 27px;
-          }
-
-          &_size_md {
-            @media #{$xs} {
-              min-width: 170px;
-              min-height: 40px;
-              height: 40px;
-            }
+            min-height: 40px;
           }
         }
 
