@@ -93,11 +93,7 @@ ul {
 }
 
 .show-1200 {
-  display: none !important;
-
-  @media #{$lg} {
-    display: block !important;
-  }
+  @include show-el($lg, block);
 }
 
 .hide-1024 {
@@ -105,11 +101,7 @@ ul {
 }
 
 .show-1024 {
-  display: none;
-
-  @media #{$md} {
-    display: block !important;
-  }
+  @include show-el($md, block);
 }
 
 .hide-768 {
@@ -117,11 +109,7 @@ ul {
 }
 
 .show-768 {
-  display: none !important;
-
-  @media #{$sm} {
-    display: block !important;
-  }
+  @include show-el($sm, block);
 }
 
 .hide-720 {
@@ -129,11 +117,15 @@ ul {
 }
 
 .show-720 {
-  display: none !important;
+  @include show-el((max-width: 720px), block);
+}
 
-  @media (max-width: 720px) {
-    display: block !important;
-  }
+.show-639 {
+  @include show-el($xsm, block);
+}
+
+.show-639-inline-flex {
+  @include show-el($xsm, inline-flex);
 }
 
 .hide-480 {
@@ -141,14 +133,14 @@ ul {
 }
 
 .show-480 {
-  display: none !important;
-
-  @media #{$xs} {
-    display: block !important;
-  }
+  @include show-el($xs, block);
 }
 
 .show-480-inline-flex {
+  @include show-el($xs, inline-flex);
+}
+
+.show-480-flex {
   @include show-el($xs, flex);
 }
 
