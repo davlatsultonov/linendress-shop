@@ -62,11 +62,11 @@
 .show-counter {
 
   .add-counter {
-    display: inline-flex !important;
+    @include inline-flex;
     opacity: 1;
   }
 
   .button {
-    display: none !important;
+    display: none;
   }
 }

@@ -214,18 +214,26 @@
     }
   }
 
+  .show-counter {
+
+    .product-card__button-buy {
+      @media #{$sm} {
+        display: inline-flex;
+      }
+    }
+
+    .add-counter {
+
+      @media #{$sm} {
+        display: none;
+      }
+    }
+  }
+
   .add-counter {
 
     @media #{$lg} {
-      min-width: 167.5px;
-    }
-
-    @media #{$md} {
-      min-width: 128px;
-    }
-
-    @media #{$sm} {
-      display: none;
+      min-width: 100%;
     }
 
     &__btn {
@@ -550,7 +558,7 @@
 
         &-add {
           @media #{$xs} {
-            display: block;
+            @include inline-flex;
           }
         }
 
@@ -590,9 +598,36 @@
         }
       }
 
+      .show-counter {
+
+        .product-card__button {
+
+          &-add {
+
+            @media #{$sm} {
+              display: none;
+            }
+          }
+
+          &-buy {
+            @media #{$xs} {
+              display: none;
+            }
+          }
+        }
+
+        .add-counter {
+
+          @media #{$xs} {
+            @include inline-flex;
+          }
+        }
+      }
+
       .add-counter {
+
         @media #{$xs} {
-          min-width: 170px;
+          min-width: 100%;
         }
 
         &__btn {

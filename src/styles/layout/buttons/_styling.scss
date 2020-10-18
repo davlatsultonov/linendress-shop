@@ -168,12 +168,13 @@
         background-color: #fa741b;
         position: absolute;
         top: -1px;
-        right: -8px;
+        right: 0;
       }
     }
 
     .button__icon {
       margin-top: 1px;
+      margin-right: 10px;
     }
   }
 }
