@@ -61,47 +61,39 @@ $(document).ready(function () {
         speed: 700
     });
 
-    {
-        //filter-block
-        let filterBlockOpenBtn = $('#filter-block__btn-open--js'),
-            filterBlockCloseBtn = $('#filter-block__btn-close--js'),
-            windowScrollY = window.scrollY,
-            filterBlock = $('.filter-block');
+    //filter-block
+    let filterBlockOpenBtn = $('#filter-block__btn-open--js'),
+        filterBlockCloseBtn = $('#filter-block__btn-close--js'),
+        windowScrollY = window.scrollY,
+        filterBlock = $('.filter-block');
 
-        $(window).on('scroll', throttle(function () {
-            windowScrollY = window.scrollY;
-        }, 50));
+    $(window).on('scroll', throttle(function () {
+        windowScrollY = window.scrollY;
+    }, 50));
 
-        $(window).on('resize', throttle(function () {
-            let w = window.innerWidth;
+    $(window).on('resize', throttle(function () {
+        let w = window.innerWidth;
 
-            if (w > 768) {
-                disableScrollInActiveModal();
-            };
-        }, 70));
-
-        filterBlockOpenBtn.click(() => {
-            filterBlock.addClass('filter-block--active');
-            enableScrollInActiveModal();
-        });
-
-        filterBlockCloseBtn.click(() => {
-            closeFilterBlock();
-        });
-
-        /*$('body').click(function (event) {
-            if(!$(event.target).closest('.filter-block').length && !$(event.target).is('.filter-block')) {
-                closeFilterBlock();
-            }
-        });*/
-
-        function closeFilterBlock() {
-            const scrollY = document.body.style.top;
-            filterBlock.removeClass('filter-block--active');
+        if (w > 768) {
             disableScrollInActiveModal();
-            window.scrollTo(0, parseInt(scrollY || '0') * -1);
-            $('.filter-block__content').scrollTop(0);
-        }
+        };
+    }, 70));
+
+    filterBlockOpenBtn.click(() => {
+        filterBlock.addClass('filter-block--active');
+        enableScrollInActiveModal();
+    });
+
+    filterBlockCloseBtn.click(() => {
+        closeFilterBlock();
+    });
+
+    function closeFilterBlock() {
+        const scrollY = document.body.style.top;
+        filterBlock.removeClass('filter-block--active');
+        disableScrollInActiveModal();
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        $('.filter-block__content').scrollTop(0);
     }
 
     function enableScrollInActiveModal() {
@@ -321,6 +313,12 @@ $(document).ready(function () {
             productsGroupWrapper.addClass('products-group_no-grid')
         } else {
             productsGroupWrapper.removeClass('products-group_no-grid')
+        }
+    });
+
+    $('[data-fancybox="workview"]').fancybox({
+        thumbs : {
+            autoStart : true
         }
     });
 });
