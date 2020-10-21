@@ -53,6 +53,7 @@ $(document).ready(function () {
         dots: true,
         arrows: true,
         speed: 700,
+        mobileFirst: true,
     });
 
     $('.has-slider_only-arrows').slick({
@@ -307,22 +308,25 @@ $(document).ready(function () {
     cardsViewItems.click(function () {
         cardsViewItems.removeClass('cards-view__item--active');
         $(this).addClass('cards-view__item--active');
-
+        setTimeout(() => {
+            $('.has-slider').slick('setPosition');
+        }, 300);
         if (!$(this).children('.cards-view__icons').hasClass('cards-view__icons--poly')) {
             productsGroupWrapper.addClass('products-group_no-grid')
         } else {
             productsGroupWrapper.removeClass('products-group_no-grid')
         }
     });
-
-    $('[data-fancybox="workview"]').fancybox({
-        mobile: { clickSlide : false }
-    });
 });
 
 $(window).on('load', dynamicSubstrateHeight);
 
-$(window).on('resize', dynamicSubstrateHeight);
+$(window).on('resize', throttle(function () {
+   setTimeout(() => {
+       $('.has-slider').slick('setPosition');
+   }, 300);
+   dynamicSubstrateHeight();
+}, 40));
 
 function dynamicSubstrateHeight() {
     // setting dynamic height to bg-layers
