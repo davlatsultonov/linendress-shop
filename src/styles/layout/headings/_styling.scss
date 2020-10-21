@@ -3,7 +3,6 @@
   font-size: 2.4rem;
   @include flexbox;
   @include align-items(center);
-  @include justify-content(space-between);
   min-height: 10px;
 
   @media #{$xs} {

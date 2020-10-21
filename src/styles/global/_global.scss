@@ -19,7 +19,6 @@ body {
 .content {
   @include flex;
   overflow: hidden;
-  margin-bottom: 40px;
 }
 
 .container {
@@ -110,6 +109,10 @@ ul {
 
 .show-768 {
   @include show-el($sm, block);
+}
+
+.show-768-inline-flex {
+  @include show-el($sm, inline-flex);
 }
 
 .hide-720 {

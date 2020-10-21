@@ -1,7 +1,6 @@
 .navigation-back {
   display: none;
   border-bottom: 1px solid #323232;
-  margin-bottom: 20px;
 
   @media #{$sm} {
     display: block;
@@ -22,5 +21,9 @@
   &__icon {
     padding: 12px;
     margin-left: -11px;
+  }
+
+  &__item-right {
+    margin-left: auto;
   }
 }

@@ -25,8 +25,13 @@
   }
 
   &_theme_white {
-    background-color: #fff;
+    background-color: $white;
     color: $black;
+  }
+
+  &_theme_orange {
+    background-color: $active-orange;
+    color: $white;
   }
 
   &_theme_no-shadow {
@@ -117,6 +122,10 @@
         width: 18px;
       }
     }
+
+    &-no-decoration {
+      text-decoration: none;
+    }
   }
 
   &_type_expand {
@@ -143,7 +152,7 @@
 
   &_type_show-more {
 
-    @media #{$xsm} {
+    @media #{$sm} {
       min-height: 36px;
       font-size: 1.4rem;
       box-shadow: none;
@@ -155,6 +164,13 @@
   }
 
   &-basket {
+
+    .button__icon {
+
+      @media #{$sm} {
+        margin-top: 1px;
+      }
+    }
 
     &--active-dot {
       position: relative;
@@ -168,13 +184,12 @@
         background-color: #fa741b;
         position: absolute;
         top: -1px;
-        right: 0;
+        right: -7px;
       }
     }
 
     .button__icon {
       margin-top: 1px;
-      margin-right: 10px;
     }
   }
 }

@@ -60,11 +60,45 @@ $(document).ready(function () {
         arrows: true,
         speed: 700
     });
-});
 
-$(window).on('load', function() {
+    //filter-block
+    let filterBlockOpenBtn = $('#filter-block__btn-open--js'),
+        filterBlockCloseBtn = $('#filter-block__btn-close--js'),
+        body = document.body,
+        windowScrollY = window.scrollY,
+        filterBlock = $('.filter-block');
+
+    $(window).on('scroll', throttle(function () {
+        windowScrollY = window.scrollY;
+    }, 50));
+
+    filterBlockOpenBtn.click(() => {
+        filterBlock.addClass('filter-block--active');
+        body.style.position = 'fixed';
+        body.style.top = `-${windowScrollY}px`;
+    });
+
+    filterBlockCloseBtn.click(() => {
+        closeFilterBlock();
+    });
+
+    $(document).click((e) => {
+        const wrap = e.target.classList.contains('filter-block');
+        if(!wrap) return;
+        e.preventDefault();
+        closeFilterBlock();
+    });
+
+    function closeFilterBlock() {
+        filterBlock.removeClass('filter-block--active');
+        const scrollY = document.body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        $('.filter-block__content').scrollTop(0);
+    }
+
     dynamicSubstrateHeight();
-
 
     // mobile-menu
     let mobileHamburgerBtn = $('.hamburger-btn_js'),
@@ -254,6 +288,21 @@ $(window).on('load', function() {
     patternItems.click(function () {
         $(this).closest(patternsWrapper).find('.pattern-group__item').removeClass('active');
         $(this).addClass('active');
+    });
+
+    //cards-view
+    let cardsViewItems = $('.cards-view__item'),
+        productsGroupWrapper = $('.products-group');
+
+    cardsViewItems.click(function () {
+        cardsViewItems.removeClass('cards-view__item--active');
+        $(this).addClass('cards-view__item--active');
+
+        if (!$(this).children('.cards-view__icons').hasClass('cards-view__icons--poly')) {
+            productsGroupWrapper.addClass('products-group_no-grid')
+        } else {
+            productsGroupWrapper.removeClass('products-group_no-grid')
+        }
     });
 });
 
