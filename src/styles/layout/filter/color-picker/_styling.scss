@@ -12,6 +12,8 @@
     margin-bottom: 15px;
     border: 2px solid transparent;
     cursor: pointer;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
 
     &:not(:nth-child(6n)) {
       margin-right: 14px;

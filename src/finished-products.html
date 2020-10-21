@@ -100,7 +100,7 @@
                     <div class="navigation-back__title">
                         Готовые изделия
                     </div>
-                    <button class="button button_type_link button_type_link-no-decoration button_font_sm button_thin navigation-back__item-right" id="filter-toggle-btn">
+                    <button class="button button_type_link button_type_link-no-decoration button_font_sm button_thin navigation-back__item-right" id="filter-block__btn-open--js">
                         Фильтры
                         <img src="/images/icons/filter-icon.svg" class="button__icon" alt="filter-icon">
                     </button>
@@ -255,7 +255,7 @@
                     Готовые изделия
                 </li>
             </ul>
-            <h1 class="main-title main-title_indent-bottom_md hide-768">
+            <h1 class="main-title main-title_with-item main-title_indent-bottom_md hide-768">
                 Готовые изделия
 
                 <div class="filter-row main-title__external-item">
@@ -288,6 +288,32 @@
                 <div class="dual-block__item">
                     <div class="filter-block">
                         <div class="filter-block__content">
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm filter-block__main-title">
+                                Фильтры
+                                <img src="/images/icons/close-icon2.svg" class="filter-block__btn-close" alt="close-icon" id="filter-block__btn-close--js">
+                            </h4>
+                            <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm show-480">
+                                Вид карточек:
+                            </h4>
+                            <div class="cards-view filter-block__item show-480-flex">
+                                <div class="cards-view__item cards-view__item--active">
+                                    <div class="cards-view__icons cards-view__icons--poly">
+                                        <span class="cards-view__icon"></span>
+                                        <span class="cards-view__icon"></span>
+                                    </div>
+                                    <div class="cards-view__label">
+                                        по две
+                                    </div>
+                                </div>
+                                <div class="cards-view__item">
+                                    <div class="cards-view__icons">
+                                        <span class="cards-view__icon"></span>
+                                    </div>
+                                    <div class="cards-view__label">
+                                        по одной
+                                    </div>
+                                </div>
+                            </div>
                             <h4 class="main-title main-title_size_sm main-title_indent-bottom_sm">
                                 Показывать только
                             </h4>
@@ -515,6 +541,10 @@
                                     <label class="check-block__label" for="pocket-checked-item1">В боковых швах</label>
                                 </div>
                             </form>
+
+                            <button class="button button_theme_white button_theme_orange button_theme_no-shadow button_type_show-more show-768-inline-flex">
+                                Показать
+                            </button>
 
                             <button class="button button_theme_white button_theme_no-shadow button_size_md button_font_sm filter-block__btn-reset">
                                 <img src="/images/icons/filter-reset-icon.svg" class="button__icon button__icon_pos_right"
@@ -1192,7 +1222,7 @@
                     </nav>
 
                     <div class="content-aligned-center">
-                        <button class="button button_theme_white button_theme_no-shadow button_type_show-more show-639-inline-flex">
+                        <button class="button button_theme_white button_type_show-more show-639-inline-flex">
                             Показать еще
                         </button>
                     </div>

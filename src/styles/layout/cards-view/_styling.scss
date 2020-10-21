@@ -1,0 +1,42 @@
+.cards-view {
+  @include flexbox;
+
+  &__item {
+    @include inline-flex;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--active {
+
+      .cards-view__icon {
+        background-color: $active-orange;
+      }
+    }
+  }
+
+  &__icons {
+    margin-right: 10px;
+    height: 12px;
+
+    &--poly {
+
+      .cards-view__icon {
+        width: 7px;
+      }
+    }
+  }
+
+  &__icon {
+    height: inherit;
+    display: inline-block;
+    width: 10px;
+    border-radius: 2px;
+    background-color: #d8d8d8;
+  }
+
+  &__label {
+    line-height: 0.95;
+  }
+}
