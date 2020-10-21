@@ -35,10 +35,6 @@
     height: 375px;
     @include cover-background;
 
-    &_size_sm {
-      height: 250px;
-    }
-
     @media #{$md} {
       height: 270px;
     }
@@ -195,6 +191,7 @@
   &__btn-more {
     margin-top: 11px;
     margin-left: 15px;
+    cursor: pointer;
 
     img {
 
@@ -260,6 +257,33 @@
         width: 14px;
         @include slick-dots-custom-color($black, border, transparent, $black, 12);
       }
+    }
+
+    &:not(.slick-initialized) {
+      max-height: 375px;
+
+      @media #{$md} {
+        max-height: 270px;
+      }
+
+      @media #{$xs} {
+        max-height: 217px;
+      }
+    }
+
+    &_size_sm {
+
+      &:not(.slick-initialized) {
+        max-height: 250px;
+      }
+
+      .product-card__img {
+        height: 250px;
+      }
+    }
+
+    &.slick-initialized {
+      max-height: inherit;
     }
 
     @include slick-arrows-inside(5);

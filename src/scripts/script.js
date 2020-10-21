@@ -109,8 +109,6 @@ $(document).ready(function () {
         body.style.top = '';
     }
 
-    dynamicSubstrateHeight();
-
     // mobile-menu
     let mobileHamburgerBtn = $('.hamburger-btn_js'),
         mobileMenuCloseBtn = $('.header-mobile__btn-close_js'),
@@ -134,9 +132,10 @@ $(document).ready(function () {
     let cardBtnMore = $('.product-card__btn-more--js'),
         closeBtn = $('.product-full-info__close-btn');
 
-    cardBtnMore.click(function (e) {
+    cardBtnMore.click(function () {
         let popover = $(this).parents('.product-card').children('.product-full-info:hidden');
         popover.addClass('visible');
+        $(".has-slider").slick('setPosition');
         //disableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 
@@ -317,10 +316,10 @@ $(document).ready(function () {
     });
 
     $('[data-fancybox="workview"]').fancybox({
-        thumbs : {
-            autoStart : true
-        }
+        mobile: { clickSlide : false }
     });
+
+    dynamicSubstrateHeight();
 });
 
 $(window).on('resize', dynamicSubstrateHeight);

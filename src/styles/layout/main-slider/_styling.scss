@@ -1,4 +1,66 @@
 .main-slider {
+  height: 330px;
+  max-height: 330px;
+  width: 96%;
+  position: relative;
+  margin-bottom: 90px !important;
+
+  @media #{$md} {
+    height: 240px;
+    max-height: 240px;
+  }
+
+  @media #{$sm} {
+    width: 100%;
+    margin-bottom: 35px !important;
+    margin-top: 15px;
+  }
+
+  @media #{$xs} {
+    height: 162px;
+    max-height: 162px;
+  }
+
+  &:after, &:before {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 30px;
+    @include center(horizontal);
+  }
+
+  &::after {
+    width: 97%;
+    background-color: #000000;
+    opacity: 0.6;
+    top: 11px;
+    z-index: -1;
+  }
+
+  &::before {
+    width: 94%;
+    background-color: #cccccc;
+    opacity: 0.8;
+    top: 20px;
+    z-index: -1;
+  }
+
+  &:not(.slick-initialized) {
+    max-height: 340px;
+    overflow: hidden;
+
+    @media #{$md} {
+      max-height: 240px;
+    }
+
+    @media #{$xs} {
+      max-height: 162px;
+    }
+  }
+
+  &.slick-initialized {
+    max-height: inherit;
+  }
 
   &__img {
     height: 330px;
@@ -12,54 +74,6 @@
 
     @media #{$xs} {
       height: 162px;
-    }
-  }
-
-  &--wrapper {
-    height: 330px;
-    max-height: 330px;
-    width: 96%;
-    position: relative;
-    margin-bottom: 90px;
-    
-    @media #{$md} {
-      height: 240px;
-      max-height: 240px;
-    }
-
-    @media #{$sm} {
-      width: 100%;
-      margin-bottom: 35px;
-      margin-top: 15px;
-    }
-
-    @media #{$xs} {
-      height: 162px;
-      max-height: 162px;
-    }
-
-    &:after, &:before {
-      content: '';
-      display: block;
-      height: 100%;
-      border-radius: 30px;
-      @include center(horizontal);
-    }
-
-    &::after {
-      width: 97%;
-      background-color: #000000;
-      opacity: 0.6;
-      top: 11px;
-      z-index: -1;
-    }
-
-    &::before {
-      width: 94%;
-      background-color: #cccccc;
-      opacity: 0.8;
-      top: 20px;
-      z-index: -1;
     }
   }
 

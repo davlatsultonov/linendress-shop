@@ -61,6 +61,19 @@
         max-height: 400px;
       }
     }
+
+    .has-slider_only-arrows:not(.slick-initialized) {
+      max-height: 570px;
+      overflow: hidden;
+
+      @media #{$xsm} {
+        max-height: 400px;
+      }
+    }
+
+    .has-slider_only-arrows.slick-initialized {
+      max-height: inherit;
+    }
   }
 
   &__btn-expand {
