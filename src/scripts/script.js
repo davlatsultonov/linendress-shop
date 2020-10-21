@@ -318,9 +318,9 @@ $(document).ready(function () {
     $('[data-fancybox="workview"]').fancybox({
         mobile: { clickSlide : false }
     });
-
-    dynamicSubstrateHeight();
 });
+
+$(window).on('load', dynamicSubstrateHeight);
 
 $(window).on('resize', dynamicSubstrateHeight);
 
