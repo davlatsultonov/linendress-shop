@@ -3,12 +3,26 @@
 
   &__item {
     @include inline-flex;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin-right: 15px;
     }
 
+    &:hover, &:active {
+      .cards-view__icon {
+        background-color: $active-orange;
+        opacity: .6;
+      }
+    }
+
     &--active {
+
+      &:hover {
+        .cards-view__icon {
+          opacity: 1;
+        }
+      }
 
       .cards-view__icon {
         background-color: $active-orange;
