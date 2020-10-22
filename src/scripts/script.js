@@ -61,8 +61,6 @@ $(document).ready(function () {
         arrows: true,
         speed: 700,
         mobileFirst: true,
-        swipe: false,
-        swipeToSlide: false
     });
 
     $('.has-slider_only-arrows').slick({
@@ -143,14 +141,14 @@ $(document).ready(function () {
         closeBtn = $('.product-full-info__close-btn');
 
     cardBtnMore.click(function () {
-        let popover = $(this).parents('.product-card').children('.product-full-info:hidden');
-        popover.addClass('visible');
+        let popover = $(this).parents('.product-card').children('.product-full-info');
+        popover.addClass('product-full-info_visible');
         $(".has-slider").slick('setPosition');
         //disableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 
     closeBtn.on('click', function () {
-        $(this).closest('.product-full-info').removeClass('visible');
+        $(this).closest('.product-full-info').removeClass('product-full-info_visible');
         //enableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 

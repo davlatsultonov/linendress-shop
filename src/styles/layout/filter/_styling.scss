@@ -16,9 +16,11 @@
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: translate(89%, -48%) scale(0.1);
-    transition: transform 400ms cubic-bezier(0.46, 0.03, 0.52, 0.96), opacity 350ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    border-radius: 100%;
+    transform: translateX(103%) scale(.4);
+    transition: transform 400ms cubic-bezier(0.46, 0.03, 0.52, 0.96), border-radius 550ms cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
     pointer-events: none;
+    overflow: hidden;
   }
 
   &:before {
@@ -39,10 +41,11 @@
   &--active {
 
     @media #{$sm} {
+      transform: translateX(-50%) scale(1);
+      pointer-events: auto;
+      border-radius: 0;
       opacity: 1;
       visibility: visible;
-      transform: translate(-50%, 0) scale(1);
-      pointer-events: auto;
     }
 
     &:before {
@@ -50,15 +53,9 @@
       pointer-events: auto;
     }
 
-    .filter-block__overlay {
-      @media #{$sm} {
-        opacity: 1;
-      }
-    }
-
     .filter-block__content {
       @media #{$sm} {
-        transform: scale(1);
+        transform: translateX(0) scale(1);
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -82,7 +79,7 @@
       visibility: hidden;
       z-index: 77;
       position: relative;
-      transform: scale(.5);
+      transform: translateX(103%) scale(.5);
       transition: all 380ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
       pointer-events: none;
     }
