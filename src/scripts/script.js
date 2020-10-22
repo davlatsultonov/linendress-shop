@@ -83,13 +83,13 @@ $(document).ready(function () {
         let w = window.innerWidth;
 
         if (w > 768) {
-            disableScrollInActiveModal();
+            enableScrollInActiveModal();
         };
     }, 70));
 
     filterBlockOpenBtn.click(() => {
         filterBlock.addClass('filter-block--active');
-        enableScrollInActiveModal();
+        disableScrollInActiveModal();
     });
 
     filterBlockCloseBtn.click(() => {
@@ -99,7 +99,7 @@ $(document).ready(function () {
     function closeFilterBlock() {
         const scrollY = document.body.style.top;
         filterBlock.removeClass('filter-block--active');
-        disableScrollInActiveModal();
+        enableScrollInActiveModal();
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
         $('.filter-block__content').scrollTop(0);
     }
@@ -112,9 +112,11 @@ $(document).ready(function () {
     }
 
     function enableScrollInActiveModal() {
-        let body = document.body;
+        let body = document.body,
+            scrollY = body.style.top;
         body.style.position = '';
         body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
 
     // mobile-menu
