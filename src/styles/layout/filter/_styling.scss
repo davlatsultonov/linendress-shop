@@ -14,14 +14,40 @@
     z-index: 76;
     width: 100%;
     height: 100%;
-    transform: translateX(-250%) scale(.5);
-    transition: all .45s cubic-bezier(0.83, 0, 0.17, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(89%, -48%) scale(0.1);
+    transition: transform 400ms cubic-bezier(0.46, 0.03, 0.52, 0.96), opacity 350ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    pointer-events: none;
+  }
+
+  &:before {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 75;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    will-change: opacity;
+    transition:  opacity 440ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    pointer-events: none;
   }
 
   &--active {
 
     @media #{$sm} {
-      transform: translateX(-50%) scale(1);
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0) scale(1);
+      pointer-events: auto;
+    }
+
+    &:before {
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .filter-block__overlay {
@@ -32,31 +58,17 @@
 
     .filter-block__content {
       @media #{$sm} {
-        transform: translateX(0) scale(1);
+        transform: scale(1);
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
       }
-    }
-  }
-
-  &__overlay {
-
-    @media #{$sm} {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-      z-index: 75;
-      transition: all .34s cubic-bezier(0.83, 0, 0.17, 1);
-      opacity: .7;
     }
   }
 
   &__content {
     background: #ffffff;
     border-radius: 13px;
-    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
 
     @media #{$sm} {
       width: 250px;
@@ -70,7 +82,9 @@
       visibility: hidden;
       z-index: 77;
       position: relative;
-      transform: translateX(-250%) scale(.5);
+      transform: scale(.5);
+      transition: all 380ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+      pointer-events: none;
     }
 
   }

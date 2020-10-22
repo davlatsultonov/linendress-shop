@@ -5,8 +5,9 @@ $(document).ready(function () {
         dots: true,
         slidesToShow: 1,
         fade: true,
-        speed: 1000,
-        cssEase: 'ease'
+        speed: 700,
+        infinite: true,
+        verticalSwiping: true
     });
 
     /*$('.product-view__parts').slick({
@@ -31,14 +32,20 @@ $(document).ready(function () {
         dots: true,
         arrows: true,
         adaptiveHeight: true,
+        cssEase: 'ease',
+        speed: 700,
         swipe: false,
-        swipeToSlide: false,
-        fade: true,
-        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-        speed: 500,
         appendDots: $("#products-group-controls .custom-controls__dots"),
         prevArrow: $("#products-group-controls .custom-controls__prev"),
-        nextArrow: $("#products-group-controls .custom-controls__next")
+        nextArrow: $("#products-group-controls .custom-controls__next"),
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    swipe: true
+                }
+            }
+        ]
     });
 
     $('.info-cards').slick({
@@ -54,12 +61,14 @@ $(document).ready(function () {
         arrows: true,
         speed: 700,
         mobileFirst: true,
+        swipe: false,
+        swipeToSlide: false
     });
 
     $('.has-slider_only-arrows').slick({
         dots: false,
         arrows: true,
-        speed: 700
+        speed: 700,
     });
 
     //filter-block
@@ -310,7 +319,7 @@ $(document).ready(function () {
         $(this).addClass('cards-view__item--active');
         setTimeout(() => {
             $('.has-slider').slick('setPosition');
-        }, 300);
+        }, 330);
         if (!$(this).children('.cards-view__icons').hasClass('cards-view__icons--poly')) {
             productsGroupWrapper.addClass('products-group_no-grid')
         } else {
