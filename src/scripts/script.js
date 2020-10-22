@@ -104,14 +104,14 @@ $(document).ready(function () {
         $('.filter-block__content').scrollTop(0);
     }
 
-    function enableScrollInActiveModal() {
+    function disableScrollInActiveModal() {
         let body = document.body,
             windowScrollY = window.scrollY;
         body.style.position = 'fixed';
         body.style.top = `-${windowScrollY}px`;
     }
 
-    function disableScrollInActiveModal() {
+    function enableScrollInActiveModal() {
         let body = document.body;
         body.style.position = '';
         body.style.top = '';
@@ -144,11 +144,13 @@ $(document).ready(function () {
         let popover = $(this).parents('.product-card').children('.product-full-info');
         popover.addClass('product-full-info_visible');
         $(".has-slider").slick('setPosition');
+        disableScrollInActiveModal();
         //disableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 
     closeBtn.on('click', function () {
         $(this).closest('.product-full-info').removeClass('product-full-info_visible');
+        enableScrollInActiveModal();
         //enableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
     });
 
