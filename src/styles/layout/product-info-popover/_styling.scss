@@ -54,8 +54,10 @@
       flex-direction: column;
       overflow-y: auto;
       overflow-x: hidden;
-      height: calc(100vh - 65px);
-      margin-top: 30px;
+      height: calc(100vh - 70px);
+      min-height: 0;
+      position: absolute;
+      top: 50px;
     }
 
 
@@ -176,8 +178,9 @@
     }
 
     @media #{$xs} {
+      font-size: 1.4rem;
       position: fixed;
-      top: 18px;
+      top: 16px;
       right: 4%;
     }
   }
