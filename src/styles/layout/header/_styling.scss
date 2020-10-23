@@ -99,6 +99,8 @@
       position: fixed;
       top: 0;
       left: 0;
+      bottom: 0;
+      right: 0;
       opacity: 0;
       border-radius: 100%;
 
@@ -106,6 +108,13 @@
         transform: translate(0, 0) scale(1);
         opacity: 1;
         border-radius: 0;
+      }
+    }
+
+    .nav-menu__item {
+
+      &:not(:first-child) {
+        border-top: 1px solid #eee;
       }
     }
 

@@ -119,17 +119,32 @@ $(document).ready(function () {
     }
 
     // mobile-menu
-    let mobileHamburgerBtn = $('.hamburger-btn_js'),
+    let mobileOpenBtn = $('.hamburger-btn_js'),
         mobileMenuCloseBtn = $('.header-mobile__btn-close_js'),
         mobileNavbar = $('.header-mobile__navbar_js');
 
-    mobileHamburgerBtn.click(function () {
-        mobileNavbar.addClass('header-mobile__navbar--active');
-    });
+    mobileOpenBtn.click(() => hideMobileMenu(mobileNavbar));
 
-    mobileMenuCloseBtn.click(function () {
-        mobileNavbar.removeClass('header-mobile__navbar--active');
-    });
+    mobileMenuCloseBtn.click(() => showMobileMenu(mobileNavbar));
+
+    function hideMobileMenu(menu) {
+        let activateOnceInDesktop = false;
+        menu.addClass('header-mobile__navbar--active');
+        disableScrollInActiveModal();
+
+        $(window).on('resize', throttle(function () {
+            let w = window.innerWidth;
+            if (!activateOnceInDesktop && w > 768) {
+                showMobileMenu(menu);
+                enableScrollInActiveModal();
+            }
+        }, 50));
+    }
+
+    function showMobileMenu(menu) {
+        menu.removeClass('header-mobile__navbar--active');
+        enableScrollInActiveModal();
+    }
 
     let productCardItems = $('.product-card  a');
 
