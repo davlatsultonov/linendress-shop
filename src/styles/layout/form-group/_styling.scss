@@ -1,20 +1,33 @@
 .form-group {
 
-  &__items {
-    @include flexbox;
-  }
-
   &__item {
+    display: inline-block;
+    vertical-align: top;
     margin-bottom: 10px;
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 17px;
+
+      @media #{$xs} {
+        margin-right: 0;
+      }
+    }
+
+    @media #{$xs} {
+      width: 100%;
+      margin-bottom: 15px;
     }
   }
 
   &__btn {
     vertical-align: top;
     margin-left: 8px;
+
+    @media #{$xxs} {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 
   &_indent-bottom {
@@ -45,9 +58,30 @@
   }
 
   &__content {
-    @include flexbox;
-    @include align-items(center);
     min-height: 30px;
+
+    &-left {
+      @include inline-flex;
+      margin-right: 24px;
+
+      @media #{$lg} {
+        margin-right: 0;
+      }
+
+      @media #{$xs} {
+        display: block;
+      }
+    }
+
+    .form-note {
+      @media #{$lg} {
+        margin-top: 10px;
+      }
+
+      @media #{$xs} {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__input {
@@ -64,19 +98,39 @@
 
     &_wider {
       width: 210px;
+
+      @media #{$xs} {
+        width: 100%;
+      }
     }
 
     &_wide {
       width: 190px;
+
+      @media #{$xxs} {
+        width: 100%;
+      }
     }
 
     &_half {
       width: 96px;
+
+      @media #{$xs} {
+        width: 50%;
+      }
+
+      @media #{$xxs} {
+        width: 100%;
+      }
     }
 
     &_quarter {
       width: 80px;
       text-align: center;
+
+      @media #{$xs} {
+        width: 100%;
+      }
     }
 
     @include placeholder {
@@ -85,23 +139,32 @@
     }
   }
 
-  &__note {
-    max-width: 216px;
-    font-size: 12px;
-    font-weight: 500;
-    font-style: italic;
-    float: right;
-    margin-left: 24px;
+}
 
-    &_status {
-      &_success {
-        color: #6dd400;
-      }
+.form-note {
+  max-width: 216px;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  display: inline-block;
+  vertical-align: middle;
 
-      &_warning {
-        color: #f7b500;
-      }
+  @media #{$lg} {
+    display: block;
+  }
+
+  &_status {
+    &_success {
+      color: #6dd400;
     }
+
+    &_warning {
+      color: #f7b500;
+    }
+  }
+
+  @media #{$xs} {
+    max-width: 100%;
   }
 }
 

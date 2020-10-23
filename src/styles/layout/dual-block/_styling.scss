@@ -138,14 +138,53 @@
 
   &_profile-info {
 
+    @media #{$xs} {
+      @include flex-direction(column);
+    }
+
     .dual-block__item {
 
       &:nth-child(1) {
-        width: calc(100% - 509px);
+        width: 59%;
+
+        @media #{$lg} {
+          width: 49%;
+        }
+
+        @media #{$md} {
+          width: 40%;
+          margin-right: 20px;
+        }
+
+        @media #{$xsm} {
+          width: 48%;
+          margin-right: 20px;
+        }
+
+        @media #{$xs} {
+          width: 100%;
+          margin-right: 0;
+        }
       }
 
       &:nth-child(2) {
-        width: 363px;
+        width: 35%;
+
+        @media #{$lg} {
+          width: 49%;
+        }
+
+        @media #{$md} {
+          width: 56%;
+        }
+
+        @media #{$xsm} {
+          width: 48%;
+        }
+
+        @media #{$xs} {
+          width: 100%;
+        }
       }
     }
   }
