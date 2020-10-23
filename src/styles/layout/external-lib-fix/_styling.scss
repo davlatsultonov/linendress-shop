@@ -86,7 +86,7 @@
   @include align-items(center);
   @include justify-content(center);
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
 
   .slick-dots {
     position: relative;

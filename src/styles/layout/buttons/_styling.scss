@@ -198,16 +198,20 @@
 .delivery-btn-group {
   @include flexbox;
   @include flex-wrap(wrap);
-  @include justify-content(space-between);
   margin-bottom: 11px;
 
   &__item {
+    display: inline-block;
     margin-bottom: 10px;
 
-    &_blank {
-      visibility: hidden;
-      margin: 0 !important;
-      padding: 0 !important;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:nth-child(2n) {
+      @media #{$xxs} {
+        margin-right: 0;
+      }
     }
   }
 }

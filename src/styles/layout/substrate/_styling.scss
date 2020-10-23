@@ -15,6 +15,14 @@
 
     .substrate__item {
       height: 323px;
+
+      @media #{$xs} {
+        height: 540px;
+      }
+
+      @media #{$xxs} {
+        height: 590px;
+      }
     }
 
     &_left .substrate__item{
@@ -24,6 +32,12 @@
     &_right .substrate__item {
       margin-left: 7%;
       top: 44px;
+
+      @media #{$xxs} {
+        height: 560px;
+        margin-left: 4%;
+        top: 37px;
+      }
     }
   }
 
@@ -65,7 +79,11 @@
     }
   }
 
-  #info-cards-controls {
+  .custom-controls--info-card {
     bottom: 12px;
+
+    @media #{$xs} {
+      bottom: 17px;
+    }
   }
 }

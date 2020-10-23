@@ -3,6 +3,13 @@
   text-align: left;
   border-collapse: collapse;
   margin-bottom: 25px;
+  
+  
+  @media #{$lg} {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 
   .table-order__row {
     @include shift(ease-in-out, 200ms, background);
@@ -44,6 +51,10 @@
     &:last-child {
       text-align: right;
     }
+
+    .main-title {
+      @include justify-content(flex-start);
+    }
   }
 
   &__product-img {
@@ -55,10 +66,20 @@
     margin-right: 20px;
     box-shadow: $base-shadow;
     @include cover-background;
+
+    @media #{$xs} {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
   }
 
   &__product-properties {
     padding-left: 115px;
+
+    @media #{$xs} {
+      padding-left: 95px;
+    }
   }
 
   &__list {

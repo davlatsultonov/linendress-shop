@@ -7,6 +7,7 @@ $(document).ready(function () {
         fade: true,
         speed: 700,
         infinite: true,
+        mobileFirst: true,
         verticalSwiping: true
     });
 
@@ -48,19 +49,18 @@ $(document).ready(function () {
         ]
     });
 
-    $('.info-cards').slick({
+    $('.info-cards__slider').slick({
         dots: true,
         arrows: true,
-        appendDots: $("#info-cards-controls .custom-controls__dots"),
-        prevArrow: $("#info-cards-controls .custom-controls__prev"),
-        nextArrow: $("#info-cards-controls .custom-controls__next")
+        appendDots: $(".custom-controls--info-card .custom-controls__dots"),
+        prevArrow: $(".custom-controls--info-card .custom-controls__prev"),
+        nextArrow: $(".custom-controls--info-card .custom-controls__next")
     });
 
     $('.has-slider').slick({
         dots: true,
         arrows: true,
         speed: 700,
-        mobileFirst: true,
     });
 
     $('.has-slider_only-arrows').slick({
@@ -79,17 +79,18 @@ $(document).ready(function () {
         windowScrollY = window.scrollY;
     }, 50));
 
-    $(window).on('resize', throttle(function () {
-        let w = window.innerWidth;
-
-        if (w > 768) {
-            enableScrollInActiveModal();
-        };
-    }, 70));
-
     filterBlockOpenBtn.click(() => {
+        let activateOnceInDesktop = false;
         filterBlock.addClass('filter-block--active');
         disableScrollInActiveModal();
+
+        $(window).on('resize', throttle(function () {
+            let w = window.innerWidth;
+            if (!activateOnceInDesktop && w > 768) {
+                closeFilterBlock();
+                activateOnceInDesktop = true;
+            }
+        }, 50));
     });
 
     filterBlockCloseBtn.click(() => {
@@ -97,10 +98,8 @@ $(document).ready(function () {
     });
 
     function closeFilterBlock() {
-        const scrollY = document.body.style.top;
         filterBlock.removeClass('filter-block--active');
         enableScrollInActiveModal();
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
         $('.filter-block__content').scrollTop(0);
     }
 
@@ -335,18 +334,24 @@ $(window).on('load', dynamicSubstrateHeight);
 $(window).on('resize', throttle(function () {
    setTimeout(() => {
        $('.has-slider').slick('setPosition');
+       dynamicSubstrateHeight();
    }, 300);
-   dynamicSubstrateHeight();
 }, 40));
 
 function dynamicSubstrateHeight() {
     // setting dynamic height to bg-layers
     let infoBlocks = $('.info-block__item'),
+        infoCards = $('.info-cards'),
+        infoCardsSubstrate = infoCards.children('.substrate__item'),
         header = $('.header');
 
     infoBlocks.each(function () {
-      let totalHeight = $(this).find('.info-block__img').outerHeight() + $(this).find('.info-block__statement').outerHeight();
-      $(this).children('.substrate__item').height(totalHeight - 30);
+        let totalHeight = $(this).find('.info-block__img').outerHeight() + $(this).find('.info-block__statement').outerHeight();
+        $(this).children('.substrate__item').height(totalHeight - 30);
+    });
+
+    infoCards.each(function () {
+        infoCardsSubstrate.height($(this).outerHeight() - 30);
     });
 
     header.find('.substrate__item').height(header.outerHeight() + 120);

@@ -1,8 +1,30 @@
 .info-cards {
-  @include cards-slide-fix;
+  position: relative;
+
+  &__slider {
+    @include cards-slide-fix;
+
+    &:not(.slick-initialized) {
+      max-height: 290px;
+      overflow: hidden;
+
+      @media #{$md} {
+        max-height: 270px;
+      }
+
+      @media #{$xs} {
+        max-height: 395px;
+      }
+    }
+
+    &.slick-initialized {
+      max-height: inherit;
+    }
+  }
 }
 
 .info-card {
+  display: block;
   border-radius: 30px;
   @include prefix(box-shadow, $base-shadow);
   height: 290px;

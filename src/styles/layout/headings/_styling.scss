@@ -48,4 +48,8 @@
   &_with-item {
     justify-content: space-between;
   }
+
+  &_aligned-left {
+    @include justify-content(left);
+  }
 }

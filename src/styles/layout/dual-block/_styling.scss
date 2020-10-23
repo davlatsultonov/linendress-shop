@@ -152,10 +152,26 @@
 
   &_basket-page {
 
+    @media #{$md} {
+      @include flex-direction(column);
+    }
+
     .dual-block__item {
 
       &:nth-child(1) {
         padding-right: 98px;
+
+        @media #{$lg} {
+          padding-right: 0;
+        }
+      }
+
+      @media #{$lg} {
+        margin-right: 33px;
+      }
+
+      @media #{$md} {
+        margin-right: 0;
       }
     }
   }
@@ -163,15 +179,35 @@
   &_last-action {
     @include align-items(center);
 
+    @media #{$xsm} {
+      @include flex-direction(column-reverse);
+    }
+
     .dual-block__item {
 
       &:nth-child(1) {
         width: 170px;
         margin-right: 20px;
+
+        @media #{$xsm} {
+          width: 100%;
+          margin-right: 0;
+        }
       }
 
       &:nth-child(2) {
         width: calc(100% - 190px);
+
+        @media #{$xsm} {
+          width: 100%;
+        }
+      }
+
+      .button {
+
+        @media #{$xs} {
+          min-width: 100%;
+        }
       }
     }
   }
