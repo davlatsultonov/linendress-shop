@@ -107,6 +107,10 @@
     position: absolute;
     bottom: -9px;
     left: -2px;
+
+    @media #{$xs} {
+      width: 109px;
+    }
   }
 
   &_selected-products {

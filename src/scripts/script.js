@@ -70,8 +70,8 @@ $(document).ready(function () {
     });
 
     //filter-block
-    let filterBlockOpenBtn = $('#filter-block__btn-open--js'),
-        filterBlockCloseBtn = $('#filter-block__btn-close--js'),
+    let filterBlockOpenBtn = $('.filter-block-open-btn'),
+        filterBlockCloseBtn = $('.filter-block__btn-close'),
         windowScrollY = window.scrollY,
         filterBlock = $('.filter-block');
 
@@ -79,7 +79,9 @@ $(document).ready(function () {
         windowScrollY = window.scrollY;
     }, 50));
 
-    filterBlockOpenBtn.click(() => {
+
+    filterBlockOpenBtn.click((e) => {
+        e.stopPropagation();
         let activateOnceInDesktop = false;
         filterBlock.addClass('filter-block--active');
         disableScrollInActiveModal();
@@ -91,6 +93,8 @@ $(document).ready(function () {
                 activateOnceInDesktop = true;
             }
         }, 50));
+
+        closeOnOuterClick('.filter-block__content', '.filter-block', '.filter-block--active');
     });
 
     filterBlockCloseBtn.click(() => {
@@ -117,11 +121,20 @@ $(document).ready(function () {
         body.style.top = '';
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
+    function closeOnOuterClick(targetElement, hideElement, removeClass) {
+        $(document).click(function(event) {
+            if (!$(event.target).closest(targetElement).length) {
+                let $body = $("body");
+                $body.find(hideElement).removeClass(removeClass);
+                enableScrollInActiveModal();
+            }
+        });
+    }
 
     // mobile-menu
     let mobileOpenBtn = $('.hamburger-btn_js'),
-        mobileMenuCloseBtn = $('.header-mobile__btn-close_js'),
-        mobileNavbar = $('.header-mobile__navbar_js');
+        mobileMenuCloseBtn = $('.header-mobile__btn-close'),
+        mobileNavbar = $('.header-mobile__navbar');
 
     mobileOpenBtn.click(() => hideMobileMenu(mobileNavbar));
 
@@ -146,17 +159,12 @@ $(document).ready(function () {
         enableScrollInActiveModal();
     }
 
-    let productCardItems = $('.product-card  a');
-
-    productCardItems.click(function (e) {
-        e.stopPropagation();
-    });
-
     // product-card__btn-more
     let cardBtnMore = $('.product-card__btn-more--js'),
         closeBtn = $('.product-full-info__close-btn');
 
-    cardBtnMore.click(function () {
+    cardBtnMore.click(function (e) {
+        e.stopPropagation();
         let popover = $(this).parents('.product-card').children('.product-full-info');
         popover.addClass('product-full-info_visible');
         $(".has-slider").slick('setPosition');

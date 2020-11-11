@@ -111,13 +111,6 @@
       }
     }
 
-    .nav-menu__item {
-
-      &:not(:first-child) {
-        border-top: 1px solid #eee;
-      }
-    }
-
     &__btn-close {
       background: #ffffff;
       border: 1px solid #292929;
