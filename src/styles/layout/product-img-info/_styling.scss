@@ -1,0 +1,80 @@
+.product-img-info {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  font-size: 18px;
+  font-weight: 500;
+
+  @media #{$lg} {
+    right: 20px;
+  }
+
+  @media #{$xs} {
+    right: 11px;
+  }
+
+  &:hover &{
+
+    &__btn {
+      opacity: 1;
+    }
+
+    &__popover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    border: none;
+    border-radius: 50%;
+    opacity: .6;
+    background-size: 18px 14px;
+    box-shadow: $base-shadow;
+    @include shift;
+    cursor: pointer;
+    background: no-repeat url('/images/icons/eye-icon.svg') center #fff;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+  &__popover {
+    width: 250px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: $base-shadow;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    transform: translate(-94%, -88%);
+    opacity: 0;
+    visibility: hidden;
+    line-height: 24px;
+    @include shift;
+
+    @media #{$lg} {
+      width: 200px;
+    }
+
+    @media #{$md} {
+      width: 250px;
+    }
+  }
+
+  &__content {
+    max-height: 140px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+  }
+}

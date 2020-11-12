@@ -112,6 +112,7 @@
     }
 
     &__btn-close {
+      box-shadow: $base-shadow;
       background: #ffffff;
       border: 1px solid #292929;
       position: fixed;
@@ -126,10 +127,6 @@
       padding: 8px;
       cursor: pointer;
       z-index: 156;
-
-      &:hover {
-        box-shadow: $base-shadow;
-      }
 
       img {
         width: 100%;
