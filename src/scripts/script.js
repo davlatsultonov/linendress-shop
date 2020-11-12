@@ -73,33 +73,43 @@ $(document).ready(function () {
     let filterBlockOpenBtn = $('.filter-block-open-btn'),
         filterBlockCloseBtn = $('.filter-block__btn-close'),
         windowScrollY = window.scrollY,
-        filterBlock = $('.filter-block');
+        filterBlock = $('.filter-block'),
+        windowInnerWidth = window.innerWidth;
 
     $(window).on('scroll', throttle(function () {
         windowScrollY = window.scrollY;
     }, 50));
 
+    $(window).on('resize', function () {
+        windowInnerWidth = window.innerWidth;
+        setTimeout(() => {
+            $('.has-slider').slick('setPosition');
+            dynamicSubstrateHeight();
+        }, 300)
+    });
 
-    filterBlockOpenBtn.click((e) => {
-        e.stopPropagation();
+    $(document).click(function (e) {
+        if ($(e.target).is('.filter-block')) closeFilterBlock();
+        if ($(e.target).is('.product-full-info')) closeProductPopover();
+        if (!$(e.target).closest('.select-block__list').length && !$(e.target).closest('.select-block').length) {
+            $('.select-block').removeClass('active');
+        }
+    });
+
+    filterBlockOpenBtn.click(() => {
         let activateOnceInDesktop = false;
         filterBlock.addClass('filter-block--active');
         disableScrollInActiveModal();
 
-        $(window).on('resize', throttle(function () {
-            let w = window.innerWidth;
-            if (!activateOnceInDesktop && w > 768) {
+        $(window).on('resize', function () {
+            if (!activateOnceInDesktop && windowInnerWidth > 768) {
                 closeFilterBlock();
                 activateOnceInDesktop = true;
             }
-        }, 50));
-
-        closeOnOuterClick('.filter-block__content', '.filter-block', '.filter-block--active');
+        });
     });
 
-    filterBlockCloseBtn.click(() => {
-        closeFilterBlock();
-    });
+    filterBlockCloseBtn.click(closeFilterBlock);
 
     function closeFilterBlock() {
         filterBlock.removeClass('filter-block--active');
@@ -107,28 +117,23 @@ $(document).ready(function () {
         $('.filter-block__content').scrollTop(0);
     }
 
-    function disableScrollInActiveModal() {
-        let body = document.body,
-            windowScrollY = window.scrollY;
-        body.style.position = 'fixed';
-        body.style.top = `-${windowScrollY}px`;
-    }
+    // product-card popover
+    let productPopoverShowBtn = $('.product-card__btn-more--js'),
+        productPopoverHideBtn = $('.product-full-info__close-btn');
 
-    function enableScrollInActiveModal() {
-        let body = document.body,
-            scrollY = body.style.top;
-        body.style.position = '';
-        body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    }
-    function closeOnOuterClick(targetElement, hideElement, removeClass) {
-        $(document).click(function(event) {
-            if (!$(event.target).closest(targetElement).length) {
-                let $body = $("body");
-                $body.find(hideElement).removeClass(removeClass);
-                enableScrollInActiveModal();
-            }
-        });
+    productPopoverShowBtn.click(function (e) {
+        e.stopPropagation();
+        $(this).parents('.product-card').children('.product-full-info').addClass('product-full-info_visible');
+        $(".has-slider").slick('setPosition');
+        disableScrollInActiveModal();
+    });
+
+    productPopoverHideBtn.click(closeProductPopover);
+
+    function closeProductPopover() {
+        let body = document.body;
+        $(body).find('.product-full-info_visible').removeClass('product-full-info_visible');
+        enableScrollInActiveModal();
     }
 
     // mobile-menu
@@ -159,66 +164,6 @@ $(document).ready(function () {
         enableScrollInActiveModal();
     }
 
-    // product-card__btn-more
-    let cardBtnMore = $('.product-card__btn-more--js'),
-        closeBtn = $('.product-full-info__close-btn');
-
-    cardBtnMore.click(function (e) {
-        e.stopPropagation();
-        let popover = $(this).parents('.product-card').children('.product-full-info');
-        popover.addClass('product-full-info_visible');
-        $(".has-slider").slick('setPosition');
-        disableScrollInActiveModal();
-        //disableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
-    });
-
-    closeBtn.on('click', function () {
-        $(this).closest('.product-full-info').removeClass('product-full-info_visible');
-        enableScrollInActiveModal();
-        //enableScroll(); нужно подключить после интеграции карточек продуктов на главной при показе доп.информации; попап доп.инофрмации не работает корректно внутри слайдера группы продуктов
-    });
-
-    // disable scrolling when modal is open
-    let keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-    function preventDefault(e) {
-        e.preventDefault();
-    }
-
-    function preventDefaultForScrollKeys(e) {
-        if (keys[e.keyCode]) {
-            preventDefault(e);
-            return false;
-        }
-    }
-
-    // modern Chrome requires { passive: false } when adding event
-    let supportsPassive = false;
-    try {
-        window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-            get: function () { supportsPassive = true; }
-        }));
-    } catch(e) {}
-
-    let wheelOpt = supportsPassive ? { passive: false } : false;
-    let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-    // call this to Disable
-    function disableScroll() {
-        window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-        window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-        window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-        window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-    }
-
-    // call this to Enable
-    function enableScroll() {
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-        window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-        window.removeEventListener('touchmove', preventDefault, wheelOpt);
-        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-    }
-
     // counting products count
     let addCounterBtn = $('.add-counter .add-counter__btn'),
         countBox = $('.add-counter .add-counter__num'),
@@ -247,11 +192,7 @@ $(document).ready(function () {
 
         if (+counterBox.val()) {
             if (decreaseBtn) {
-
                 if (+counterBox.val() <= 1) {
-                    console.log(parent.parent());
-
-
                     parent.parent().removeClass('show-counter');
                 } else {
                     counterBox.val(+counterBox.val() - 1)
@@ -274,13 +215,11 @@ $(document).ready(function () {
     });
 
     // dropdown
+    let defaultItem = $('.select-block__default'),
+        dropdownItems =  $('.select-block__list li');
 
-    let defaultItem = $('.select-block__default'), // начальный/дефолтный выбранный элемент блока селект
-        dropdownItems =  $('.select-block__list li'); // все элементы внутри дропдовна
-    // инициализация кликов
     openDropdown(defaultItem);
     selectDropdownItem(dropdownItems);
-    // функция для показа дропдовна
     function openDropdown(defaultItem) {
         if (defaultItem) {
             defaultItem.click(function () {
@@ -289,7 +228,6 @@ $(document).ready(function () {
         }
         return false;
     }
-    // функция для выбора элемента дропдовна
     function selectDropdownItem(items) {
         items.click(function () {
             let current = $(this).html();
@@ -298,7 +236,7 @@ $(document).ready(function () {
         });
     }
 
-    // выбор языка
+    // language selection
     let langSwticherWrapper = $( ".lang-switcher" ),
         langSwticherWrapperLinks = langSwticherWrapper.find('a'),
         currentLang = $('.lang-switcher__current');
@@ -320,7 +258,7 @@ $(document).ready(function () {
     // navmenu select
     let navMenuLinks = $('.nav-menu').find('a');
 
-    navMenuLinks.click(() => {
+    navMenuLinks.click(function () {
         navMenuLinks.removeClass('current');
         $(this).addClass('current');
     });
@@ -350,16 +288,34 @@ $(document).ready(function () {
             productsGroupWrapper.removeClass('products-group_no-grid')
         }
     });
+
+    // menu-dropdown on mobile
+    let menuDropDownBtn = $('.menu-dropdown__btn');
+
+    menuDropDownBtn.click(e => {
+        if (windowInnerWidth <= 768) {
+            e.preventDefault()
+        }
+    });
+
+    // scroll disabling and enabling
+    function disableScrollInActiveModal() {
+        let body = document.body,
+            windowScrollY = window.scrollY;
+        body.style.position = 'fixed';
+        body.style.top = `-${windowScrollY}px`;
+    }
+
+    function enableScrollInActiveModal() {
+        let body = document.body,
+            scrollY = body.style.top;
+        body.style.position = '';
+        body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
 });
 
 $(window).on('load', dynamicSubstrateHeight);
-
-$(window).on('resize', throttle(function () {
-   setTimeout(() => {
-       $('.has-slider').slick('setPosition');
-       dynamicSubstrateHeight();
-   }, 300);
-}, 40));
 
 function dynamicSubstrateHeight() {
     // setting dynamic height to bg-layers

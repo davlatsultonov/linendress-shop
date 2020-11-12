@@ -31,18 +31,46 @@
 
   &_look-book {
 
+    @media #{$xsm} {
+      @include flex-direction(column-reverse);
+    }
+
     .dual-block__item {
 
       &:nth-child(1) {
         width: calc(100% - 397px);
+
+        @media #{$lg} {
+          width: calc(100% - 290px);
+        }
+
+        @media #{$xsm} {
+          width: 100%;
+        }
       }
 
       &:nth-child(2) {
         width: 347px;
+
+        @media #{$lg} {
+          width: 290px;
+        }
+
+        @media #{$xsm} {
+          width: 100%;
+        }
       }
 
       &:not(:last-child) {
         margin-right: 52px;
+
+        @media #{$lg} {
+          margin-right: 25px;
+        }
+
+        @media #{$xsm} {
+          margin-right: 0;
+        }
       }
     }
   }

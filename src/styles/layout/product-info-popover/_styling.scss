@@ -43,9 +43,6 @@
     padding: 25px 20px 20px 20px;
     z-index: 556;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 
     @media #{$xsm} {
       width: 455px;
@@ -200,9 +197,14 @@
     transform: scale(1);
     opacity: 1;
     visibility: visible;
+    display: flex;
+    padding: 75px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     .product-card {
       @include flexbox;
+      margin: auto;
     }
   }
 }

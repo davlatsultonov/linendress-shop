@@ -38,6 +38,10 @@
   &_look-book {
     margin: 40px 0 96px;
 
+    @media #{$xsm} {
+      margin-bottom: 0;
+    }
+
     .testimonial__img {
       width: 106px;
       height: 106px;

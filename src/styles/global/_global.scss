@@ -127,6 +127,10 @@ ul {
   @include show-el($xsm, block);
 }
 
+.hide-639 {
+  @include hide-el($xsm);
+}
+
 .show-639-inline-flex {
   @include show-el($xsm, inline-flex);
 }
