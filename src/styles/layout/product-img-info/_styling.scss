@@ -13,13 +13,13 @@
     right: 11px;
   }
 
-  &:hover &{
+  &--active {
 
-    &__btn {
+    .product-img-info__btn {
       opacity: 1;
     }
 
-    &__popover {
+    .product-img-info__popover {
       opacity: 1;
       visibility: visible;
     }
