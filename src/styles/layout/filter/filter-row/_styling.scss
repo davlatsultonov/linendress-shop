@@ -1,9 +1,43 @@
 .filter-row {
-  @include flexbox;
   font-size: 1.4rem;
 
+  @media #{$sm} {
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
   &__label {
+    display: inline-block;
     margin-right: 10px;
     font-weight: 500;
+
+    @media #{$sm} {
+      vertical-align: middle;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 7px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: -15px;
+      background: url("/images/icons/select-arrow-down.svg") no-repeat;
+      width: 10px;
+      height: 6px;
+      @include shift;
+    }
+
+    &--active {
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
