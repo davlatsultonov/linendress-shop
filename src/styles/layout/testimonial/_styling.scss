@@ -9,6 +9,7 @@
     height: 126px;
     width: 126px;
     margin-right: 15px;
+    overflow: hidden;
     @include flex-shrink;
 
     @media #{$md} {
