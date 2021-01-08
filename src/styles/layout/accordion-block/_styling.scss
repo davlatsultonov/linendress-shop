@@ -1,0 +1,45 @@
+.accordion-block {
+  margin-bottom: 30px;
+  $super-parent: &;
+
+  &__item {
+    margin-bottom: 10px;
+
+    &_active {
+      #{$super-parent}__content {
+        height: auto;
+        padding: 15px 20px 5px 20px;
+      }
+
+      #{$super-parent}__icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 7px 20px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &__icon {
+    float: right;
+    width: 9px;
+    transform: rotate(90deg);
+  }
+}

@@ -142,6 +142,12 @@ module.exports = {
       template: './src/basket.html',
       inject: 'head'
     }),
+    new HtmlWebpackPlugin({
+      title: 'basket-steps-page',
+      filename: 'basket-steps.html',
+      template: './src/basket-steps.html',
+      inject: 'head'
+    }),
     new PreloadWebpackPlugin({
       rel: 'preload',
       as(entry) {

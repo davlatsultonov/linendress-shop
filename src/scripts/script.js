@@ -361,6 +361,17 @@ $(document).ready(function () {
         body.style.top = '';
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
+
+
+    let accordionBlock = $('.accordion-block__item');
+
+    accordionBlock.click(function () {
+        accordionBlock.each(function () {
+           $(this).removeClass('accordion-block__item_active');
+        });
+
+        $(this).addClass('accordion-block__item_active');
+    });
 });
 
 $(window).on('load', dynamicSubstrateHeight);
