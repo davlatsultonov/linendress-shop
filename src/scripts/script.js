@@ -363,15 +363,32 @@ $(document).ready(function () {
     }
 
 
-    let accordionBlock = $('.accordion-block__item');
+    let accordionBlock = $('.accordion-block__item'),
+        accordionBlockBtn = $('.accordion-block__btn');
 
-    accordionBlock.click(function () {
+
+    accordionBlockBtn.on('click', function () {
+        let parent = $(this).closest('.accordion-block__item'),
+            panel = parent.children('.accordion-block__content')[0],
+            panelScrollHeight = panel.scrollHeight;
+
         accordionBlock.each(function () {
-           $(this).removeClass('accordion-block__item_active');
+            $(this).removeClass('accordion-block__item_active');
+            $(this).children('.accordion-block__content').css('max-height', 0);
         });
 
-        $(this).addClass('accordion-block__item_active');
-    });
+        parent.addClass('accordion-block__item_active');
+        panel.style.maxHeight = panelScrollHeight + 20 + 'px';
+
+        $(window).on('resize', throttle(function () {
+            if (!panel.style.maxHeight) return;
+            accordionBlock.each(function () {
+                $(this).children('.accordion-block__content').css('max-height', 0);
+            });
+            panelScrollHeight = panel.scrollHeight;
+            panel.style.maxHeight = panelScrollHeight + 20 + 'px';
+        }, 300));
+    })
 });
 
 $(window).on('load', dynamicSubstrateHeight);

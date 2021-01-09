@@ -100,6 +100,10 @@
   &_indent-bottom {
     margin-bottom: 20px;
 
+    &-sm {
+      margin-bottom: 15px;
+    }
+
     &-md {
       margin-bottom: 30px;
     }
@@ -206,11 +210,10 @@
 .delivery-btn-group {
   @include flexbox;
   @include flex-wrap(wrap);
-  margin-bottom: 11px;
 
   &__item {
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     &:not(:last-child) {
       margin-right: 10px;
@@ -253,6 +256,8 @@
   &__title {
     padding-top: 3px;
     margin-right: 7px;
+    max-width: 83px;
+    word-break: break-word;
   }
 
   &__address {

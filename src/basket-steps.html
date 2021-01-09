@@ -245,7 +245,7 @@
                     Корзина покупок
                 </li>
             </ul>
-            <h1 class="main-title main-title_indent-bottom hide-768">
+            <h1 class="main-title block-indent-bottom_xlg hide-768">
                 Оформление заказа
             </h1>
 
@@ -256,7 +256,65 @@
                         <img src="/images/icons/pagination/pagin-arrow-left.svg" alt="" class="accordion-block__icon">
                     </div>
                     <div class="accordion-block__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus exercitationem ipsa itaque iure labore nesciunt placeat similique veniam voluptatem!
+                        <h2 class="main-title main-title_size_lg">
+                           Новый пользователь
+                        </h2>
+
+                        <form action="#" class="filter-radio filter-radio_indent-bottom_md">
+                            <div class="radio-block filter-radio__item">
+                                <input class="radio-block__input" type="radio" id="registration" name="filter-radio-group"
+                                       checked>
+                                <label for="registration" class="radio-block__label">Регистрация</label>
+                            </div>
+                            <div class="radio-block filter-radio__item">
+                                <input class="radio-block__input" type="radio" id="сheckout-without-registration"
+                                       name="filter-radio-group">
+                                <label for="сheckout-without-registration" class="radio-block__label">Оформить заказ без регистрации</label>
+                            </div>
+
+                            <p>
+                                Создание учётной записи поможет делать покупки быстрее и удобнее. Вы также сможете отслеживать статус своего заказа, пользоваться Закладками, видеть свои предыдущие заказы или получить скидку как наш постоянный покупатель.
+                            </p>
+
+                            <button type="submit" class="button button_size_sm button_font_sm form-group__btn">Продолжить</button>
+                        </form>
+
+                        <h2 class="main-title main-title_size_lg">
+                            Постоянный покупатель
+                        </h2>
+
+                        <p>
+                            Я совершал здесь покупки ранее и регистрировался
+                        </p>
+
+                        <form class="form-group">
+                            <div class="form-group__items form-group__items_row">
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        E-mail
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="email" class="form-item__input form-item__input_wider"
+                                               placeholder="mail@mail.com">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Пароль
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="password" class="form-item__input form-item__input_wider form-item__content-left"
+                                               placeholder="Ваш пароль">
+                                        <span class="form-note form-note_type_link form-note_font_md text-thin">
+                                            Забыли пароль?
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button type="submit" class="button button_size_sm button_font_sm  form-group__btn">Войти</button>
+                        </form>
                     </div>
                 </div>
                 <div class="accordion-block__item">
@@ -265,7 +323,135 @@
                         <img src="/images/icons/pagination/pagin-arrow-left.svg" alt="" class="accordion-block__icon">
                     </div>
                     <div class="accordion-block__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus exercitationem ipsa itaque iure labore nesciunt placeat similique veniam voluptatem!
+                        <h2 class="main-title main-title_size_lg">
+                            Контактная информация
+                        </h2>
+
+                        <form class="form-group">
+                            <div class="form-group__items">
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Имя
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_wider" placeholder="Елена">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Фамилия
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_wider" placeholder="Иванова">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group__items">
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Телефон
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="tel" class="form-item__input form-item__input_wider" placeholder="+7 (000) 000-00-00">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        E-mail
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="email" class="form-item__input form-item__input_wider" placeholder="mail@mail.com">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <h2 class="main-title main-title_size_lg">
+                            Ваш пароль
+                        </h2>
+
+                        <form class="form-group">
+                            <div class="form-group__items">
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Пароль
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="password" class="form-item__input form-item__input_wider" placeholder="Не менее 6 симвлов, цифр">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Подтвердите пароль
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="password" class="form-item__input form-item__input_wider" placeholder="Не менее 6 симвлов, цифр">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <h2 class="main-title main-title_size_lg">
+                            Ваш адрес
+                        </h2>
+
+                        <form class="form-group">
+                            <div class="form-group__items form-group__items_row">
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Компания (если вы юр. лицо)
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_widest" placeholder="ООО “Компания”">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Адрес 1
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_widest" placeholder="ул. Котельники, 1">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Адрес 2
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_widest" placeholder="ул. Котельники, 2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group__items">
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Город
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_wider" placeholder="Омск">
+                                    </div>
+                                </div>
+                                <div class="form-item form-group__item">
+                                    <label class="form-item__label">
+                                        Индекс
+                                    </label>
+                                    <div class="form-item__content">
+                                        <input type="text" class="form-item__input form-item__input_wider" placeholder="630 000">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="notifications">
+                            <div class="check-block check-block_size_sm check-block_box-grey notifications__item">
+                                <input class="check-block__input" type="checkbox" id="subscribe-to-newsletter" checked />
+                                <label class="check-block__label" for="subscribe-to-newsletter">Я хочу подписаться на рассылку новостей Изделия из льна - Linendress.ru.</label>
+                            </div>
+                            <div class="check-block check-block_size_sm check-block_box-grey notifications__item">
+                                <input class="check-block__input" type="checkbox" id="my-shipping-address" checked />
+                                <label class="check-block__label" for="my-shipping-address">Мой адрес доставки совпадает с платёжным.</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-block__item">
@@ -274,7 +460,18 @@
                         <img src="/images/icons/pagination/pagin-arrow-left.svg" alt="" class="accordion-block__icon">
                     </div>
                     <div class="accordion-block__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus exercitationem ipsa itaque iure labore nesciunt placeat similique veniam voluptatem!
+                        <form action="#" class="filter-radio">
+                            <div class="radio-block filter-radio__item">
+                                <input class="radio-block__input" type="radio" id="existing-address" name="filter-radio-group"
+                                       checked>
+                                <label for="existing-address" class="radio-block__label">Я хочу использовать существующий адрес</label>
+                            </div>
+                            <div class="radio-block filter-radio__item">
+                                <input class="radio-block__input" type="radio" id="new-address"
+                                       name="filter-radio-group">
+                                <label for="new-address" class="radio-block__label">Я хочу использовать существующий адрес</label>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="accordion-block__item">
@@ -283,7 +480,164 @@
                         <img src="/images/icons/pagination/pagin-arrow-left.svg" alt="" class="accordion-block__icon">
                     </div>
                     <div class="accordion-block__content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ducimus exercitationem ipsa itaque iure labore nesciunt placeat similique veniam voluptatem!
+                        <p>Выберите удобный способ доставки для этого заказа</p>
+                        <div class="delivery-btn-group">
+                            <div class="delivery-btn delivery-btn-group__item checked">
+                                <div class="delivery-btn__header">
+                                    <div class="delivery-btn__title">
+                                        Самовывоз
+                                    </div>
+                                    <img src="/images/icons/delivery-btn/flag.svg" alt="" class="delivery-btn__icon">
+                                </div>
+                                <div class="delivery-btn__content">
+                                    <div class="delivery-btn__address">
+                                        <span>г.Омск </span><span>ул. Ленина, 14/1</span><span>3 этаж, офис 312</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-btn delivery-btn-group__item">
+                                <div class="delivery-btn__header">
+                                    <div class="delivery-btn__title">
+                                        Доставка
+                                        Почтой России
+                                    </div>
+                                    <img src="/images/icons/delivery-btn/delivery-icon.svg" alt=""
+                                         class="delivery-btn__icon">
+                                </div>
+                                <div class="delivery-btn__content">
+                                    <div class="total-price total-price_size_xs delivery-btn__price">
+                                        от 350 руб.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Вы можете добавить комментарий к своему заказу</p>
+                        <div class="form-item">
+                            <textarea class="form-item__textarea" placeholder="Ваш коментарий"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-block__item">
+                    <div class="accordion-block__btn">
+                        Шаг 5: Способ оплаты
+                        <img src="/images/icons/pagination/pagin-arrow-left.svg" alt="" class="accordion-block__icon">
+                    </div>
+                    <div class="accordion-block__content">
+                        <p>Выберите способ оплаты для этого заказа</p>
+                        <div class="delivery-btn-group">
+                            <div class="delivery-btn delivery-btn-group__item checked">
+                                <div class="delivery-btn__header">
+                                    <div class="delivery-btn__title">
+                                        Оплата банковской картой на сайте
+                                    </div>
+                                    <img src="/images/icons/delivery-btn/payment-with-card.svg" alt=""
+                                         class="delivery-btn__icon">
+                                </div>
+                            </div>
+                            <div class="delivery-btn delivery-btn-group__item">
+                                <div class="delivery-btn__header">
+                                    <div class="delivery-btn__title">
+                                        Оплата Яндекс.Деньги
+                                    </div>
+                                    <img src="/images/icons/delivery-btn/payment-icon.svg" alt=""
+                                         class="delivery-btn__icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-block__item accordion-block__item_no-horizontal-padding">
+                    <div class="accordion-block__btn">
+                        Шаг 6: Подтверждение заказа
+                        <img src="/images/icons/pagination/pagin-arrow-left.svg" alt="" class="accordion-block__icon">
+                    </div>
+                    <div class="accordion-block__content">
+                        <table class="table-order table-order_selected-products block-indent-bottom_md">
+                            <tr class="table-order__row">
+                                <th>Наименование товара</th>
+                                <th>Артикл</th>
+                                <th>Количество</th>
+                                <th>Цена</th>
+                                <th colspan="2">Стоимость</th>
+                            </tr>
+                            <tr class="table-order__row">
+                                <td class="table-order__item">
+                                    <h4 class="main-title main-title_size_sm block-indent-bottom_sm">
+                                        Платье Шанхай, прямое с пуговками до пояса
+                                    </h4>
+                                    <ul class="table-order__list">
+                                        <li>
+                                            <table class="product-selection product-selection_size_sm">
+                                                <tr>
+                                                    <td>Размер:</td>
+                                                    <td>M</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Длина:</td>
+                                                    <td>165</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Цвет:</td>
+                                                    <td>Хвоя</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                        <li>
+                                            <table class="product-selection product-selection_size_sm">
+                                                <tr>
+                                                    <td>Воротник:</td>
+                                                    <td>Шанхай</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Пуговки:</td>
+                                                    <td>На груди, 3/4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Рукава:</td>
+                                                    <td>3/4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Карманы:</td>
+                                                    <td>Да</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="table-order__item table-order__id">Арт. 000143</td>
+                                <td class="table-order__item">
+                                    2 шт.
+                                </td>
+                                <td class="table-order__item">
+                                    <div class="total-price total-price_size_sm">
+                                        3 500 руб.
+                                    </div>
+                                </td>
+                                <td class="table-order__item">
+                                    <div class="total-price total-price_size_sm">
+                                        3 500 руб.
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="item-bordered block-indent-bottom_md">
+                            <div class="total-price total-price_indent-bottom_md">
+                                Итого: 7 000 руб.
+                            </div>
+
+                            <h4 class="total-price total-price_size_lg total-price_indent-bottom_sm text-thin">
+                                Самовывоз: 0 руб.
+                            </h4>
+
+                            <h4 class="total-price total-price_size_lg text-thin">
+                                Всего: 7 000 руб.
+                            </h4>
+                        </div>
+
+                        <button class="button button_size_md button_font_sm button_indent-bottom">
+                            Подтвердить заказ
+                        </button>
                     </div>
                 </div>
             </div>

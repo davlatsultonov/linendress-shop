@@ -83,8 +83,41 @@ ul {
   padding-bottom: 15px;
 }
 
-.text-cursive {
-  font-style: italic;
+.text {
+
+  &-thin {
+    font-weight: normal;
+  }
+
+  &-cursive {
+    font-style: italic;
+  }
+}
+
+.block-indent {
+
+  &-bottom {
+
+    &_xlg {
+      margin-bottom: 25px;
+
+      @media #{$xs} {
+        margin-bottom: 20px;
+      }
+    }
+
+    &_lg {
+      margin-bottom: 20px;
+    }
+
+    &_md {
+      margin-bottom: 15px;
+    }
+
+    &_sm {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .hide-1200 {
@@ -161,5 +194,12 @@ ul {
 
   @media #{$sm} {
     display: block;
+  }
+}
+
+input, textarea {
+  @include placeholder {
+    color: #898989;
+    font-style: italic;
   }
 }

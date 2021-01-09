@@ -17,6 +17,10 @@
     }
   }
 
+  &_size_lg {
+    font-size: 1.8rem;
+  }
+
   &_size_md {
     font-size: 1.6rem;
   }
@@ -27,22 +31,6 @@
 
   &_size_xs {
     font-size: 1.2rem;
-  }
-
-  &_indent-bottom {
-    margin-bottom: 25px;
-
-    @media #{$xs} {
-      margin-bottom: 20px;
-    }
-
-    &_md {
-      margin-bottom: 20px;
-    }
-
-    &_sm {
-      margin-bottom: 10px;
-    }
   }
 
   &__external-item {

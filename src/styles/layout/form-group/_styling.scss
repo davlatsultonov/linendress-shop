@@ -1,32 +1,42 @@
 .form-group {
+  $super-parent: &;
+
+
+  &__items {
+
+    &_row {
+      #{$super-parent}__item {
+        display: block;
+        margin-right: 0;
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 
   &__item {
     display: inline-block;
     vertical-align: top;
-    margin-bottom: 10px;
-
-    &:not(:last-child) {
-      margin-right: 17px;
-
-      @media #{$xs} {
-        margin-right: 0;
-      }
-    }
+    margin-bottom: 15px;
+    margin-right: 17px;
 
     @media #{$xs} {
       width: 100%;
-      margin-bottom: 15px;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
   &__btn {
     vertical-align: top;
-    margin-left: 8px;
 
     @media #{$xxs} {
       width: 100%;
-      margin-left: 0;
-      margin-top: 10px;
     }
   }
 
@@ -62,7 +72,8 @@
 
     &-left {
       @include inline-flex;
-      margin-right: 24px;
+      margin-right: 10px;
+      vertical-align: middle;
 
       @media #{$lg} {
         margin-right: 0;
@@ -70,6 +81,15 @@
 
       @media #{$xs} {
         display: block;
+      }
+    }
+
+    .button {
+      margin-left: 8px;
+
+      @media #{$xxs} {
+        margin-left: 0;
+        margin-top: 10px;
       }
     }
 
@@ -132,17 +152,19 @@
         width: 100%;
       }
     }
-
-    @include placeholder {
-      color: #898989;
-      font-style: italic;
-    }
   }
 
+  &__textarea {
+    @extend .form-item__input;
+    width: 440px;
+    height: 95px;
+    padding: 8px 15px;
+    resize: none;
+  }
 }
 
 .form-note {
-  max-width: 216px;
+  max-width: 211px;
   font-size: 12px;
   font-weight: 500;
   font-style: italic;
@@ -160,6 +182,27 @@
 
     &_warning {
       color: #f7b500;
+    }
+  }
+
+  &_type {
+
+    &_link {
+      color: #1e1e1e;
+      font-style: normal;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &_font {
+
+    &_md {
+      font-size: 14px;
     }
   }
 

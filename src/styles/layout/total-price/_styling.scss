@@ -2,6 +2,10 @@
   font-weight: 700;
   font-size: 2.4rem;
 
+  &_size_lg {
+    font-size: 1.8rem;
+  }
+
   &_size_md {
     font-size: 1.6rem;
     line-height: 1.4;
@@ -21,8 +25,16 @@
 
   &_indent-bottom {
 
+    &_lg {
+      margin-bottom: 25px;
+    }
+
+    &_md {
+      margin-bottom: 15px;
+    }
+
     &_sm {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
   }
 }
