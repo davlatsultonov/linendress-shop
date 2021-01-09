@@ -378,7 +378,7 @@ $(document).ready(function () {
         });
 
         parent.addClass('accordion-block__item_active');
-        panel.style.maxHeight = panelScrollHeight + 20 + 'px';
+        panel.style.maxHeight = panelScrollHeight + 30 + 'px';
 
         $(window).on('resize', throttle(function () {
             if (!panel.style.maxHeight) return;
@@ -386,7 +386,7 @@ $(document).ready(function () {
                 $(this).children('.accordion-block__content').css('max-height', 0);
             });
             panelScrollHeight = panel.scrollHeight;
-            panel.style.maxHeight = panelScrollHeight + 20 + 'px';
+            panel.style.maxHeight = panelScrollHeight + 30 + 'px';
         }, 300));
     })
 });

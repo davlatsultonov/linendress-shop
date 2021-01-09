@@ -36,7 +36,7 @@
     vertical-align: top;
 
     @media #{$xxs} {
-      width: 100%;
+      min-width: 100%;
     }
   }
 
@@ -160,6 +160,10 @@
     height: 95px;
     padding: 8px 15px;
     resize: none;
+
+    @media #{$xsm} {
+      width: 100%;
+    }
   }
 }
 

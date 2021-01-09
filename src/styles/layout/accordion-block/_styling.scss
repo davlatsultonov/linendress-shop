@@ -12,6 +12,8 @@
     &_active {
       #{$super-parent}__content {
         padding: 15px 20px 5px 20px;
+        opacity: 1;
+        overflow: visible;
 
         @media #{$sm} {
           padding-left: 0;
@@ -35,6 +37,7 @@
 
   &__content {
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
     transition: all 0.2s ease-in;
   }
@@ -69,6 +72,12 @@
 
     @media #{$xs} {
       right: 13px;
+    }
+  }
+
+  .button {
+    @media #{$xs} {
+      min-width: 100%;
     }
   }
 
