@@ -2,6 +2,8 @@
   @include flexbox;
   @include flex-wrap(wrap);
   margin-top: 15px;
+  margin-bottom: 25px;
+  $super-parent: &;
 
   @media #{$md} {
     @include justify-content(space-between)
@@ -11,11 +13,20 @@
     padding: 0 25px;
   }
 
+  &--column {
+    #{$super-parent}__item {
+      margin-right: 0;
+    }
+  }
+
   &__item {
     $lg-margin-offset: 90px;
 
     margin-right: 56px;
-    margin-bottom: 35px;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
 
     @media #{$lg} {
       margin-right: $lg-margin-offset;

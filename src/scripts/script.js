@@ -6,7 +6,7 @@ $(document).ready(function () {
         slidesToShow: 1,
         fade: true,
         speed: 700,
-        infinite: true,
+        infinite: false,
         mobileFirst: true,
         verticalSwiping: true
     });
@@ -16,6 +16,7 @@ $(document).ready(function () {
         arrows: true,
         speed: 700,
         asNavFor: '.product-view__gallery-parts',
+        infinite: false,
         mobileFirst: true
     });
 
@@ -25,7 +26,7 @@ $(document).ready(function () {
         arrows: false,
         vertical: true,
         verticalSwiping: true,
-        slidesToShow: 7,
+        slidesToShow: 6,
         slidesToScroll: 1,
         focusOnSelect: true,
         infinite: false,
@@ -78,7 +79,8 @@ $(document).ready(function () {
                     swipe: true
                 }
             }
-        ]
+        ],
+        infinite: false
     });
 
     $('.info-cards__slider').slick({
@@ -93,12 +95,14 @@ $(document).ready(function () {
         dots: true,
         arrows: true,
         speed: 700,
+        infinite: false
     });
 
     $('.has-slider_only-arrows').slick({
         dots: false,
         arrows: true,
         speed: 700,
+        infinite: false
     });
 
     //filter-block
@@ -164,7 +168,7 @@ $(document).ready(function () {
 
     productPopoverShowBtn.click(function (e) {
         e.stopPropagation();
-        $(this).parents('.product-card').children('.product-full-info').addClass('product-full-info_visible');
+        $(this).closest('body').find('.product-full-info').addClass('product-full-info_visible');
         $(".has-slider").slick('setPosition');
         disableScrollInActiveModal();
     });
@@ -172,8 +176,7 @@ $(document).ready(function () {
     productPopoverHideBtn.click(closeProductPopover);
 
     function closeProductPopover() {
-        let body = document.body;
-        $(body).find('.product-full-info_visible').removeClass('product-full-info_visible');
+        $('body').find('.product-full-info_visible').removeClass('product-full-info_visible');
         enableScrollInActiveModal();
     }
 
@@ -388,7 +391,15 @@ $(document).ready(function () {
             panelScrollHeight = panel.scrollHeight;
             panel.style.maxHeight = panelScrollHeight + 30 + 'px';
         }, 300));
-    })
+    });
+
+    // to initialize the product card image
+    const productViewBtn = $('.product-view__btn-expand');
+
+    productViewBtn.on('click', function (e) {
+        e.preventDefault();
+        $.fancybox.open($('.product-view__img a'), fancyBoxConfigs);
+    });
 
     let fancyBoxConfigs = {
         buttons: [
@@ -400,6 +411,8 @@ $(document).ready(function () {
     };
 
     $('[data-fancybox="workview"]').fancybox(fancyBoxConfigs);
+
+    $('[data-fancybox="product-img"]').fancybox(fancyBoxConfigs);
 
     $('[data-fancybox="look-book"]').fancybox(fancyBoxConfigs);
 });
