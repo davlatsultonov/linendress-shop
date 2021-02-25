@@ -389,6 +389,19 @@ $(document).ready(function () {
             panel.style.maxHeight = panelScrollHeight + 30 + 'px';
         }, 300));
     })
+
+    let fancyBoxConfigs = {
+        buttons: [
+            "zoom",
+            "slideShow",
+            "fullScreen",
+            "close"
+        ]
+    };
+
+    $('[data-fancybox="workview"]').fancybox(fancyBoxConfigs);
+
+    $('[data-fancybox="look-book"]').fancybox(fancyBoxConfigs);
 });
 
 $(window).on('load', dynamicSubstrateHeight);

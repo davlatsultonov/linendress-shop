@@ -50,11 +50,6 @@
       width: 290px;
     }
 
-    img {
-      border-radius: 8px;
-      width: 100%;
-    }
-
     &_size {
 
       &_lg {
@@ -94,6 +89,12 @@
 
     &_pos_bottom {
       margin-top: 15px;
+    }
+
+    &--inner {
+      width: 100%;
+      height: 100%;
+      @include cover-background;
     }
   }
 }
