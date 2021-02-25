@@ -11,6 +11,11 @@
 
   &__column {
     width: 300px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     @media #{$lg} {
       width: 250px;
@@ -18,6 +23,7 @@
 
     @media #{$md} {
       width: 100%;
+      margin-right: 0;
     }
 
     &_lg {
@@ -29,22 +35,6 @@
 
       @media #{$md} {
         width: 100%;
-      }
-    }
-
-    &_pos_right {
-      margin-left: 15px;
-
-      @media #{$md} {
-        margin-left: 0;
-      }
-    }
-
-    &_pos_left {
-      margin-right: 15px;
-
-      @media #{$md} {
-        margin-right: 0;
       }
     }
   }
@@ -103,6 +93,12 @@
       @media #{$md} {
         margin-bottom: 15px;
       }
+    }
+
+    &--inner {
+      width: 100%;
+      height: 100%;
+      @include cover-background;
     }
 
     img {
