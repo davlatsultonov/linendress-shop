@@ -36,8 +36,12 @@
     overflow: hidden;
     border-radius: 30px;
 
-    @media #{$md} {
+    @media #{$lg} {
       height: 250px;
+    }
+
+    @media #{$md} {
+      height: 200px;
     }
 
     @media #{$xxs} {
@@ -90,14 +94,14 @@
   }
 
   &__statement {
-    padding: 15px 55px 20px;
+    padding: 15px 55px 20px 10%;
 
     @media #{$md} {
-      padding: 15px 20px 20px 35px;
+      padding-right: 55px;
     }
 
     @media #{$xsm} {
-      padding: 15px 5px 20px 24px;
+      padding-right: 5px;
     }
 
     p {
