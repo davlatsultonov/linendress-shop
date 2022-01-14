@@ -1,3 +1,5 @@
+import { createPopper } from '@popperjs/core';
+
 $(document).ready(function () {
     $('.main-slider').slick({
         autoplay: true,
@@ -61,7 +63,6 @@ $(document).ready(function () {
         ]
     });
 
-
     $('#products-group-slider').slick({
         dots: true,
         arrows: true,
@@ -104,6 +105,63 @@ $(document).ready(function () {
         speed: 700,
         infinite: false
     });
+
+    // click on eye icon
+    const poppers = $('[data-popper-el]');
+    const popperInstances = [];
+
+    poppers.each((i, item) => {
+        const popperBtn = $(item).find('[data-popper-el-button]');
+        const popperBtnClose = $(item).find('[data-popper-el-button-close]');
+        const popperContent = $(item).find('[data-popper-el-content]');
+        let src;
+
+        const popperInstance = createPopper(popperBtn.get(0), popperContent.get(0), {
+            placement: 'top',
+            modifiers: [
+                {
+                    name: 'offset',
+                    options: {
+                        offset: [0, 8],
+                    },
+                },
+                {
+                    name: 'preventOverflow',
+                    options: {
+                        padding: 15
+                    },
+                },
+            ],
+        });
+        popperInstances.push([popperBtn, popperContent]);
+
+        popperBtn.on('click', function () {
+            src = $(this).attr('src');
+            let isActive = src.search(/active-eye/g);
+
+            popperInstances.forEach(item => {
+                $(item[0]).attr('src', src.replace('active-eye', 'eye'))
+                item[1].get(0).removeAttribute('data-show');
+            })
+
+            if (isActive !== -1) {
+                hide()
+            } else {
+                popperContent.get(0).setAttribute('data-show', '');
+                popperInstance.update();
+                $(this).attr('src', src.replace('eye', 'active-eye'))
+            }
+        })
+
+        popperBtnClose.on('click', hide)
+
+        function hide() {
+            popperContent.get(0).removeAttribute('data-show');
+            $(popperBtn).attr('src', src.replace('active-eye', 'eye'))
+        }
+
+
+    })
 
     //filter-block
     let filterBlockOpenBtn = $('.filter-block-open-btn'),
@@ -312,6 +370,7 @@ $(document).ready(function () {
         patternItems = $('.pattern-group__item').not('.pattern-item_type_btn').not('.pattern-group__item_blank');
 
     patternItems.click(function () {
+        $(this).closest('.dual-block').find('.product-full-info__gallery.has-slider').slick('slickGoTo', Number($(this).data('id')));
         $(this).closest(patternsWrapper).find('.pattern-group__item').removeClass('active');
         $(this).addClass('active');
     });

@@ -1,6 +1,10 @@
 .dual-block {
   @include flexbox;
 
+  @media #{$md} {
+    flex-wrap: wrap;
+  }
+
   &__item {
     width: 49%;
     margin-bottom: 30px;
@@ -11,7 +15,7 @@
 
     &:not(:last-child) {
       margin-right: 58px;
-      
+
       @media #{$lg} {
         margin-right: 20px;
       }
@@ -35,7 +39,7 @@
       @include flex-direction(column-reverse);
     }
 
-    .dual-block__item {
+    & > .dual-block__item {
 
       &:nth-child(1) {
         width: calc(100% - 397px);
@@ -77,7 +81,7 @@
 
   &_catalog {
 
-    .dual-block__item {
+    & > .dual-block__item {
 
       &:nth-child(1) {
         width: 219px;
@@ -123,7 +127,7 @@
       @include flex-direction(column);
     }
 
-    .dual-block__item {
+    & > .dual-block__item {
 
       &:nth-child(1) {
         width: 470px;
@@ -174,7 +178,7 @@
       @include flex-direction(column);
     }
 
-    .dual-block__item {
+    & > .dual-block__item {
 
       &:nth-child(1) {
         width: 59%;
@@ -227,7 +231,7 @@
       @include flex-direction(column);
     }
 
-    .dual-block__item {
+    & > .dual-block__item {
 
       &:nth-child(1) {
         padding-right: 98px;
@@ -254,7 +258,7 @@
       @include flex-direction(column-reverse);
     }
 
-    .dual-block__item {
+    & > .dual-block__item {
 
       &:nth-child(1) {
         width: 170px;

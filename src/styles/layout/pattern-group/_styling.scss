@@ -1,8 +1,5 @@
 .pattern-group {
   width: 100%;
-  @include flexbox;
-  @include justify-content(space-between);
-  @include flex-wrap(wrap);
 
   &__item {
     margin-bottom: 15px;
@@ -16,40 +13,99 @@
 }
 
 .pattern-item {
+  display: inline-block;
+  vertical-align: top;
   width: 60px;
   height: 60px;
-  @include inline-flex;
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-direction(column);
-  padding: 8px;
-  box-shadow: $base-shadow;
-  border-radius: 3px;
-  background-color: #ffffff;
-  @include shift(ease-in-out, 200ms, box-shadow);
-  transition-delay: 20ms;
   cursor: pointer;
+  position: relative;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 13px;
+  }
 
   &.active:not(.pattern-item_type_btn) {
-    box-shadow: none;
-    border: 2px solid $active-orange;
 
-    &:hover {
-      box-shadow: none;
+    .pattern-item__content {
+      border: 2px solid $active-orange;
+
+      &, &:hover {
+        box-shadow: none;
+      }
+    }
+
+    .pattern-item__dot::after {
+      background-color: #000;
     }
   }
 
   &:hover:not(.pattern-item_type_btn) {
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .15);
-    border: 2px solid $active-orange;
+
+    .pattern-item__content {
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .15);
+      border: 2px solid $active-orange;
+    }
+  }
+
+  &__content {
+    padding: 8px;
+    border-radius: 3px;
+    @include inline-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+    @include shift(ease-in-out, 200ms, box-shadow);
+    transition-delay: 20ms;
+    box-shadow: $base-shadow;
+    border: 2px solid transparent;
+  }
+
+  &__title {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: normal;
+    text-align: center;
+    @include ellipsis(2);
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #000000;
+    }
+
+    &::after {
+      width: 6px;
+      height: 6px;
+      bottom: 4px;
+    }
   }
 
   &_type_btn {
-    box-shadow: none;
+    display: flex;
+    justify-content: center;
     border: 1px solid #323232;
+    border-radius: 3px;
 
-    &:hover {
-      box-shadow: $base-shadow;
+    .pattern-item__content {
+      box-shadow: none;
+      border: none;
     }
   }
 
@@ -65,6 +121,9 @@
     height: 44px;
     pointer-events: none;
     user-select: none;
+    border-radius: 3px;
+    overflow: hidden;
+    @include cover-background;
 
     img {
       max-width: 100%;
