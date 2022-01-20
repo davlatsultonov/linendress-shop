@@ -99,12 +99,28 @@ $(document).ready(function () {
         infinite: false
     });
 
+    $('.popper-slider').slick({
+        dots: false,
+        arrows: true,
+        speed: 700,
+        infinite: false
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        const el = slick.$slider.closest('[data-popper-el-content]').find(`.pattern-item[data-id="${nextSlide}"]`);
+        const parent = el.parent();
+        el.click()
+        parent.animate({
+            scrollTop: parent.scrollTop() + (el.offset().top - parent.offset().top)
+        }, 400);
+    });
+
     $('.has-slider_only-arrows').slick({
         dots: false,
         arrows: true,
         speed: 700,
         infinite: false
     });
+
+    let windowInnerWidth = window.innerWidth;
 
     // click on eye icon
     const poppers = $('[data-popper-el]');
@@ -114,30 +130,37 @@ $(document).ready(function () {
         const popperBtn = $(item).find('[data-popper-el-button]');
         const popperBtnClose = $(item).find('[data-popper-el-button-close]');
         const popperContent = $(item).find('[data-popper-el-content]');
-        let src;
+        let src, popperInstance;
 
-        const popperInstance = createPopper(popperBtn.get(0), popperContent.get(0), {
-            placement: 'top',
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [0, 8],
+        if (windowInnerWidth > 639) {
+            popperInstance = createPopper(popperBtn.get(0), popperContent.get(0), {
+                placement: 'top',
+                modifiers: [
+                    {
+                        name: 'offset',
+                        options: {
+                            offset: [0, 8],
+                        },
                     },
-                },
-                {
-                    name: 'preventOverflow',
-                    options: {
-                        padding: 15
+                    {
+                        name: 'preventOverflow',
+                        options: {
+                            padding: 15
+                        },
                     },
-                },
-            ],
-        });
+                ],
+            });
+            popperContent.attr('data-popper-escaped', '');
+        }
         popperInstances.push([popperBtn, popperContent]);
 
         popperBtn.on('click', function () {
             src = $(this).attr('src');
             let isActive = src.search(/active-eye/g);
+
+            setTimeout(() => {
+                $(item).closest('[data-popper-el]').find('.popper-slider').slick('setPosition');
+            }, 200)
 
             popperInstances.forEach(item => {
                 $(item[0]).attr('src', src.replace('active-eye', 'eye'))
@@ -147,28 +170,39 @@ $(document).ready(function () {
             if (isActive !== -1) {
                 hide()
             } else {
-                popperContent.get(0).setAttribute('data-show', '');
-                popperInstance.update();
+                if (windowInnerWidth > 639) {
+                    popperContent.get(0).setAttribute('data-show', '');
+                    popperInstance.update();
+                } else {
+                    popperContent.show();
+                    disableScrollInActiveModal();
+                }
+
                 $(this).attr('src', src.replace('eye', 'active-eye'))
             }
         })
 
-        popperBtnClose.on('click', hide)
+        popperBtnClose.on('click', function () {
+            hide();
+            enableScrollInActiveModal();
+        })
 
         function hide() {
-            popperContent.get(0).removeAttribute('data-show');
-            $(popperBtn).attr('src', src.replace('active-eye', 'eye'))
+            $(popperBtn).attr('src', src.replace('active-eye', 'eye'));
+
+            if (windowInnerWidth > 639) {
+                popperContent.get(0).removeAttribute('data-show');
+            } else {
+                popperContent.hide();
+            }
         }
-
-
     })
 
     //filter-block
     let filterBlockOpenBtn = $('.filter-block-open-btn'),
         filterBlockCloseBtn = $('.filter-block__btn-close'),
         windowScrollY = window.scrollY,
-        filterBlock = $('.filter-block'),
-        windowInnerWidth = window.innerWidth;
+        filterBlock = $('.filter-block');
 
     $(window).on('scroll', throttle(function () {
         windowScrollY = window.scrollY;
@@ -370,7 +404,7 @@ $(document).ready(function () {
         patternItems = $('.pattern-group__item').not('.pattern-item_type_btn').not('.pattern-group__item_blank');
 
     patternItems.click(function () {
-        $(this).closest('.dual-block').find('.product-full-info__gallery.has-slider').slick('slickGoTo', Number($(this).data('id')));
+        $(this).closest('.dual-block').find('.product-full-info__gallery.popper-slider').slick('slickGoTo', Number($(this).data('id')));
         $(this).closest(patternsWrapper).find('.pattern-group__item').removeClass('active');
         $(this).addClass('active');
     });
