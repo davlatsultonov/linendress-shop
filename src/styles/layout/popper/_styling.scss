@@ -32,6 +32,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: rgba(0, 0, 0, 0.63);
     min-width: 100%;
     max-width: 100%;
     overflow-y: auto;
@@ -77,8 +78,21 @@
     }
   }
 
+  &__wrapper {
+
+    @media #{$xsm} {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+
   &__arrow {
     visibility: hidden;
+
+    @media #{$xsm} {
+      display: none;
+    }
 
     &, &::before {
       position: absolute;
@@ -94,23 +108,13 @@
     }
   }
 
-  &__wrapper {
-
-    @media #{$xsm} {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-
   .dual-block {
 
     @media #{$md} {
       flex-wrap: nowrap;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       flex-wrap: wrap;
     }
 
@@ -118,18 +122,14 @@
       flex-grow: 1;
       margin-bottom: 0;
 
-      @media (max-width: 450px) {
-        margin-bottom: 20px;
-      }
-
       &:first-child {
-        width: calc(100% - 295px);
+        width: calc(100% - 315px);
 
-        @media (max-width: 530px) {
+        @media #{$xsm} {
           width: calc(100% - 210px);
         }
 
-        @media (max-width: 450px) {
+        @media (max-width: 480px) {
           width: 100%;
         }
       }
@@ -137,13 +137,13 @@
       &:not(:last-child) {
         margin-right: 20px;
 
-        @media (max-width: 450px) {
+        @media (max-width: 480px) {
           margin-right: 0;
         }
       }
 
       &:last-child {
-        @media (max-width: 450px) {
+        @media (max-width: 480px) {
           margin-bottom: 0;
         }
       }
@@ -154,26 +154,19 @@
     width: 100%;
   }
 
-  .product-full-info__gallery {
-
-    @media (max-height: 568px) {
-      max-height: 280px;
-    }
-  }
-
   .pattern-group {
     max-height: 315px;
     height: 100%;
     overflow-y: auto;
 
-    @media (max-width: 450px) {
-      max-height: 150px;
+    @media (max-width: 480px) {
+      max-height: 170px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
     }
 
-    @media #{$xxs} {
+    @media (max-width: 414px) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -187,8 +180,7 @@
       margin-right: 2px;
     }
 
-    @media (max-width: 450px) {
-      height: 120px;
+    @media (max-width: 480px) {
       margin-right: 0 !important;
     }
   }
@@ -196,8 +188,11 @@
   .button_indent-top {
 
     @media (max-width: 639px) {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
       margin-top: 30px;
-      margin-bottom: 15px;
     }
   }
 }

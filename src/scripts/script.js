@@ -2,8 +2,6 @@ import { createPopper } from '@popperjs/core';
 
 $(document).ready(function () {
     $('.main-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 7000,
         dots: true,
         slidesToShow: 1,
         fade: true,
@@ -184,7 +182,10 @@ $(document).ready(function () {
 
         popperBtnClose.on('click', function () {
             hide();
-            enableScrollInActiveModal();
+
+            if (windowInnerWidth < 639) {
+                enableScrollInActiveModal();
+            }
         })
 
         function hide() {
