@@ -36,7 +36,7 @@
     box-shadow: $base-shadow;
     @include shift;
     cursor: pointer;
-    background: no-repeat url('/images/icons/eye-icon.svg') center #fff;
+    background: no-repeat url('images/icons/eye-icon.svg') center #fff;
 
     &:hover {
       opacity: 1;

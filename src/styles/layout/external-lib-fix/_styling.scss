@@ -32,12 +32,12 @@
   $arrow-distance: 10px;
 
   .prev {
-    background: url("/images/icons/slider/arrow-left.svg") no-repeat;
+    background: url("images/icons/slider/arrow-left.svg") no-repeat;
     margin-right: $arrow-distance;
   }
 
   .next {
-    background: url("/images/icons/slider/arrow-right.svg") no-repeat;
+    background: url("images/icons/slider/arrow-right.svg") no-repeat;
     margin-left: $arrow-distance;
   }
 
@@ -73,11 +73,11 @@
 }
 
 .slick-prev:before {
-  background: url('/images/icons/slider/arrow-left_bold.png') no-repeat;
+  background: url('images/icons/slider/arrow-left_bold.png') no-repeat;
 }
 
 .slick-next:before {
-  background: url('/images/icons/slider/arrow-right_bold.png') no-repeat;
+  background: url('images/icons/slider/arrow-right_bold.png') no-repeat;
 }
 
 .custom-controls {
